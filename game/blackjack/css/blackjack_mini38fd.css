@@ -1,0 +1,103 @@
+﻿/************************************************************************************/
+/* GAME BOX BASE */
+/************************************************************************************/
+.game_box {}
+
+/************************************************************************************/
+/* ORDER CARD  */
+/************************************************************************************/
+.div_order_card_zone { position:absolute; width:66px; height:96px; margin-top:23px; margin-left:465px; background-image:url('../img/layout/burn_base.png'); background-repeat:no-repeat; padding:6px 14px; display:none;}
+
+.div_order_card_zone_text {position:absolute; width:259px; height:108px; margin-top:23px; float:left; margin-left:562px; display:none;}
+.div_order_card_zone_text1{position:absolute; width:259px; height:108px; margin-top:23px; float:left; margin-left:562px; background-image:url('../img/order/aorder_1.png');}
+.div_order_card_zone_text2{position:absolute; width:259px; height:108px; margin-top:23px; float:left; margin-left:562px; background-image:url('../img/order/aorder_2.png');}
+.div_order_card_zone_text3{position:absolute; width:259px; height:108px; margin-top:23px; float:left; margin-left:562px; background-image:url('../img/order/aorder_3.png');}
+.div_order_card_zone_text0{position:absolute; width:259px; height:108px; margin-top:23px; float:left; margin-left:562px; background-image:url('../img/order/aorder_0.png');}
+/************************************************************************************/
+/* HISTORY */
+/************************************************************************************/
+
+.div_history {width:372px; height:255px; background-image:url('../../niuniu/img/history/history_back.png'); background-repeat:no-repeat; margin-left:457px; margin-top:132px;}
+.div_history .title {height:38px;background-image:url('../../niuniu/img/history/history_title.png'); background-repeat:no-repeat; background-position:center 7px;}
+.div_history .arrow {height:7px; background-image:url('../../niuniu/img/history/arrow.png'); background-position: 317px 0px; background-repeat:no-repeat;}
+
+.div_history .result_back {width:342px; height:189px; background-image:url('../../niuniu/img/history/his_result_back.png'); background-position: 1px 1px; background-repeat:no-repeat;}
+
+.div_history .tb_result_history { width:100%; height:100%; border-collapse:separate; empty-cells:show; padding:0px; border:0px !important; border-spacing:1px; }
+.div_history .tb_result_history th {padding:0px;}
+.div_history .tb_result_history td {padding:0px; width:44px; height:46px;}
+
+.div_history .tb_result_history .w16 { background-image:url('../img/history/result/W16.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .w17 { background-image:url('../img/history/result/W17.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .w18 { background-image:url('../img/history/result/W18.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .w19 { background-image:url('../img/history/result/W19.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .w20 { background-image:url('../img/history/result/W20.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .w21 { background-image:url('../img/history/result/W21.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .w22 { background-image:url('../img/history/result/W22.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .w23 { background-image:url('../img/history/result/W23.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .w24 { background-image:url('../img/history/result/W24.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .w25 { background-image:url('../img/history/result/W25.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .w26 { background-image:url('../img/history/result/W26.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .w27 { background-image:url('../img/history/result/W27.png'); background-repeat:no-repeat;}
+
+.div_history .tb_result_history .d16 { background-image:url('../img/history/result/16.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .d17 { background-image:url('../img/history/result/17.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .d18 { background-image:url('../img/history/result/18.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .d19 { background-image:url('../img/history/result/19.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .d20 { background-image:url('../img/history/result/20.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .d21 { background-image:url('../img/history/result/21.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .d22 { background-image:url('../img/history/result/22.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .d23 { background-image:url('../img/history/result/23.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .d24 { background-image:url('../img/history/result/24.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .d25 { background-image:url('../img/history/result/25.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .d26 { background-image:url('../img/history/result/26.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .d27 { background-image:url('../img/history/result/27.png'); background-repeat:no-repeat;}
+
+.div_history .tb_result_history .l16 { background-image:url('../img/history/result/L16.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .l17 { background-image:url('../img/history/result/L17.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .l18 { background-image:url('../img/history/result/L18.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .l19 { background-image:url('../img/history/result/L19.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .l20 { background-image:url('../img/history/result/L20.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .l21 { background-image:url('../img/history/result/L21.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .l22 { background-image:url('../img/history/result/L22.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .l23 { background-image:url('../img/history/result/L23.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .l24 { background-image:url('../img/history/result/L24.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .l25 { background-image:url('../img/history/result/L25.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .l26 { background-image:url('../img/history/result/L26.png'); background-repeat:no-repeat;}
+.div_history .tb_result_history .l27 { background-image:url('../img/history/result/L27.png'); background-repeat:no-repeat;}
+/************************************************************************************/
+/* CARD RESULT */
+/************************************************************************************/
+.sizeup_line {height:40px; text-align:right;}
+
+.div_result_zone_p1 {position:absolute; width:330px; height:215px; padding:15px 20px; float:left; margin:454px 0 0 45px; background-image:url('../img/layout/player_card_base2.png');}
+.div_result_zone_p2{ position:absolute; width:330px; height:215px; padding:15px 20px; float:left; margin:670px 0 0 45px; background-image:url('../img/layout/player_card_base2.png');}
+.div_result_zone_p3{ position:absolute; width:330px; height:215px; padding:15px 20px; float:left; margin:670px 0 0 459px;  background-image:url('../img/layout/player_card_base2.png');}
+.div_result_zone_bk{ position:absolute; width:330px; height:215px; padding:15px 20px; float:left; margin:454px 0 0 459px; background-image:url('../img/layout/player_card_base2.png');}
+
+.rt_winner_text { width:380px; height:215px; margin-top:-0px; margin-left:-20px; background-image:url('../img/result/win_new.png'); display:inline-block; background-position-y:bottom;}
+.rt_lose_text { width:380px; height:215px; margin-top:-0px; margin-left:-20px; background-image:url('../img/result/lose_new3.png'); display:inline-block; background-position-y:bottom;}
+.rt_draw_text { width:380px; height:215px; margin-top:-0px; margin-left:-21px; background-image:url('../img/result/tie_new.png'); display:inline-block; background-position-y:bottom;}
+
+
+/************************************************************************************/
+/* TEXT RESULT */
+/************************************************************************************/
+.div_result_text_base{height:0px; z-index:59; position:absolute;}
+.div_result_hiden_card_base{height:0px; z-index:55; position:absolute;}
+.div_result_zone_win_p1 {position:absolute; width:330px; height:215px;padding:15px 20px; float:left; margin:454px 0 0 45px; background-image:url('../img/layout/player_card_base2.png');}
+.div_result_zone_win_p2{position:absolute; width:330px; height:215px;padding:15px 20px; float:left; margin:670px 0 0 45px; background-image:url('../img/layout/player_card_base2.png'); background-repeat:no-repeat;}
+.div_result_zone_win_p3{position:absolute; width:330px; height:215px;padding:15px 20px; float:left; margin:670px 0 0 459px; background-image:url('../img/layout/player_card_base2.png'); background-repeat:no-repeat;}
+
+.rt_banker_text .card_result_text{ color:#ffffff; font-weight:bold; font-size:30px; margin-top:124px;}
+.rt_winner_text .card_result_text{ color:#ffcd00; font-weight:bold; font-size:30px; margin-top:124px;}
+.rt_loser_text .card_result_text{ color:#d2d2d2; font-weight:bold; font-size:20px; margin-top:128px;}
+/************************************************************************************/
+/* HAND CARD */
+/************************************************************************************/
+.div_hand_card_box {height:493px; width:1200px; margin-top:308px; background-image:url('../../niuniu/img/layout/hand_zone_base.png'); display:none;}
+/************************************************************************************/
+/* TEXT RESULT BOX */
+/************************************************************************************/
+
+/************************************************************************************/

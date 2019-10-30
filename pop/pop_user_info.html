@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from www.spark-pop.com/pc/pop/pop_user_info.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Sep 2019 12:24:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+	스카이파크 회원 정보
+</title>
+    <link rel="stylesheet" href="../css/popup6641.css?v=20190911212342"/> 
+    <script type="text/javascript">
+        //--------------------------------------------------------------------------------------
+        function set_user_introduce() {
+            var intro = document.getElementById('taIntro').value;
+            PageMethods.Set_User_Introduce(intro,
+            function (result) {
+                if (result == "ok") {
+                    alert("요청이 완료되었습니다.");
+                    location.href = location.href;
+                }
+                else if (result == "logout") location.href = location.href;
+                else {
+                    alert(result);
+                }
+            });
+        }
+        //--------------------------------------------------------------------------------------
+    </script>
+</head>
+<body style="background-color:#e4e5e7;">
+    <script>alert('로그아웃 되었습니다.');window.opener.document.location.href = window.opener.document.URL; window.close();</script>

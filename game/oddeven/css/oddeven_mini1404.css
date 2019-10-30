@@ -1,0 +1,167 @@
+﻿/************************************************************************************/
+/* GAME BOX BASE */
+/************************************************************************************/
+.game_box { }
+/************************************************************************************/
+/* TABLE INFO */
+/************************************************************************************/
+.div_result_info {width:372px; height:255px; background-image:url('../img/info/table_info_for_oe.png'); background-repeat:no-repeat; margin-left:457px; margin-top:132px;}
+.div_result_info .title {height:534px;background-image:url('../../common/img/info/table_info_title.png'); background-repeat:no-repeat; background-position:center 8px;}
+.div_result_info .value {width:123px; height:30px; padding-right:7px; font-weight:bold; color:white; line-height:26px; font-size:16px; text-shadow:1px 1px 1px #000; text-align:right;}
+.div_result_info .value2 {width:50px; height:30px; padding-right:7px; font-weight:bold; color:white; line-height:26px; font-size:16px; text-shadow:1px 1px 1px #000; text-align:right; text-shadow:1px 1px 1px #000;}
+
+.div_result_info .pej1N{margin-top:0px; margin-left:0px; height:22px; width:22px; float:left; }
+.div_result_info .pej2N{margin-top:0px; margin-left:0px; height:22px; width:22px; float:left; }
+.div_result_info .pej3N{margin-top:0px; margin-left:0px; height:22px; width:22px; float:left; }
+.div_result_info .pej4N{margin-top:0px; margin-left:0px; height:22px; width:22px; float:left; }
+
+.div_result_info .pej1T{margin-top:0; margin-left:0px; height:22px; width:22px; float:left; background-image:url('../img/info/m1t.png'); background-position:3px 3px;}
+.div_result_info .pej2T{margin-top:0; margin-left:0px; height:22px; width:22px; float:left; background-image:url('../img/info/m2t.png'); background-position:3px 3px;}
+.div_result_info .pej3T{margin-top:0; margin-left:0px; height:22px; width:22px; float:left; background-image:url('../img/info/m3t.png'); background-position:3px 3px;}
+.div_result_info .pej4T{margin-top:0; margin-left:0px; height:22px; width:22px; float:left; background-image:url('../img/info/m4t.png'); background-position:3px 3px;}
+
+.div_result_info .pej1F{margin-top:0; margin-left:0px; height:22px; width:22px; float:left; background-image:url('../img/info/m1f.png'); background-position:3px 3px;}
+.div_result_info .pej2F{margin-top:0; margin-left:0px; height:22px; width:22px; float:left; background-image:url('../img/info/m2f.png'); background-position:3px 3px;}
+.div_result_info .pej3F{margin-top:0; margin-left:0px; height:22px; width:22px; float:left; background-image:url('../img/info/m3f.png'); background-position:3px 3px;}
+.div_result_info .pej4F{margin-top:0; margin-left:0px; height:22px; width:22px; float:left; background-image:url('../img/info/m4f.png'); background-position:3px 3px;}
+
+.div_result_info .bej1N{margin-top:0; margin-left:0px; height:22px; width:22px; float:left; }
+.div_result_info .bej2N{margin-top:0; margin-left:0px; height:22px; width:22px; float:left; }
+.div_result_info .bej3N{margin-top:0; margin-left:0px; height:22px; width:22px; float:left; }
+.div_result_info .bej4N{margin-top:0; margin-left:0px; height:22px; width:22px; float:left; }
+
+.div_result_info .bej1T{margin-top:0; margin-left:0px; height:22px; width:22px; float:left; background-image:url('../img/info/m1t.png'); background-position:3px 3px; }
+.div_result_info .bej2T{margin-top:0; margin-left:0px; height:22px; width:22px; float:left; background-image:url('../img/info/m2t.png'); background-position:3px 3px;}
+.div_result_info .bej3T{margin-top:0; margin-left:0px; height:22px; width:22px; float:left; background-image:url('../img/info/m3t.png'); background-position:3px 3px;}
+.div_result_info .bej4T{margin-top:0; margin-left:0px; height:22px; width:22px; float:left; background-image:url('../img/info/m4t.png'); background-position:3px 3px;}
+
+.div_result_info .bej1F{margin-top:0px; margin-left:0px; height:22px; width:22px; float:left; background-image:url('../img/info/m1f.png'); background-position:3px 3px;}
+.div_result_info .bej2F{margin-top:0px; margin-left:0px; height:22px; width:22px; float:left; background-image:url('../img/info/m2f.png'); background-position:3px 3px;}
+.div_result_info .bej3F{margin-top:0px; margin-left:0px; height:22px; width:22px; float:left; background-image:url('../img/info/m3f.png'); background-position:3px 3px;}
+.div_result_info .bej4F{margin-top:0px; margin-left:0px; height:22px; width:22px; float:left; background-image:url('../img/info/m4f.png'); background-position:3px 3px;}
+/************************************************************************************/
+/* BETTING ZONE */
+/************************************************************************************/
+.div_bet_zone1_off{position:absolute; width:257px; height:143px; float:left; margin:463px 0 0 238px; border-radius:0px;}
+.div_bet_zone3_off{position:absolute; width:201px; height:120px; float:left; margin:486px 0 0 500px; border-radius:0px; }
+.div_bet_zone2_off{position:absolute; width:262px; height:144px; float:left; margin:458px 0 0 704px; border-radius:0px;}
+
+
+.div_bet_zone1_on{width:257px; height:143px; float:left; margin:465px 0 0 261px; position:absolute; background-image:url('../img/layout/bet1.png'); cursor:url(../../common/cursor/bet5.png), auto; border-radius:0px;}
+.div_bet_zone2_on{width:262px; height:144px; float:left; margin:461px 0 0 679px; position:absolute; background-image:url('../img/layout/bet2.png'); cursor:url(../../common/cursor/bet5.png), auto; border-radius:0px;}
+
+
+.div_bet_zone1_on:hover{background-image:url('../img/layout/bet1_over.png');}
+.div_bet_zone2_on:hover{background-image:url('../img/layout/bet2_over.png');}
+
+.div_bet_chip_zone1 {height:0px; margin-left:80px; margin-top:20px; width:112px; z-index:32; position:absolute;}
+.div_bet_chip_zone3 {height:0px; margin-left:45px; margin-top:10px; width:112px; z-index:32; position:absolute;}
+.div_bet_chip_zone2 {height:0px; margin-left:75px; margin-top:20px; width:112px; z-index:32; position:absolute;}
+
+
+.show_bet_money_box1 { position:relative; float: left; padding:5px 15px 5px 45px; border-radius: 5px; font-weight: bold; font-size: 18px; left:-92px; margin-top: 95px;
+    margin-left: 50%; width:124px; height:39px; line-height:30px; text-align:right; background-image:url('../../common/img/layout/bet_money_box.png'); color:#ffcd00;
+}
+.show_bet_money_box2 { position:relative; float: left; padding:5px 15px 5px 45px; border-radius: 5px; font-weight: bold; font-size: 18px; left:-92px; margin-top: 95px;
+    margin-left: 50%; width:124px; height:39px; line-height:30px; text-align:right; background-image:url('../../common/img/layout/bet_money_box.png'); color:#ffcd00;
+}
+.show_bet_money_box3 { position:relative; float: left; padding:5px 15px 5px 45px; border-radius: 5px; font-weight: bold; font-size: 18px; left:-92px; margin-top: 95px;
+    margin-left: 50%; width:124px; height:39px; line-height:30px; text-align:right; background-image:url('../../common/img/layout/bet_money_box.png'); color:#ffcd00;
+}
+/************************************************************************************/
+/* HISTORY */
+/************************************************************************************/
+.div_result_history_box{position:absolute; height:164px; width:1200px; margin-top:636px;}
+.div_six_map {float:left; position:absolute; width:401px; height:151px; padding:0px; margin-top:-86px;margin-left:46px; background-image:url('../../baccarat_speed/img/layout/sixmap_back.jpg');}
+.big_road_map { float:left; position:absolute; width:820px; height:79px; padding:0px; left:4px; top:-175px; background-image:url('../../baccarat_speed/img/layout/big_road_back.jpg'); overflow:hidden;}
+.j1_road_map { float:left; position:absolute; width:415px; height:39px; margin-left:407px; margin-top:-172px;  padding:1px 0 0 1px; background-image:url('../../baccarat_speed/img/layout/small_map.jpg'); overflow:hidden;}
+.j2_road_map { float:left; position:absolute; width:415px; height:39px; margin-left:407px; margin-top:-132px; padding:1px 0 0 1px; background-image:url('../../baccarat_speed/img/layout/small_map.jpg'); overflow:hidden;}
+.j3_road_map { float:left; position:absolute; width:415px; height:39px; margin-left:407px; margin-top:-132px; padding:1px 0 0 1px; background-image:url('../../baccarat_speed/img/layout/small_map.jpg'); overflow:hidden;}
+.j4_road_map { float:left; position:absolute; width:415px; height:39px; margin-left:407px; margin-top:-92px; padding:1px 0 0 1px; background-image:url('../../baccarat_speed/img/layout/small_map.jpg'); overflow:hidden;}
+
+.div_six_map .tb_result_history { width:351px;border-collapse:separate; empty-cells:show; padding:0px; border:0px !important; border-spacing:1px; }
+.div_six_map .tb_result_history th {padding:0px;}
+.div_six_map .tb_result_history td {padding:0px; width:24px; height:24px;}
+.big_road_map .tb_result_history { width:834px; border-collapse:separate; empty-cells:show; padding:0px; border:0px !important; border-spacing:1px; }
+.big_road_map .tb_result_history th {padding:0px;}
+.big_road_map .tb_result_history td {padding:0px; width:12px; height:12px;}
+
+.div_six_map .tb_result_history .O { background-image:url('../img/history/O.png'); background-size:24px 24px; }
+.div_six_map .tb_result_history .E { background-image:url('../img/history/E.png'); background-size:24px 24px;}
+
+.big_road_map .tb_result_history { border-collapse:separate; empty-cells:show; padding:0px; border:0px !important; border-spacing:1px; }
+.big_road_map .tb_result_history th {padding:0px;}
+.big_road_map .tb_result_history td {padding:0px; width:12px; height:12px;}
+
+.big_road_map .tb_result_history .O { background-image:url('../img/history/BRP.png'); background-size:12px 12px; }
+.big_road_map .tb_result_history .E { background-image:url('../img/history/BRB.png'); background-size:12px 12px; }
+
+.j1_road_map .tb_result_history { border-collapse:separate; empty-cells:show; padding:0px; border:0px !important; border-spacing:0px; }
+.j1_road_map .tb_result_history th {padding:0px;}
+.j1_road_map .tb_result_history td {padding:0px;}
+
+.j1_road_map .tb_result_history .T { height:6px; width:6px; background-image:url('../img/history/j1t.png'); background-size:6px 6px;}
+.j1_road_map .tb_result_history .F { height:6px; width:6px; background-image:url('../img/history/j1f.png'); background-size:6px 6px;}
+.j1_road_map .tb_result_history .L {width:1px;}
+
+
+.j2_road_map .tb_result_history { border-collapse:separate; empty-cells:show; padding:0px; border:0px !important; border-spacing:0px; }
+.j2_road_map .tb_result_history th {padding:0px;}
+.j2_road_map .tb_result_history td {padding:0px;}
+
+.j2_road_map .tb_result_history .T { height:6px; width:6px; background-image:url('../img/history/j2t.png'); background-size:6px 6px;}
+.j2_road_map .tb_result_history .F { height:6px; width:6px; background-image:url('../img/history/j2f.png'); background-size:6px 6px;}
+.j2_road_map .tb_result_history .L {width:1px;}
+
+.j3_road_map .tb_result_history { border-collapse:separate; empty-cells:show; padding:0px; border:0px !important; border-spacing:0px; }
+.j3_road_map .tb_result_history th {padding:0px;}
+.j3_road_map .tb_result_history td {padding:0px;}
+
+.j3_road_map .tb_result_history .T { height:6px; width:6px; background-image:url('../img/history/j3t.png'); background-size:6px 6px; }
+.j3_road_map .tb_result_history .F { height:6px; width:6px; background-image:url('../img/history/j3f.png'); background-size:6px 6px; }
+.j3_road_map .tb_result_history .L {width:1px;}
+
+.j4_road_map .tb_result_history { border-collapse:separate; empty-cells:show; padding:0px; border:0px !important; border-spacing:0px; }
+.j4_road_map .tb_result_history th {padding:0px;}
+.j4_road_map .tb_result_history td {padding:0px;}
+
+.j4_road_map .tb_result_history .T { height:6px; width:6px; background-image:url('../img/history/j4t.png'); background-size:6px 6px; }
+.j4_road_map .tb_result_history .F { height:6px; width:6px; background-image:url('../img/history/j4f.png'); background-size:6px 6px;}
+.j4_road_map .tb_result_history .L {width:1px;}
+/************************************************************************************/
+/* HAND CARD */
+/************************************************************************************/
+.div_hand_card_box {height:222px; width:1200px; position:absolute; margin-top:558px; background-image:url('../../baccarat_speed/img/result/result_base.png'); display:none;
+                    -ms-zoom: 0.69;
+-moz-transform: scale(0.69, 0.69); 
+    -webkit-transform: scale(0.69, 0.69); 
+    -o-transform: scale(0.69, 0.69); 
+    -ms-transform: scale(0.69, 0.69); 
+    transform: scale(0.69, 0.69); 
+    -moz-transform-origin: top left; 
+    -webkit-transform-origin: top left; 
+    -o-transform-origin: top left; 
+    -ms-transform-origin: top left; 
+    transform-origin: top left; 
+}
+/************************************************************************************/
+/* TEXT RESULT BOX */
+/************************************************************************************/
+.result_box_base {height:0px; position:absolute; width:1200px; text-align:center;
+                  -ms-zoom: 0.69;
+-moz-transform: scale(0.69, 0.69); 
+    -webkit-transform: scale(0.69, 0.69); 
+    -o-transform: scale(0.69, 0.69); 
+    -ms-transform: scale(0.69, 0.69); 
+    transform: scale(0.69, 0.69); 
+    -moz-transform-origin: top left; 
+    -webkit-transform-origin: top left; 
+    -o-transform-origin: top left; 
+    -ms-transform-origin: top left; 
+    transform-origin: top left; 
+}
+.result_box_base .text_box {width:604px; height:114px; margin-left:50%; margin-top:693px; position:absolute; left:-302px; z-index:503; background-image:url('../img/result/text_result_base.png'); background-position:center; display:none;}
+.result_box_base .even_win {width:555px; height:75px; margin-left:50%; margin-top:20px; position:absolute; left:-277px; z-index:503; background-image:url('../img/result/even_win.png'); background-position:center;}
+.result_box_base .odd_win {width:555px; height:75px; margin-left:50%; margin-top:20px; position:absolute; left:-277px; z-index:503; background-image:url('../img/result/odd_win.png'); background-position:center;}
+.result_box_base .tie {width:555px; height:75px; margin-left:50%; margin-top:20px; position:absolute; left:-277px; z-index:503; background-image:url('../img/result/tie.html'); background-position:center;}
+/************************************************************************************/

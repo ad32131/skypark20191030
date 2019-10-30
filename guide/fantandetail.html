@@ -1,0 +1,328 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from www.spark-pop.com/pc/guide/fantandetail.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Sep 2019 13:32:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+	스카이파크
+</title>
+    <script src="../../Scripts/jquery-1.6.4.min.js"></script>
+	<script src="../../Scripts/jquery.signalR-2.4.0.min.js"></script>
+	<script src="http://www.spark-pop.com/signalr/hubs"></script>
+    
+    <link rel="stylesheet" href="../css/chat7aff.css?v=1905271" /><link rel="stylesheet" href="../css/layout7aff.css?v=1905271" /><link rel="stylesheet" href="../css/common7aff.css?v=1905271" /> 
+    <script type="text/javascript" src="../js/common7aff.js?v=1905271" ></script>
+    <script type="text/javascript">
+        var chat;
+        var szAccount = "";
+        var szNcik = "";
+        var chat_id = "";
+
+        function pop_note_list() {
+            var nWidth = 800;
+            var nHeight = 500;
+            var x = (screen.availWidth - nWidth) / 2;
+            var y = (screen.availHeight - nHeight) / 2;
+            window.open("../pop/pop_note_list.html", "note_list", "width=" + nWidth + ",height=" + nHeight + ",toolbar=no,top=" + y + ",left=" + x + ",directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes");
+        }
+
+        function pop_user_info() {
+            var nWidth = 800;
+            var nHeight = 500;
+            var x = (screen.availWidth - nWidth) / 2;
+            var y = (screen.availHeight - nHeight) / 2;
+            window.open("../pop/pop_user_info.html", "user_info", "width=" + nWidth + ",height=" + nHeight + ",toolbar=no,top=" + y + ",left=" + x + ",directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes");
+        }
+
+        function pop_rand_box() {
+            var nWidth = 420;
+            var nHeight = 600;
+            var x = (screen.availWidth - nWidth) / 2;
+            var y = (screen.availHeight - nHeight) / 2;
+            window.open("../pop/pop_rand_box.html", "rand_box", "width=" + nWidth + ",height=" + nHeight + ",toolbar=no,top=" + y + ",left=" + x + ",directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes");
+        }
+        function pop_api_sample() {
+            var nWidth = 900;
+            var nHeight = 1000;
+            var x = (screen.availWidth - nWidth) / 2;
+            var y = (screen.availHeight - nHeight) / 2;
+            window.open("../pop/api_sample_view.html", "rand_box", "width=" + nWidth + ",height=" + nHeight + ",toolbar=no,top=" + y + ",left=" + x + ",directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes");
+        }
+
+    </script>
+    <script type="text/javascript" src="../js/chatcbaf.js?v=20190911212459" ></script>
+    
+    <link href="css/detailgamecbaf.css?v=20190911212459" rel="stylesheet" />
+</head>
+<body>
+    
+    <form method="post" action="http://www.spark-pop.com/pc/guide/fantandetail.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="JEDacWjf7Wx4ZhVtxp80phx6Ezmlu1epNMMcqcSFdA6Y2GxDGg3VLsrAKewziQ0jakRvnouz5ArExoh6DQ1C+f2brySD2Oyh/WrpYhp+z3A=" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="EB34FBA2" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="21rOjxeWgCvv784RwHFGCyWhXN34+mNiJ7nauHwCrZvc/lPU7GVSufwlA63/e7STP/SoLk219eHjh0n2UxtGcWMuVXK/+5NNCGOtLECk4z6rRwYNBUrVlXWPN0K/0xzA" />
+</div>
+        <div style="display:none"><input type="submit" name="ctl00$btnNull" value="" onclick="return false;" id="btnNull" /></div>
+        <div style="position:fixed; left:-9000px;"><img alt="" src="../img/main_logo4.png" /></div>
+    <div>
+        <div class="main_page_top_line">
+            <div class="top_line_zone" style="font-size:12px;">
+                <a href="javascript:pop_rand_box();" style="padding:0; margin:0;">
+                    <div style="float:left; margin-left:10px;">
+                        <div style="width:23px; padding:5px 0px; height:20px; float:left;"><img src="../img/icon/rand_box_icon.png" style="height:20px; display:block;" /></div>
+                        <div style="color:#c5cfff; float:left; text-align:left;">랜덤박스</div>
+                        <div style="width:100px; padding:9px; height:12px; float:left;">
+                            <div style="height:12px; border-radius:5px; background-color:#c2ebff;">
+                                <div style="float:left; height:12px; border-radius:5px; background-color:#2ef706; width:0px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div style="color:#c5cfff; float:left; text-align:left;">달성률 0%</div>
+                    </div>
+                </a>
+                <a href="javascript:pop_api_sample();">영상API샘플</a>
+                <a href="../Default.html">영상API문의</a>
+                <a href="../Default.html">고객센터</a>
+                <a href="pairdetail.html" style="margin-right:10px;">로그아웃</a>
+            </div>
+        </div>
+        <div class="main_body">
+            <div class="logo_line">
+                <div class="logo_zone">
+                    <a href="../Default.html">
+                        <img alt="" src="../img/main_logo4.png" />
+                    </a>
+                </div>
+                <div class="main_menu"><a href="../lobby.html"><img alt="" src="../img/mnt01.png" /></a></div>
+                <div class="main_menu"><a href="gameguide.html"><img alt="" src="../img/mnt02.png" /></a></div>
+                <div class="main_menu"><a href="../item_shop/item_shop.html"><img alt="" src="../img/mnt03.png" /></a></div>
+                <div class="main_menu"><a href="../notice_board.html"><img alt="" src="../img/mnt04.png" /></a></div>
+                <div class="main_menu"><a href="../dealer_intro.html"><img alt="" src="../img/mnt05.png" /></a></div>
+                <div class="main_menu"><a href="../free_refill.html"><img alt="" src="../img/mnt06.png" /></a></div>
+                <div class="main_menu"><a href="../user_rank.html"><img alt="" src="../img/mnt07.png" /></a></div>
+                <div class="main_menu"><a href="../game_result.html"><img alt="" src="../img/mnt08.png" /></a></div>
+            </div>
+            <div>
+                <div class="div_chat">
+                    <div class="login_box">
+                        
+                        <div style="height:4px;"></div>
+                        <div>
+                            <div style="width:280px; margin-left:auto; margin-right:auto;">
+                                <div style="height:40px; line-height:40px;">
+                                    로그인 이후 컨텐츠 이용이 가능합니다.
+                                </div> 
+                                <div class="login_button_box">
+                                    <a href="../login.html"><img alt="" src="../img/login_button.png" /></a>
+                                </div>
+                                <div style="height:40px; line-height:40px;">
+                                    <span style="float:left;"><a href="http://www.spark-pop.com/SignUp.aspx">간편 회원가입</a></span>
+                                    <span style="float:right;"><a href="http://www.spark-pop.com/find_id.aspx" style="font-weight:100;">아이디 찾기</a></span> 
+                                    <span style="float:right; padding:0 10px; font-size:8px; color:#dbdbdb">|</span> <span style="float:right;"><a href="http://www.spark-pop.com/find_passwd.aspx" style="font-weight:100;">비밀번호 찾기</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="div_split_height"></div>
+                    <div class="chat_box">
+                        <div style="position:absolute; height:440px; width:60px; margin-left:-64px;margin-top:-3px;">
+                            <div id="enter_room_chat" style="height:63px; cursor:pointer;">
+                                <img alt="" src="../img/chat_room_icon2.png" />
+                            </div>
+                        </div>
+                        <div id="msgs" class="msg_box">
+                            <div style="text-align:center;">
+                                <img alt="" src="../img/chat_loading.gif" style="margin-left:auto; margin-right:auto;" />
+                            </div>
+                        </div>
+                        <div class="div_chat_input_line">
+                            <input autocomplete="off" type="text" id="msg" onkeypress="javascript: msg_input_keypress(event);" class="chat_msg_input" />
+	                        <input type="button" id="send" value="전송" / class="send_button" />
+                        </div>
+                    </div>
+                </div>
+                <div class="div_content">
+                    
+    <div class="div_content_pd5">
+         <div class="subject"></div>
+         <div class="sub_menu">
+            <ul>
+                <li><a href="gameguide.html">게임소개</a></li>
+                <li><a href="niuniudetail.html">니우니우</a></li>
+                <li><a href="baccaratdetail.html">바카라</a></li>
+                <li><a href="baccarat_speeddetail.html">스피드 바카라</a></li>
+                <li><a href="baccarat_insurancedetail.html">보험 바카라</a></li>
+                <li><a href="pokerdetail.html">스카이 포커</a></li>
+                <li><a href="pairdetail.html">페어 게임</a></li>
+            </ul>
+            <ul>
+                <li><a href="oddevendetail.html">스카이 홀짝</a></li>
+                <li><a href="dragontigerdetail.html">드래곤 타이거</a></li>
+                <li><a href="blackjackdetail.html">블랙잭</a></li>
+                <li><a href="fantandetail.html" class="active">삼치기</a></li>
+                <li><a href="dicedetail.html">주사위</a></li>
+                <li><a href="roulettedetail.html">스카이 룰렛</a></li>
+                <li><a href="yutdetail.html">윷놀이</a></li>
+            </ul>
+        </div>
+        <div class="w_rap">
+            <!--------close Detail game menu page---------------------------->
+            <div class="row">
+                <div class="column left">
+                    <img src="../img/game_icon/gm_banner10.png" />
+                </div>
+                <div class="column right" >
+                    <div class="game_title"><span class="main_title">삼치기</span> <span class="sub_title">게임 소개</span></div>
+                    <div class="game_guide_text">
+                        &nbsp;삼치기 게임은 바닥에 섞은 단추 뭉치에서 일부를 분리해 내어 분리해 낸 단추의 숫자가 3으로 나누었을때 남는 단추의 숫자를 맞추는 게임 입니다.
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <h2>동영상 게임 가이드</h2>
+                     <video src="video/ft.mp4" width="780" height="500" preload="auto" controls="controls">
+                    </video>
+                </div>
+                <div class="game_guide_text_detail">  
+                    <p class="MsoNormal" style="line-height: 1.2;"><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">『게임진행』<br><br><img src="../../UploadFiles/20181227074809%ec%82%bc%ec%b9%98%ea%b8%b0_2.png" title="%ec%82%bc%ec%b9%98%ea%b8%b0_2.png"><br style="clear:both;"><br><br></span><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">1. </span></b><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;"><span style="color: rgb(255, 0, 0);"><sup><span style="font-size: 11pt;">①</span></sup></span></span></b><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">원형통에</span><span lang="KO" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">&nbsp;</span><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">단추들을</span><span lang="KO" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">&nbsp;</span><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">넣고</span><span lang="KO" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">&nbsp;</span><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">섞습니다.</span></b></p><p class="MsoNormal" style="line-height: 1.2;"><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;"><br>2.&nbsp;</span></b><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;"><span style="color: rgb(255, 0, 0);"><sup><span style="font-size: 11pt;">①</span></sup></span></span></b><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">원</span><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">형통</span><span lang="KO" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">&nbsp;</span><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">안에</span><span lang="KO" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">&nbsp;</span><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">있던</span><span lang="KO" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">&nbsp;</span><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">단추 뭉치에서 일부를</span><span lang="KO" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">&nbsp;</span></b><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;"><span style="color: rgb(255, 0, 0);"><sup><span style="font-size: 11pt;">②</span></sup></span></span></b><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">작은컵으로</span><span lang="KO" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">&nbsp;분리해</span><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">냅니다.</span></b></p><p class="MsoNormal" style="line-height: 1.2;"><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;"><br></span><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">3.&nbsp;</span></b><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;"><span style="color: rgb(255, 0, 0);"><sup><span style="font-size: 11pt;">③</span></sup></span></span></b><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">승게임</span><span lang="KO" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">&nbsp;</span><span style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">,&nbsp;</span></b><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;"><span style="color: rgb(255, 0, 0);"><sup><span style="font-size: 11pt;">④</span></sup></span></span></b><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:calibri;="" mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">승무</span><span lang="KO" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">&nbsp;</span><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">게임</span><span lang="KO" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">&nbsp;</span><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">원하는</span><span lang="KO" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">&nbsp;</span><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">곳에</span><span lang="KO" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">&nbsp;</span><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">배팅이</span><span lang="KO" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">&nbsp;</span><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">가능합니다.</span></b></p><p class="MsoNormal" style="line-height: 1.2;"><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;"><br></span><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">4. 딜러는</span><span lang="KO" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">&nbsp;</span></b><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;"><span style="color: rgb(255, 0, 0);"><sup><span style="font-size: 11pt;">②</span></sup></span></span></b><b><span lang="KO" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">작은</span><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">컵에</span><span lang="KO" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">&nbsp;</span><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">담겨잇는</span><span lang="KO" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">&nbsp;</span><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">단추들을</span><span lang="KO" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">&nbsp;</span><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">막대로</span><span lang="KO" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">&nbsp;3개씩&nbsp;</span><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">나눕니다.</span></b></p><p class="MsoNormal" style="line-height: 1.2;"><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="text-indent: -0.25in; line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;"><br>5. 마지막 남은 단추가 3개 이하일 때 결과값이 나옵니다.<br><br></span></b><span style="font-family: 굴림, gulim; font-size: 11pt;"><span style="font-size: 18pt;">·················································································</span></span><span style="font-family: 굴림, gulim; font-size: 18pt;">·</span><span style="font-family: 굴림, gulim; font-size: 18pt;">·<br></span><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;"><br>『게임규칙』<br><img src="../../UploadFiles/20181227075310%ec%82%bc%ec%b9%98%ea%b8%b0_3.png" title="%ec%82%bc%ec%b9%98%ea%b8%b0_3.png"><br><br></span></b><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:calibri;="" mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">⊙ 단추를</span><span lang="KO" style="line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">&nbsp;</span><span style="line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">3</span><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:calibri;="" mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">개씩 나누어서 나머지가 1이면 1승, 나머지가 2면 2승, 나머지가 0이면 3승 입니다.<br><br></span></b><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:calibri;="" mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">⊙&nbsp;</span></b><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">승게임은 1승,2승,3승 을 맞추는 게임입니다.<br><br></span></b><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:calibri;="" mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">⊙&nbsp;</span></b><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:calibri;="" mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">승무게임은 승 맞추기에 실패했을때를 대비하여 보험을 드는 것이라고 생각하시면 됩니다.<br><br></span></b><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:calibri;="" mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;"><span style="color: rgb(255, 0, 0);">예) 2승 1무 배팅 했을 때 결과값 1승 이면 배팅금을 잃지않고 되돌려 받습니다.<br><br></span></span></b><span style="font-family: 굴림, gulim; font-size: 11pt;"><span style="font-size: 18pt;">·················································································</span></span><span style="font-family: 굴림, gulim; font-size: 18pt;">·</span><span style="font-family: 굴림, gulim; font-size: 18pt;">·<br></span><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;"><br>『배당』<br><br></span></b><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:calibri;="" mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">승게임</span><span lang="KO" style="line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">&nbsp;</span><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">배팅 적중시</span><span lang="KO" style="line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">&nbsp;배팅골드의 1.95</span><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:calibri;="" mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">배가 추가</span><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">지급됩니다.<br><br></span></b><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:calibri;="" mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">승무게임</span><span lang="KO" style="line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">&nbsp;</span><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">배팅 승 적중시 배팅골드의</span><span lang="KO" style="line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">&nbsp;0.95</span><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:calibri;="" mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">배가</span><span lang="KO" style="line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">&nbsp;추가</span><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">지급됩니다.<br><br></span></b><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:calibri;="" mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="font-size: 11pt; font-family: 굴림, gulim; color: rgb(255, 0, 0);">표기되어있는 배당은 배팅한 금액을 제외하고 지급되는 금액을 말합니다<br></span></b><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:calibri;="" mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="font-size: 11pt; font-family: 굴림, gulim;"><br><span style="color: rgb(255, 0, 0);">EX) '승게임'에 1만골드 배팅후 적중시&nbsp; 배팅골드1만+적중골드1만9천500 = 총 2만9500골드지급</span><br></span></b><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;"><br></span></b><b><span lang="KO" malgun="" gothic","sans-serif";mso-ascii-font-family:="" calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"malgun="" gothic";="" mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:calibri;mso-hansi-theme-font:="" minor-latin"="" style="line-height: 15.6933px; font-size: 11pt; font-family: 굴림, gulim;">승무게임 배팅 무 적중시 배팅금 그대로 되돌려 받습니다.</span></b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                </div>
+                <div style="clear:both;"></div>
+                <div class="div_game_menu_zone">
+                    <div class="game_menu_title_line"> <img alt="" src="../img/title_skypark_games.png" /> </div>
+                    <div class="div_line_1px"></div>
+                    <div class="game_menu_line">
+                        <div class="game_menu_box" onclick="move_game_lobby('14');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner14.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">해달별</div>
+                                <div class="game_detail">하늘의 최강자를 가린다!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('2');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner2.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">바카라</div>
+                                <div class="game_detail">두근두근 악마의 게임!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('3');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner3.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">스피드 바카라</div>
+                                <div class="game_detail">쉴틈이 없다! 더욱 빠르게!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('4');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner4.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">보험 바카라</div>
+                                <div class="game_detail">안전을 위한 선택!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('5');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner5.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">포커</div>
+                                <div class="game_detail">최고의 패를 쥐어라!</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game_menu_line">
+                        <div class="game_menu_box" onclick="move_game_lobby('6');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner6.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">페어게임</div>
+                                <div class="game_detail">아슬아슬한 한끗 승부!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('7');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner7.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">스카이 홀짝</div>
+                                <div class="game_detail">둘중 하나만 골라 홀 OR 짝?</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('8');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner8.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">드래곤 타이거</div>
+                                <div class="game_detail">최강은 누구인가?</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('9');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner9.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">스카이 블랙잭</div>
+                                <div class="game_detail">버스트인가 메이드인가? 한장 더!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('10');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner10.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">삼치기</div>
+                                <div class="game_detail">그시절 우리가 좋아했던 게임</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game_menu_line">
+                        <div class="game_menu_box" onclick="move_game_lobby('11');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner11.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">주사위</div>
+                                <div class="game_detail">행운을 굴려보자!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('12');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner12.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">스카이 룰렛</div>
+                                <div class="game_detail">판은 오늘도 돌고있다</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('13');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner13.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">윷놀이</div>
+                                <div class="game_detail">신선하게 즐기는 우리네 전통놀이</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="height:20px;"></div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="div_footer">
+            <div style="height:46px; text-align:center; line-height:46px; color:#999;">
+                회사소개 &nbsp;&nbsp;<span style="color:#ddd;">|</span>&nbsp;&nbsp; <a href="../agreement.html" style="text-decoration:none; color:#999;">이용약관</a> &nbsp;&nbsp;<span style="color:#ddd;">|</span>&nbsp;&nbsp;개인정보처리방침 &nbsp;&nbsp;<span style="color:#ddd;">|</span>&nbsp;&nbsp; <a href="../Default.html" style="text-decoration:none; color:#999;">제휴문의</a> &nbsp;&nbsp;<span style="color:#ddd;">|</span>&nbsp;&nbsp; <a href="../Default.html" style="text-decoration:none; color:#999;">고객센터</a>
+            </div>
+            <div class="div_line_1px"></div>
+            <div>
+                <div style="width:1130px; margin-top:10px; margin-left:auto; margin-right:auto;">
+                    <img alt="" src="../img/bottom4.png" />
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">connect_chat_server();</script>
+    </div>
+    </form>
+</body>
+
+<!-- Mirrored from www.spark-pop.com/pc/guide/fantandetail.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Sep 2019 13:34:51 GMT -->
+</html>

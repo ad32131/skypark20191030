@@ -1,0 +1,178 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from www.spark-pop.com/pc/login.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Sep 2019 12:27:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="expires" content="-1" /><meta http-equiv="pragma" content="no-cache" /><meta http-equiv="cache-control" content="no-cache" /><meta http-equiv="pragma" content="no-cache" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="viewport" content="width=600, user-scalable=no" /><title>
+	스카이파크 로그인
+</title><link rel="stylesheet" href="css/common.css" /><link rel="stylesheet" href="css/loginad05.css?v=001" /> 
+    <script type="text/javascript">
+        function try_login() {
+            var id = document.getElementById('userid').value;
+            var passwd = document.getElementById('userpw').value;
+            if (id == "" || passwd == "") {
+                alert('아이디나 닉네임을 입력하지 않았습니다.');
+            }
+            else{
+                document.getElementById('form1').submit();
+            }
+
+        }
+        function pass_input_keypress(event) {
+			if(event.keyCode == "13")
+            {
+                try_login();
+                event.keyCode = 0;
+			}
+        }
+    </script>
+</head>
+<body style="min-width:600px;">
+    <form method="post" action="login_action.php" id="form1">
+<div class="aspNetHidden">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="http://www.spark-pop.com/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZP9C9hBc2ix_Vpo5xoxLayfasIIE57xDlc_0ZR4o0FghRYgxOEF3rgkEWuBuOJlvkQ2&amp;t=636935209199995647" type="text/javascript"></script>
+
+
+<script src="http://www.spark-pop.com/ScriptResource.axd?d=_NcE0aGrUc6EUyZzDzskkrFgTg2C18BPkmwwFwp-prWbR7ppAQtwjv-icqewN19SZsbeIf-w4rsaivknFsjJBdOF2H3Bo84bwbE-VDZ6hHtM3y49Q_uptO1vW9Wowk9UhY5xJ9kggYxGLGfH0U_nx1kicB5fbGJsG2ip_Il6_Ec1&amp;t=ffffffffa580202a" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax 클라이언트 쪽 프레임워크를 로드하지 못했습니다.');
+//]]>
+</script>
+
+<script src="http://www.spark-pop.com/ScriptResource.axd?d=Z_UoG0ltL_OjEHhyW1k7lIoXMvHBk7ZP8RK6k-V1b9cko9LaZDc2SNocJlK8t-xtM49BwwVyVhlWSGcPgQ8iKxKVW1dvFP1iWeze2GK-sjM2ZwJfBPFuNyhAERLzPVfMG4wTthd2XNElSiUVwvRGmt3c93DEYrJHwc4WuIlFriRV__Yp8Xzdf9cMrCvYm4ee0&amp;t=ffffffffa580202a" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var PageMethods = function() {
+PageMethods.initializeBase(this);
+this._timeout = 0;
+this._userContext = null;
+this._succeeded = null;
+this._failed = null;
+}
+PageMethods.prototype = {
+_get_path:function() {
+ var p = this.get_path();
+ if (p) return p;
+ else return PageMethods._staticInstance.get_path();},
+Try_Login:function(id,passwd,succeededCallback, failedCallback, userContext) {
+/// <param name="id" type="String">System.String</param>
+/// <param name="passwd" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'Try_Login',false,{id:id,passwd:passwd},succeededCallback,failedCallback,userContext); }}
+PageMethods.registerClass('PageMethods',Sys.Net.WebServiceProxy);
+PageMethods._staticInstance = new PageMethods();
+PageMethods.set_path = function(value) {
+PageMethods._staticInstance.set_path(value); }
+PageMethods.get_path = function() { 
+/// <value type="String" mayBeNull="true">The service url.</value>
+return PageMethods._staticInstance.get_path();}
+PageMethods.set_timeout = function(value) {
+PageMethods._staticInstance.set_timeout(value); }
+PageMethods.get_timeout = function() { 
+/// <value type="Number">The service timeout.</value>
+return PageMethods._staticInstance.get_timeout(); }
+PageMethods.set_defaultUserContext = function(value) { 
+PageMethods._staticInstance.set_defaultUserContext(value); }
+PageMethods.get_defaultUserContext = function() { 
+/// <value mayBeNull="true">The service default user context.</value>
+return PageMethods._staticInstance.get_defaultUserContext(); }
+PageMethods.set_defaultSucceededCallback = function(value) { 
+ PageMethods._staticInstance.set_defaultSucceededCallback(value); }
+PageMethods.get_defaultSucceededCallback = function() { 
+/// <value type="Function" mayBeNull="true">The service default succeeded callback.</value>
+return PageMethods._staticInstance.get_defaultSucceededCallback(); }
+PageMethods.set_defaultFailedCallback = function(value) { 
+PageMethods._staticInstance.set_defaultFailedCallback(value); }
+PageMethods.get_defaultFailedCallback = function() { 
+/// <value type="Function" mayBeNull="true">The service default failed callback.</value>
+return PageMethods._staticInstance.get_defaultFailedCallback(); }
+PageMethods.set_enableJsonp = function(value) { PageMethods._staticInstance.set_enableJsonp(value); }
+PageMethods.get_enableJsonp = function() { 
+/// <value type="Boolean">Specifies whether the service supports JSONP for cross domain calling.</value>
+return PageMethods._staticInstance.get_enableJsonp(); }
+PageMethods.set_jsonpCallbackParameter = function(value) { PageMethods._staticInstance.set_jsonpCallbackParameter(value); }
+PageMethods.get_jsonpCallbackParameter = function() { 
+/// <value type="String">Specifies the parameter name that contains the callback function name for a JSONP request.</value>
+return PageMethods._staticInstance.get_jsonpCallbackParameter(); }
+PageMethods.set_path("login.aspx");
+PageMethods.Try_Login= function(id,passwd,onSuccess,onFailed,userContext) {
+/// <param name="id" type="String">System.String</param>
+/// <param name="passwd" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.Try_Login(id,passwd,onSuccess,onFailed,userContext); }
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="0AF12AEE" />
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', [], [], [], 90, '');
+//]]>
+</script>
+
+        <div>
+            <div style="width:422px; padding:80px; background-color:white; margin-left:auto; margin-right:auto; margin-top:100px;">
+                <div>
+                    <a href="Default.html">
+                        <img alt="" src="img/skypark_logo_big2.png" style="width:422px;" />
+                    </a>
+                </div>
+                <div style="height:50px;"></div>
+                <div>
+                    <img alt="" src="img/skypark_login_title2.png" style="margin-left:5px;" />
+                </div>
+                <div style="height:5px;"></div>
+                <div style="margin-left:auto; margin-right:auto;">
+                    <input autocomplete="off" id="userid" name="userid" type="text" class="tb_account" placeholder="아이디를 입력하세요." />
+                </div>
+                <div style="height:5px;"></div>
+                <div style="margin-left:auto; margin-right:auto;">
+                    <input autocomplete="off" id="userpw" name="userpw" type="password" onkeypress="pass_input_keypress(event)" class="tb_account" placeholder="비밀번호를 입력하세요." />
+                </div>
+                <div style="height:30px; line-height:30px;">
+                    <span style="float:left;"><a href="http://www.spark-pop.com/SignUp.aspx" style=" color:#777;">간편 회원가입</a></span>
+                    <span style="float:right;"><a href="http://www.spark-pop.com/find_id.aspx" style="font-weight:100; color:#777;">아이디 찾기</a></span> 
+                    <span style="float:right; padding:0 10px; font-size:8px; color:#dbdbdb">|</span> <span style="float:right;"><a href="http://www.spark-pop.com/find_passwd.aspx" style="font-weight:100; color:#777;">비밀번호 찾기</a></span>
+                </div>
+                <div style="height:10px;"></div>
+                
+                <div style="margin-left:auto; margin-right:auto;">
+                    <input type="button" value="LOGIN"  onclick="try_login()" class="btlogin" />
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+<!-- Mirrored from www.spark-pop.com/pc/login.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Sep 2019 12:27:57 GMT -->
+</html>

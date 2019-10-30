@@ -1,0 +1,776 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from www.spark-pop.com/pc/item_shop/item_shop.aspx?kind=1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Sep 2019 14:04:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+	스카이파크
+</title>
+    <script src="../../Scripts/jquery-1.6.4.min.js"></script>
+	<script src="../../Scripts/jquery.signalR-2.4.0.min.js"></script>
+	<script src="http://www.spark-pop.com/signalr/hubs"></script>
+    
+    <link rel="stylesheet" href="../css/chat7aff.css?v=1905271" /><link rel="stylesheet" href="../css/layout7aff.css?v=1905271" /><link rel="stylesheet" href="../css/common7aff.css?v=1905271" /> 
+    <script type="text/javascript" src="../js/common7aff.js?v=1905271" ></script>
+    <script type="text/javascript">
+        var chat;
+        var szAccount = "";
+        var szNcik = "";
+        var chat_id = "";
+
+        function pop_note_list() {
+            var nWidth = 800;
+            var nHeight = 500;
+            var x = (screen.availWidth - nWidth) / 2;
+            var y = (screen.availHeight - nHeight) / 2;
+            window.open("../pop/pop_note_list.html", "note_list", "width=" + nWidth + ",height=" + nHeight + ",toolbar=no,top=" + y + ",left=" + x + ",directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes");
+        }
+
+        function pop_user_info() {
+            var nWidth = 800;
+            var nHeight = 500;
+            var x = (screen.availWidth - nWidth) / 2;
+            var y = (screen.availHeight - nHeight) / 2;
+            window.open("../pop/pop_user_info.html", "user_info", "width=" + nWidth + ",height=" + nHeight + ",toolbar=no,top=" + y + ",left=" + x + ",directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes");
+        }
+
+        function pop_rand_box() {
+            var nWidth = 420;
+            var nHeight = 600;
+            var x = (screen.availWidth - nWidth) / 2;
+            var y = (screen.availHeight - nHeight) / 2;
+            window.open("../pop/pop_rand_box.html", "rand_box", "width=" + nWidth + ",height=" + nHeight + ",toolbar=no,top=" + y + ",left=" + x + ",directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes");
+        }
+        function pop_api_sample() {
+            var nWidth = 900;
+            var nHeight = 1000;
+            var x = (screen.availWidth - nWidth) / 2;
+            var y = (screen.availHeight - nHeight) / 2;
+            window.open("../pop/api_sample_view.html", "rand_box", "width=" + nWidth + ",height=" + nHeight + ",toolbar=no,top=" + y + ",left=" + x + ",directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes");
+        }
+
+    </script>
+    <script type="text/javascript" src="../js/chat3b9b.js?v=20190911212502" ></script>
+    
+    <style type="text/css">
+        .button_cancel {width:100px; height:30px; line-height:30px; margin:5px; background-color:#8f1e1e; cursor:pointer; border:0; border-radius:5px; color:white;}
+        .button_ok{width:170px; height:30px; line-height:30px; margin:5px; background-color:#2d61aa; cursor:pointer; border:0; border-radius:5px; color:white;}
+        .sub_menu a{width:150px;}
+        .div_content_pd5 .subject {background-image:url('../img/page_title/title_itemshop.png'); background-repeat:no-repeat;}
+    </style>
+    <link href="css/itemshop3b9b.css?v=20190911212502" rel="stylesheet" />
+    <script type="text/javascript">
+        function Change_Money_String(szMoney) {
+            var formatNum = "";
+            szMoney = szMoney.replace(/,/g, "");
+            formatNum = szMoney.toString().replace(/(\d)(?=(?:\d{3})+$)/g, "$1,");
+            return formatNum;
+        }
+        //-----------------------------------------------------------------------------------------------
+        function get_now_gif_gold() {
+            var nNow_Money = 0;
+            nNow_Money = document.getElementById("ipGold").value;
+            nNow_Money = str_replace(",", "", nNow_Money);
+            return nNow_Money;
+        }
+        //-----------------------------------------------------------------------------------------------
+        function sort_gold_str() {
+            
+            var gold = get_now_gif_gold();
+            document.getElementById("ipGold").value = Change_Money_String(gold);
+        }
+        //-----------------------------------------------------------------------------------------------
+        function buy_grade_item(idx) {
+            if (confirm('\n정말로 해당 아이템을 구매 하시겠습니까?\n')) {
+                PageMethods.Try_Buy_Grade_Item(idx,
+                function (result) {
+                    if (result == "ok") {
+                        alert("요청이 완료되었습니다.");
+                        location.href = location.href;
+                    }
+                    else if (result == "logout") {
+                        alert("로그인이 필요합니다.");
+                        location.href = location.href;
+                    }
+                    else {
+                        alert(result);
+                    }
+                        });
+                }
+        }
+        //--------------------------------------------------------------------------------------
+        function buy_chat_item(idx) {
+            if (confirm('\n정말로 해당 아이템을 구매 하시겠습니까?\n')) {
+                PageMethods.Try_Buy_Chat_Item(idx,
+                function (result) {
+                    if (result == "ok") {
+                        alert("요청이 완료되었습니다.");
+                        location.href = location.href;
+                    }
+                    else if (result == "logout") {
+                        alert("로그인이 필요합니다.");
+                        location.href = location.href;
+                    }
+                    else {
+                        alert(result);
+                    }
+                        });
+                }
+        }
+        //--------------------------------------------------------------------------------------
+        function sell_grade_item(idx) {
+            if (confirm('\n정말로 해당 아이템을 판매 하시겠습니까?\n')) {
+                PageMethods.Try_Sell_Grade_Item(idx,
+                    function (result) {
+                        if (result == "ok") {
+                            alert("요청이 완료되었습니다.");
+                            location.href = location.href;
+                        }
+                        else if (result == "logout") {
+                            alert("로그인이 필요합니다.");
+                            location.href = location.href;
+                        }
+                        else {
+                            alert(result);
+                        }
+                    });
+            }
+        }
+        //--------------------------------------------------------------------------------------
+        function try_buy_clear_rate_item(idx) {
+            if (confirm('\n정말로 해당 아이템을 구매 하시겠습니까?\n')) {
+                PageMethods.Try_Buy_Clear_Rate_Item(idx,
+                function (result) {
+                    if (result == "ok") {
+                        alert("요청이 완료되었습니다.");
+                        location.href = location.href;
+                    }
+                    else if (result == "logout") {
+                        alert("로그인이 필요합니다.");
+                        location.href = location.href;
+                    }
+                    else {
+                        alert(result);
+                    }
+                        });
+                }
+        }
+        //--------------------------------------------------------------------------------------
+        function try_gift_gold() {
+            var gold = document.getElementById('ipGold').value;
+            var nick = document.getElementById('ipGift_Nick').value;
+            if (gold == "" || nick == "") {
+                alert('선물하기에 필요한 골드나 닉네임을 입력하지 않았습니다.');
+            }
+
+            if (confirm('\n정말로 ' + gold + ' Gold 를\n' + nick + '님 에게 선물 하시겠습니까?')) {
+                gold = str_replace(",", "", gold);
+                
+                PageMethods.Try_Gift_Gold(gold,nick,
+                    function (result) {
+                        if (result == "ok") {
+                            alert("요청이 완료되었습니다.");
+                            location.href = location.href;
+                        }
+                        else if (result == "logout") {
+                            alert("로그인이 필요합니다.");
+                            location.href = location.href;
+                        }
+                        else {
+                            alert(result);
+                        }
+                    });
+            }
+        }
+        //--------------------------------------------------------------------------------------
+        function close_gift_popup() {
+            document.getElementById('div_gif_gold_box').style.display = "none";
+        }
+        //--------------------------------------------------------------------------------------
+         function open_gift_gold_box() {
+            document.getElementById('div_gif_gold_box').style.display = "block";
+         }
+        //--------------------------------------------------------------------------------------
+        function str_replace(search, replace, subject, count) { var i = 0, j = 0, temp = '', repl = '', sl = 0, fl = 0, f = [].concat(search), r = [].concat(replace), s = subject, ra = r instanceof Array, sa = s instanceof Array; s = [].concat(s); if (count) { this.window[count] = 0; } for (i = 0, sl = s.length; i < sl; i++) { if (s[i] === '') { continue; } for (j = 0, fl = f.length; j < fl; j++) { temp = s[i] + ''; repl = ra ? (r[j] !== undefined ? r[j] : '') : r[0]; s[i] = (temp).split(f[j]).join(repl); if (count && s[i] !== temp) { this.window[count] += (temp.length - s[i].length) / f[j].length; } } } return sa ? s : s[0]; } function substr(str, start, len) { var i = 0, allBMP = true, es = 0, el = 0, se = 0, ret = ''; str += ''; var end = str.length; this.php_js = this.php_js || {}; this.php_js.ini = this.php_js.ini || {}; switch ((this.php_js.ini['unicode.semantics'] && this.php_js.ini['unicode.semantics'].local_value.toLowerCase())) { case 'on': for (i = 0; i < str.length; i++) { if (/[\uD800-\uDBFF]/.test(str.charAt(i)) && /[\uDC00-\uDFFF]/.test(str.charAt(i + 1))) { allBMP = false; break; } } if (!allBMP) { if (start < 0) { for (i = end - 1, es = (start += end) ; i >= es; i--) { if (/[\uDC00-\uDFFF]/.test(str.charAt(i)) && /[\uD800-\uDBFF]/.test(str.charAt(i - 1))) { start--; es--; } } } else { var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g; while ((surrogatePairs.exec(str)) != null) { var li = surrogatePairs.lastIndex; if (li - 2 < start) { start++; } else { break; } } } if (start >= end || start < 0) { return false; } if (len < 0) { for (i = end - 1, el = (end += len) ; i >= el; i--) { if (/[\uDC00-\uDFFF]/.test(str.charAt(i)) && /[\uD800-\uDBFF]/.test(str.charAt(i - 1))) { end--; el--; } } if (start > end) { return false; } return str.slice(start, end); } else { se = start + len; for (i = start; i < se; i++) { ret += str.charAt(i); if (/[\uD800-\uDBFF]/.test(str.charAt(i)) && /[\uDC00-\uDFFF]/.test(str.charAt(i + 1))) { se++; } } return ret; } break; } case 'off': default: if (start < 0) { start += end; } end = typeof len === 'undefined' ? end : (len < 0 ? len + end : len + start); return start >= str.length || start < 0 || start > end ? !1 : str.slice(start, end); } return undefined; } 
+    </script>
+</head>
+<body>
+    
+    <form method="post" action="http://www.spark-pop.com/pc/item_shop/item_shop.aspx?kind=1" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="ZgQOEF8UIjvuKFUxafnRwTi11J3gQpv6lUjgur2/BnPcwAyhwfstrcQ90JjD6rgYX0ZcgyQeWxkCcVsRJQ2uEpc+E7pCCWtpbv5JlVQ4ocE=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="http://www.spark-pop.com/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZP9C9hBc2ix_Vpo5xoxLayfasIIE57xDlc_0ZR4o0FghRYgxOEF3rgkEWuBuOJlvkQ2&amp;t=636935209199995647" type="text/javascript"></script>
+
+
+<script src="http://www.spark-pop.com/ScriptResource.axd?d=_NcE0aGrUc6EUyZzDzskkrFgTg2C18BPkmwwFwp-prWbR7ppAQtwjv-icqewN19SZsbeIf-w4rsaivknFsjJBdOF2H3Bo84bwbE-VDZ6hHtM3y49Q_uptO1vW9Wowk9UhY5xJ9kggYxGLGfH0U_nx1kicB5fbGJsG2ip_Il6_Ec1&amp;t=ffffffffa580202a" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax 클라이언트 쪽 프레임워크를 로드하지 못했습니다.');
+//]]>
+</script>
+
+<script src="http://www.spark-pop.com/ScriptResource.axd?d=Z_UoG0ltL_OjEHhyW1k7lIoXMvHBk7ZP8RK6k-V1b9cko9LaZDc2SNocJlK8t-xtM49BwwVyVhlWSGcPgQ8iKxKVW1dvFP1iWeze2GK-sjM2ZwJfBPFuNyhAERLzPVfMG4wTthd2XNElSiUVwvRGmt3c93DEYrJHwc4WuIlFriRV__Yp8Xzdf9cMrCvYm4ee0&amp;t=ffffffffa580202a" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var PageMethods = function() {
+PageMethods.initializeBase(this);
+this._timeout = 0;
+this._userContext = null;
+this._succeeded = null;
+this._failed = null;
+}
+PageMethods.prototype = {
+_get_path:function() {
+ var p = this.get_path();
+ if (p) return p;
+ else return PageMethods._staticInstance.get_path();},
+Try_Buy_Grade_Item:function(item_idx,succeededCallback, failedCallback, userContext) {
+/// <param name="item_idx" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'Try_Buy_Grade_Item',false,{item_idx:item_idx},succeededCallback,failedCallback,userContext); },
+Try_Buy_Chat_Item:function(item_idx,succeededCallback, failedCallback, userContext) {
+/// <param name="item_idx" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'Try_Buy_Chat_Item',false,{item_idx:item_idx},succeededCallback,failedCallback,userContext); },
+Try_Sell_Grade_Item:function(item_idx,succeededCallback, failedCallback, userContext) {
+/// <param name="item_idx" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'Try_Sell_Grade_Item',false,{item_idx:item_idx},succeededCallback,failedCallback,userContext); },
+Try_Gift_Gold:function(gold,nick,succeededCallback, failedCallback, userContext) {
+/// <param name="gold" type="String">System.String</param>
+/// <param name="nick" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'Try_Gift_Gold',false,{gold:gold,nick:nick},succeededCallback,failedCallback,userContext); },
+Try_Buy_Clear_Rate_Item:function(idx,succeededCallback, failedCallback, userContext) {
+/// <param name="idx" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'Try_Buy_Clear_Rate_Item',false,{idx:idx},succeededCallback,failedCallback,userContext); }}
+PageMethods.registerClass('PageMethods',Sys.Net.WebServiceProxy);
+PageMethods._staticInstance = new PageMethods();
+PageMethods.set_path = function(value) {
+PageMethods._staticInstance.set_path(value); }
+PageMethods.get_path = function() { 
+/// <value type="String" mayBeNull="true">The service url.</value>
+return PageMethods._staticInstance.get_path();}
+PageMethods.set_timeout = function(value) {
+PageMethods._staticInstance.set_timeout(value); }
+PageMethods.get_timeout = function() { 
+/// <value type="Number">The service timeout.</value>
+return PageMethods._staticInstance.get_timeout(); }
+PageMethods.set_defaultUserContext = function(value) { 
+PageMethods._staticInstance.set_defaultUserContext(value); }
+PageMethods.get_defaultUserContext = function() { 
+/// <value mayBeNull="true">The service default user context.</value>
+return PageMethods._staticInstance.get_defaultUserContext(); }
+PageMethods.set_defaultSucceededCallback = function(value) { 
+ PageMethods._staticInstance.set_defaultSucceededCallback(value); }
+PageMethods.get_defaultSucceededCallback = function() { 
+/// <value type="Function" mayBeNull="true">The service default succeeded callback.</value>
+return PageMethods._staticInstance.get_defaultSucceededCallback(); }
+PageMethods.set_defaultFailedCallback = function(value) { 
+PageMethods._staticInstance.set_defaultFailedCallback(value); }
+PageMethods.get_defaultFailedCallback = function() { 
+/// <value type="Function" mayBeNull="true">The service default failed callback.</value>
+return PageMethods._staticInstance.get_defaultFailedCallback(); }
+PageMethods.set_enableJsonp = function(value) { PageMethods._staticInstance.set_enableJsonp(value); }
+PageMethods.get_enableJsonp = function() { 
+/// <value type="Boolean">Specifies whether the service supports JSONP for cross domain calling.</value>
+return PageMethods._staticInstance.get_enableJsonp(); }
+PageMethods.set_jsonpCallbackParameter = function(value) { PageMethods._staticInstance.set_jsonpCallbackParameter(value); }
+PageMethods.get_jsonpCallbackParameter = function() { 
+/// <value type="String">Specifies the parameter name that contains the callback function name for a JSONP request.</value>
+return PageMethods._staticInstance.get_jsonpCallbackParameter(); }
+PageMethods.set_path("item_shop.aspx");
+PageMethods.Try_Buy_Grade_Item= function(item_idx,onSuccess,onFailed,userContext) {
+/// <param name="item_idx" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.Try_Buy_Grade_Item(item_idx,onSuccess,onFailed,userContext); }
+PageMethods.Try_Buy_Chat_Item= function(item_idx,onSuccess,onFailed,userContext) {
+/// <param name="item_idx" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.Try_Buy_Chat_Item(item_idx,onSuccess,onFailed,userContext); }
+PageMethods.Try_Sell_Grade_Item= function(item_idx,onSuccess,onFailed,userContext) {
+/// <param name="item_idx" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.Try_Sell_Grade_Item(item_idx,onSuccess,onFailed,userContext); }
+PageMethods.Try_Gift_Gold= function(gold,nick,onSuccess,onFailed,userContext) {
+/// <param name="gold" type="String">System.String</param>
+/// <param name="nick" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.Try_Gift_Gold(gold,nick,onSuccess,onFailed,userContext); }
+PageMethods.Try_Buy_Clear_Rate_Item= function(idx,onSuccess,onFailed,userContext) {
+/// <param name="idx" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.Try_Buy_Clear_Rate_Item(idx,onSuccess,onFailed,userContext); }
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="9AFD068F" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="syWuDnSgIjudn2Rlqjjc1uPh2DzUBhe8NjWj63HeXCjDnu0KChGAGkxLvgj7AlFqSo5kHo2QPtIBrzNcN7bqQhFl634DrHvYRq0Wd+YkZ+h8Y12YhMsbmmswiOq2dPVa" />
+</div>
+        <div style="display:none"><input type="submit" name="ctl00$btnNull" value="" onclick="return false;" id="btnNull" /></div>
+        <div style="position:fixed; left:-9000px;"><img alt="" src="../img/main_logo4.png" /></div>
+    <div>
+        <div class="main_page_top_line">
+            <div class="top_line_zone" style="font-size:12px;">
+                <a href="javascript:pop_rand_box();" style="padding:0; margin:0;">
+                    <div style="float:left; margin-left:10px;">
+                        <div style="width:23px; padding:5px 0px; height:20px; float:left;"><img src="../img/icon/rand_box_icon.png" style="height:20px; display:block;" /></div>
+                        <div style="color:#c5cfff; float:left; text-align:left;">랜덤박스</div>
+                        <div style="width:100px; padding:9px; height:12px; float:left;">
+                            <div style="height:12px; border-radius:5px; background-color:#c2ebff;">
+                                <div style="float:left; height:12px; border-radius:5px; background-color:#2ef706; width:0px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div style="color:#c5cfff; float:left; text-align:left;">달성률 0%</div>
+                    </div>
+                </a>
+                <a href="javascript:pop_api_sample();">영상API샘플</a>
+                <a href="../Default.html">영상API문의</a>
+                <a href="../Default.html">고객센터</a>
+                <a href="../guide/pairdetail.html" style="margin-right:10px;">로그아웃</a>
+            </div>
+        </div>
+        <div class="main_body">
+            <div class="logo_line">
+                <div class="logo_zone">
+                    <a href="../Default.html">
+                        <img alt="" src="../img/main_logo4.png" />
+                    </a>
+                </div>
+                <div class="main_menu"><a href="../lobby.html"><img alt="" src="../img/mnt01.png" /></a></div>
+                <div class="main_menu"><a href="../guide/gameguide.html"><img alt="" src="../img/mnt02.png" /></a></div>
+                <div class="main_menu"><a href="item_shop.html"><img alt="" src="../img/mnt03.png" /></a></div>
+                <div class="main_menu"><a href="../notice_board.html"><img alt="" src="../img/mnt04.png" /></a></div>
+                <div class="main_menu"><a href="../dealer_intro.html"><img alt="" src="../img/mnt05.png" /></a></div>
+                <div class="main_menu"><a href="../free_refill.html"><img alt="" src="../img/mnt06.png" /></a></div>
+                <div class="main_menu"><a href="../user_rank.html"><img alt="" src="../img/mnt07.png" /></a></div>
+                <div class="main_menu"><a href="../game_result.html"><img alt="" src="../img/mnt08.png" /></a></div>
+            </div>
+            <div>
+                <div class="div_chat">
+                    <div class="login_box">
+                        
+                        <div style="height:4px;"></div>
+                        <div>
+                            <div style="width:280px; margin-left:auto; margin-right:auto;">
+                                <div style="height:40px; line-height:40px;">
+                                    로그인 이후 컨텐츠 이용이 가능합니다.
+                                </div> 
+                                <div class="login_button_box">
+                                    <a href="../login.html"><img alt="" src="../img/login_button.png" /></a>
+                                </div>
+                                <div style="height:40px; line-height:40px;">
+                                    <span style="float:left;"><a href="http://www.spark-pop.com/SignUp.aspx">간편 회원가입</a></span>
+                                    <span style="float:right;"><a href="http://www.spark-pop.com/find_id.aspx" style="font-weight:100;">아이디 찾기</a></span> 
+                                    <span style="float:right; padding:0 10px; font-size:8px; color:#dbdbdb">|</span> <span style="float:right;"><a href="http://www.spark-pop.com/find_passwd.aspx" style="font-weight:100;">비밀번호 찾기</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="div_split_height"></div>
+                    <div class="chat_box">
+                        <div style="position:absolute; height:440px; width:60px; margin-left:-64px;margin-top:-3px;">
+                            <div id="enter_room_chat" style="height:63px; cursor:pointer;">
+                                <img alt="" src="../img/chat_room_icon2.png" />
+                            </div>
+                        </div>
+                        <div id="msgs" class="msg_box">
+                            <div style="text-align:center;">
+                                <img alt="" src="../img/chat_loading.gif" style="margin-left:auto; margin-right:auto;" />
+                            </div>
+                        </div>
+                        <div class="div_chat_input_line">
+                            <input autocomplete="off" type="text" id="msg" onkeypress="javascript: msg_input_keypress(event);" class="chat_msg_input" />
+	                        <input type="button" id="send" value="전송" / class="send_button" />
+                        </div>
+                    </div>
+                </div>
+                <div class="div_content">
+                    
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ContentPlaceHolder1$ScriptManager1', 'form1', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+    <div class="div_content_pd5">
+        <div class="subject" ></div>
+        <div style="height:18px;"></div>
+        <div class="sub_menu">
+            <ul>
+                <li><a href="item_shope63b.html?kind=0" >모든 아이템</a></li>
+                <li><a href="item_shopb295.html?kind=1"class="active">등급 아이템</a></li>
+                <li><a href="item_shop7f3a.html?kind=2">기능성 아이템</a></li>
+                <li><a href="item_shop02cf.html?kind=3">채팅 아이템</a></li>
+            </ul>
+        </div>
+        <div style="height:0px; position:absolute; width:100%;">
+            <div id="div_gif_gold_box" style="position:fixed; display:none; height:180px; width:320px; margin-top:50px; padding:10px; background-color:#eee; z-index:9999; border:1px solid #aaa; margin-left:225px"> 
+                <div style="height:158px; width:298px;  padding:10px; background-color:#fff; border:1px solid #aaa; margin-left:auto; margin-right:auto; color:black;">
+                    <div style="height:5px;"></div>
+                    <table style="width:300px; height:100px; position:relative; top:0px; left:0px;">
+                            <tr>
+                                <td style="width:100px; height:100px; text-align:right;">
+                                    <img alt="" src="img/goldbox.png" style="width:90px; height:90px; display:inline-block;" />
+                                </td>
+                                <td style="vertical-align:top;">
+                                    <div style="text-align:right; margin-top:8px;"><img alt="" src="img/title_gifgold.png" style="margin-right:10px;"/></div>
+                                    <div style="height:15px;"></div>
+                                    <div style="height:21px; text-align:right;"> 골드 <input id="ipGold" onkeyup="sort_gold_str()"  type="text" value="" style="width:130px; margin-right:10px; padding-right:5px; text-align:right;" /></div>
+                                    <div style="height:5px;"></div>
+                                    <div style="height:21px; text-align:right;"> 닉네임 <input id="ipGift_Nick" type="text" value="" style="width:135px; margin-right:10px; text-align:center;" />
+                                    </div>
+                                </td>
+                            </tr>
+                    </table>
+                    <div style="height:10px;"></div>
+                    <div style="text-align:center;">
+                    
+                        <input class="button_cancel" onclick="close_gift_popup();" value="취소" type="button" />
+                        <input class="button_ok" onclick="try_gift_gold();" value="선물하기" type="button" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="height:18px;"></div>
+        
+                <div style="margin:5px; width:175px; padding:5px; border: 1px solid #dddddd;  float:left; ">
+                    <div style="width:101px; height:101px; margin: 20px auto ;">
+                        <img alt="" src="img/silver_belt1.png" style="height:120px; width:100px;" />
+                    </div>
+                    <div>
+                        <div class="item_name">은띠</div> 
+                        <div class="item_tip">- 혜택 -<br/>오천방 입장 가능.  </div> 
+                    </div>
+                       
+                    <div style="margin: 8px 20px 8px 20px;"></div> 
+                    <div style="margin-top:16px; text-align:center;"> 
+                        <span class="item_name">500,000 골드</span> 
+                    </div> 
+                    <div style="height:10px;"></div> 
+                    <div style="text-align:center;">
+                        <a href="javascript:alert('로그인 이후 구매가 가능합니다.');" style="width:120px;" class="blue_button" >구매하기</a>
+                    </div>
+                    <div style="height:10px;"></div> 
+                 </div>
+        
+                <div style="margin:5px; width:175px; padding:5px; border: 1px solid #dddddd;  float:left; ">
+                    <div style="width:101px; height:101px; margin: 20px auto ;">
+                        <img alt="" src="img/silver_belt2.png" style="height:120px; width:100px;" />
+                    </div>
+                    <div>
+                        <div class="item_name">은쌍띠</div> 
+                        <div class="item_tip">- 혜택 -<br/>은띠까지의 모든 혜택.<br/>일만방 입장 가능.<br/>선물하기 가능.  </div> 
+                    </div>
+                       
+                    <div style="margin: 8px 20px 8px 20px;"></div> 
+                    <div style="margin-top:16px; text-align:center;"> 
+                        <span class="item_name">1,000,000 골드</span> 
+                    </div> 
+                    <div style="height:10px;"></div> 
+                    <div style="text-align:center;">
+                        <a href="javascript:alert('로그인 이후 구매가 가능합니다.');" style="width:120px;" class="blue_button" >구매하기</a>
+                    </div>
+                    <div style="height:10px;"></div> 
+                 </div>
+        
+                <div style="margin:5px; width:175px; padding:5px; border: 1px solid #dddddd;  float:left; ">
+                    <div style="width:101px; height:101px; margin: 20px auto ;">
+                        <img alt="" src="img/gold_belt1.png" style="height:120px; width:100px;" />
+                    </div>
+                    <div>
+                        <div class="item_name">금띠</div> 
+                        <div class="item_tip">- 혜택 -<br/>은쌍띠까지의 모든 혜택.<br/>오만방 입장 가능.<br/>[아봉권] 구입가능.  </div> 
+                    </div>
+                       
+                    <div style="margin: 8px 20px 8px 20px;"></div> 
+                    <div style="margin-top:16px; text-align:center;"> 
+                        <span class="item_name">5,000,000 골드</span> 
+                    </div> 
+                    <div style="height:10px;"></div> 
+                    <div style="text-align:center;">
+                        <a href="javascript:alert('로그인 이후 구매가 가능합니다.');" style="width:120px;" class="blue_button" >구매하기</a>
+                    </div>
+                    <div style="height:10px;"></div> 
+                 </div>
+        
+                <div style="margin:5px; width:175px; padding:5px; border: 1px solid #dddddd;  float:left; ">
+                    <div style="width:101px; height:101px; margin: 20px auto ;">
+                        <img alt="" src="img/gold_belt2.png" style="height:120px; width:100px;" />
+                    </div>
+                    <div>
+                        <div class="item_name">금쌍띠</div> 
+                        <div class="item_tip">- 혜택 -<br/>금띠까지의 모든 혜택.<br/>십만방 입장가능.<br/>[아봉쉴드] 구입가능.  </div> 
+                    </div>
+                       
+                    <div style="margin: 8px 20px 8px 20px;"></div> 
+                    <div style="margin-top:16px; text-align:center;"> 
+                        <span class="item_name">10,000,000 골드</span> 
+                    </div> 
+                    <div style="height:10px;"></div> 
+                    <div style="text-align:center;">
+                        <a href="javascript:alert('로그인 이후 구매가 가능합니다.');" style="width:120px;" class="blue_button" >구매하기</a>
+                    </div>
+                    <div style="height:10px;"></div> 
+                 </div>
+        
+                <div style="margin:5px; width:175px; padding:5px; border: 1px solid #dddddd;  float:left; ">
+                    <div style="width:101px; height:101px; margin: 20px auto ;">
+                        <img alt="" src="img/silver_ring.png" style="height:120px; width:100px;" />
+                    </div>
+                    <div>
+                        <div class="item_name">은반지</div> 
+                        <div class="item_tip">- 혜택 -<br/>금쌍띠까지의 모든 혜택.<br/>오십만방 입장 가능.  </div> 
+                    </div>
+                       
+                    <div style="margin: 8px 20px 8px 20px;"></div> 
+                    <div style="margin-top:16px; text-align:center;"> 
+                        <span class="item_name">50,000,000 골드</span> 
+                    </div> 
+                    <div style="height:10px;"></div> 
+                    <div style="text-align:center;">
+                        <a href="javascript:alert('로그인 이후 구매가 가능합니다.');" style="width:120px;" class="blue_button" >구매하기</a>
+                    </div>
+                    <div style="height:10px;"></div> 
+                 </div>
+        
+                <div style="margin:5px; width:175px; padding:5px; border: 1px solid #dddddd;  float:left; ">
+                    <div style="width:101px; height:101px; margin: 20px auto ;">
+                        <img alt="" src="img/gold_ring.png" style="height:120px; width:100px;" />
+                    </div>
+                    <div>
+                        <div class="item_name">금반지</div> 
+                        <div class="item_tip">- 혜택 -<br/>은반지까지의 모든 혜택.<br/>백만방 입장 가능.  </div> 
+                    </div>
+                       
+                    <div style="margin: 8px 20px 8px 20px;"></div> 
+                    <div style="margin-top:16px; text-align:center;"> 
+                        <span class="item_name">100,000,000 골드</span> 
+                    </div> 
+                    <div style="height:10px;"></div> 
+                    <div style="text-align:center;">
+                        <a href="javascript:alert('로그인 이후 구매가 가능합니다.');" style="width:120px;" class="blue_button" >구매하기</a>
+                    </div>
+                    <div style="height:10px;"></div> 
+                 </div>
+        
+                <div style="margin:5px; width:175px; padding:5px; border: 1px solid #dddddd;  float:left; ">
+                    <div style="width:101px; height:101px; margin: 20px auto ;">
+                        <img alt="" src="img/silver_crown1.png" style="height:120px; width:100px;" />
+                    </div>
+                    <div>
+                        <div class="item_name">은관</div> 
+                        <div class="item_tip">- 혜택 -<br/>금반지까지의 모든 혜택.<br/>오백만방 입장 가능.  </div> 
+                    </div>
+                       
+                    <div style="margin: 8px 20px 8px 20px;"></div> 
+                    <div style="margin-top:16px; text-align:center;"> 
+                        <span class="item_name">500,000,000 골드</span> 
+                    </div> 
+                    <div style="height:10px;"></div> 
+                    <div style="text-align:center;">
+                        <a href="javascript:alert('로그인 이후 구매가 가능합니다.');" style="width:120px;" class="blue_button" >구매하기</a>
+                    </div>
+                    <div style="height:10px;"></div> 
+                 </div>
+        
+                <div style="margin:5px; width:175px; padding:5px; border: 1px solid #dddddd;  float:left; ">
+                    <div style="width:101px; height:101px; margin: 20px auto ;">
+                        <img alt="" src="img/gold_crown1.png" style="height:120px; width:100px;" />
+                    </div>
+                    <div>
+                        <div class="item_name">금관</div> 
+                        <div class="item_tip">- 혜택 -<br/>은관까지의 모든 혜택.<br/>천만방 입장 가능.  </div> 
+                    </div>
+                       
+                    <div style="margin: 8px 20px 8px 20px;"></div> 
+                    <div style="margin-top:16px; text-align:center;"> 
+                        <span class="item_name">1,000,000,000 골드</span> 
+                    </div> 
+                    <div style="height:10px;"></div> 
+                    <div style="text-align:center;">
+                        <a href="javascript:alert('로그인 이후 구매가 가능합니다.');" style="width:120px;" class="blue_button" >구매하기</a>
+                    </div>
+                    <div style="height:10px;"></div> 
+                 </div>
+        
+        
+    </div>
+    
+
+                </div>
+                <div style="clear:both;"></div>
+                <div class="div_game_menu_zone">
+                    <div class="game_menu_title_line"> <img alt="" src="../img/title_skypark_games.png" /> </div>
+                    <div class="div_line_1px"></div>
+                    <div class="game_menu_line">
+                        <div class="game_menu_box" onclick="move_game_lobby('14');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner14.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">해달별</div>
+                                <div class="game_detail">하늘의 최강자를 가린다!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('2');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner2.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">바카라</div>
+                                <div class="game_detail">두근두근 악마의 게임!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('3');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner3.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">스피드 바카라</div>
+                                <div class="game_detail">쉴틈이 없다! 더욱 빠르게!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('4');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner4.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">보험 바카라</div>
+                                <div class="game_detail">안전을 위한 선택!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('5');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner5.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">포커</div>
+                                <div class="game_detail">최고의 패를 쥐어라!</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game_menu_line">
+                        <div class="game_menu_box" onclick="move_game_lobby('6');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner6.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">페어게임</div>
+                                <div class="game_detail">아슬아슬한 한끗 승부!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('7');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner7.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">스카이 홀짝</div>
+                                <div class="game_detail">둘중 하나만 골라 홀 OR 짝?</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('8');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner8.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">드래곤 타이거</div>
+                                <div class="game_detail">최강은 누구인가?</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('9');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner9.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">스카이 블랙잭</div>
+                                <div class="game_detail">버스트인가 메이드인가? 한장 더!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('10');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner10.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">삼치기</div>
+                                <div class="game_detail">그시절 우리가 좋아했던 게임</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game_menu_line">
+                        <div class="game_menu_box" onclick="move_game_lobby('11');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner11.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">주사위</div>
+                                <div class="game_detail">행운을 굴려보자!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('12');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner12.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">스카이 룰렛</div>
+                                <div class="game_detail">판은 오늘도 돌고있다</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('13');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner13.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">윷놀이</div>
+                                <div class="game_detail">신선하게 즐기는 우리네 전통놀이</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="height:20px;"></div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="div_footer">
+            <div style="height:46px; text-align:center; line-height:46px; color:#999;">
+                회사소개 &nbsp;&nbsp;<span style="color:#ddd;">|</span>&nbsp;&nbsp; <a href="../agreement.html" style="text-decoration:none; color:#999;">이용약관</a> &nbsp;&nbsp;<span style="color:#ddd;">|</span>&nbsp;&nbsp;개인정보처리방침 &nbsp;&nbsp;<span style="color:#ddd;">|</span>&nbsp;&nbsp; <a href="../Default.html" style="text-decoration:none; color:#999;">제휴문의</a> &nbsp;&nbsp;<span style="color:#ddd;">|</span>&nbsp;&nbsp; <a href="../Default.html" style="text-decoration:none; color:#999;">고객센터</a>
+            </div>
+            <div class="div_line_1px"></div>
+            <div>
+                <div style="width:1130px; margin-top:10px; margin-left:auto; margin-right:auto;">
+                    <img alt="" src="../img/bottom4.png" />
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">connect_chat_server();</script>
+    </div>
+    </form>
+</body>
+
+<!-- Mirrored from www.spark-pop.com/pc/item_shop/item_shop.aspx?kind=1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Sep 2019 14:04:00 GMT -->
+</html>

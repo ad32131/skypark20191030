@@ -1,0 +1,407 @@
+
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.spark-pop.com/pc/game/baccarat/baccarat_mini.aspx?room=3 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Sep 2019 14:21:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="viewport" content="width=830, user-scalable=no" /><title>
+
+</title>
+    <style type="text/css">
+        .tb_solid_table { width:100%; border-collapse:separate; empty-cells:show; padding:0px;  border-spacing:1px; background-color:#777;}
+        .tb_solid_table th {padding:0px;}
+        .tb_solid_table td {padding:0px; background-color:#000; padding-left:5px;}
+    </style>
+    <script src="../../../Scripts/jquery-1.6.4.min.js"></script>
+    <script src="../../js/moment.js"></script>
+    <script src="../../js/monet-with-locales3860.js?v=1"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500" rel="stylesheet" />
+    <link rel="stylesheet" href="../common/css/mini_game_layout2e09.css?v=20190911212750"/> 
+    <link rel="stylesheet" href="../common/css/cards6b1c.css?v=01" /> 
+    <script type="text/javascript" src="../../js/common20eb.js?v=19070101" ></script>
+    <script type="text/javascript">
+        var POM = "P";
+        var bet_limit_menu_on_off = false;
+       
+        var ROOM_NUM = "3";
+        
+        var ROOM_GRADE = 1;
+        var USER_LEVEL = 1;
+
+        
+        var MIN_BET;
+        var MAX_BET;
+
+        var dtS = moment("2019-09-11 21:27:50.922");
+        var dtP = moment().tz("Asia/Seoul");
+        
+        //--------------------------------------------------------------------------------------
+        function open_close_chat() {
+            if (!chat_on_off) {
+                document.getElementById('div_chat').style.display = "block";
+                document.getElementById('btchat_icon').src = "../common/img/button/chat_icon_on.png";
+                document.getElementById('msg').focus();
+            }
+            else {
+                document.getElementById('div_chat').style.display = "none";
+                document.getElementById('btchat_icon').src = "../common/img/button/chat_icon_off.png";
+            }
+            chat_on_off = !chat_on_off;
+        }
+        //--------------------------------------------------------------------------------------
+        function open_close_bet_detail() {
+            if (!bet_limit_menu_on_off) {
+                document.getElementById('div_bet_limit_detail_info').style.display = "block";
+                document.getElementById('detail_bet_menu').className="menu_on";
+            }
+            else {
+                document.getElementById('div_bet_limit_detail_info').style.display = "none";
+                document.getElementById('detail_bet_menu').className="menu";
+            }
+            bet_limit_menu_on_off = !bet_limit_menu_on_off;
+        }
+    </script>
+
+
+    <script type="text/javascript" src="../../../../player.wowza.com/player/ull/latest/wowzaplayer.min.js"></script>
+    <script type="text/javascript" src="../common/js/mini_game2e09.js?v=20190911212750" ></script>
+    <script type="text/javascript" src="../common/js/proc_xml2e09.js?v=20190911212750" ></script>
+    
+    <link rel="stylesheet" href="css/baccarat_mini2e09.css?v=20190911212750"/> 
+    <style type="text/css">
+        .game_history_table{ width:100%;}
+        .hrline0 { background-color:#fff;}
+        .hrline1 { background-color:#eee;}
+        .div_game_history_box {color:black; line-height:29px;font-weight:bold; font-size:14px;}
+        .div_game_history_box table{width:100%;}
+        .div_game_history_box .td1{width:24%; text-align:center; height:30px; }
+        .div_game_history_box .td2{width:33%; text-align:center; text-shadow: 1px 1px 1px #999;}
+        .div_game_history_box .td3{width:33%; text-align:center; text-shadow: 1px 1px 1px #999;}
+        .div_game_history_box .td4{width:10%; text-align:center;}
+
+        .div_game_history_box .td4 .B{ width:26px; height:26px; margin: 2px auto; background-image:url('img/history/B.png');}
+        .div_game_history_box .td4 .BP{ width:26px; height:26px; margin: 2px auto; background-image:url('img/history/B1.png');}
+        .div_game_history_box .td4 .BB{ width:26px; height:26px; margin: 2px auto; background-image:url('img/history/B2.png');}
+        .div_game_history_box .td4 .BPB{ width:26px; height:26px; margin: 2px auto; background-image:url('img/history/B12.png');}
+        .div_game_history_box .td4 .P{ width:26px; height:26px; margin: 2px auto; background-image:url('img/history/P.png');}
+        .div_game_history_box .td4 .PP{ width:26px; height:26px; margin: 2px auto; background-image:url('img/history/P1.png');}
+        .div_game_history_box .td4 .PB{ width:26px; height:26px; margin: 2px auto; background-image:url('img/history/P2.png');}
+        .div_game_history_box .td4 .PPB{ width:26px; height:26px; margin: 2px auto; background-image:url('img/history/P12.png');}
+        .div_game_history_box .td4 .T{ width:26px; height:26px; margin: 2px auto; background-image:url('img/history/T.png');}
+        .div_game_history_box .td4 .TP{ width:26px; height:26px; margin: 2px auto; background-image:url('img/history/T1.png');}
+        .div_game_history_box .td4 .TB{ width:26px; height:26px; margin: 2px auto; background-image:url('img/history/T2.png');}
+        .div_game_history_box .td4 .TPB{ width:26px; height:26px; margin: 2px auto; background-image:url('img/history/T12.png');}
+    </style>
+    <script type="text/javascript">
+        ABLE_BET_STATE = 2;
+    </script>
+    <script type="text/javascript" src="js/baccarat_mini2e09.js?v=20190911212750" ></script>
+</head>
+<body style="">
+    <form method="post" action="http://www.spark-pop.com/pc/game/baccarat/baccarat_mini.aspx?room=3" id="game_master">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="7pQwwznNk6frq3YJk0uIae3CyvpcpzIOPHifCA5JsoR8unqgpMgCqyyQUOiHds9FxR0JGsTSfsXC62pTeAuDmR3xKCeB2JHspk2rMTEipPI=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['game_master'];
+if (!theForm) {
+    theForm = document.game_master;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="http://www.spark-pop.com/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZP9C9hBc2ix_Vpo5xoxLayfasIIE57xDlc_0ZR4o0FghRYgxOEF3rgkEWuBuOJlvkQ2&amp;t=636935209199995647" type="text/javascript"></script>
+
+
+<script src="http://www.spark-pop.com/ScriptResource.axd?d=_NcE0aGrUc6EUyZzDzskkrFgTg2C18BPkmwwFwp-prWbR7ppAQtwjv-icqewN19SZsbeIf-w4rsaivknFsjJBdOF2H3Bo84bwbE-VDZ6hHtM3y49Q_uptO1vW9Wowk9UhY5xJ9kggYxGLGfH0U_nx1kicB5fbGJsG2ip_Il6_Ec1&amp;t=ffffffffa580202a" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax 클라이언트 쪽 프레임워크를 로드하지 못했습니다.');
+//]]>
+</script>
+
+<script src="http://www.spark-pop.com/ScriptResource.axd?d=Z_UoG0ltL_OjEHhyW1k7lIoXMvHBk7ZP8RK6k-V1b9cko9LaZDc2SNocJlK8t-xtM49BwwVyVhlWSGcPgQ8iKxKVW1dvFP1iWeze2GK-sjM2ZwJfBPFuNyhAERLzPVfMG4wTthd2XNElSiUVwvRGmt3c93DEYrJHwc4WuIlFriRV__Yp8Xzdf9cMrCvYm4ee0&amp;t=ffffffffa580202a" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="3EBBFB43" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="lU5ji61GaFQrUEixorupdTJrKsylWRYsTVwNL5ZBu/+yq89+jh5fNR21sUp02m+LGLwiKdGEizQGbNBkfqD4CdpJNd65jV3Dz++XnknfujI2yfd7B4DL60JIt91ngl/W" />
+</div>
+        <div style="display:none"><input type="submit" name="ctl00$btnNull" value="" onclick="return false;" id="btnNull" /></div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'game_master', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+    <div class="game_box">
+        <div class="canvas20">
+            <div style="height:50px; padding:9px 12px; background-color:#5a3fa3; width:348px; margin-top:387px; margin-left:457px; background-image:url('../common/img/info/gi_line2.png');">
+                        <table style="width:100%;height:50px">
+                            <tr>
+                                <td style="width:88px;">
+                                    <div id="remain_time" style="height:50px; line-height:50px; font-size:46px; font-weight:bold; text-align:center; color:#3ef300;">
+                                        0
+                                    </div>
+                                </td>
+                                <td style="width:15px;"></td>
+                                <td style="width:168px;">
+                                    <div id="div_notice_line" style="height:50px; line-height:50px; font-size:20px; font-weight:bold; text-align:center; color:#fff;">
+                                                    
+                                    </div>
+                                </td>
+                                <td style="width:10px;"></td>
+                                <td style="width:9px;"></td>
+                                <td style="width:48px;">
+                                    <div style="height:50px;"><a href="javascript:try_change_sound_option();" id="icon_sound" class="sound_on"></a></div>
+                                </td>
+                                <td style="width:5px;"></td>
+                            </tr>
+                        </table>
+                    </div>
+        </div>
+        <div class="canvas20">
+            <div>
+                <div class="div_video_base">
+                    <div id="div_loading" class="video_loding"></div>
+                    <div id="live_video" style="width:456px; height:456px;"></div>
+                    <div style="height:1px; background-color:#6252b5; position:relative; margin-top:-1px; z-index:21;"></div>
+                </div>
+            </div>
+        </div>
+        
+    <div class="canvas20">
+        <div style="margin-left:459px;"><img alt="" src="img/info/baccarat_title.png" style="display:block;" /></div>
+    </div>
+    <!-------------------------------------------------------------------------------------------------------------------->
+    <!-- START TABLE INFO -->
+    <!-------------------------------------------------------------------------------------------------------------------->
+    <div class="canvas20">
+        <div class="div_result_info">
+            <div style="height:2px; background-color:#57369b;"></div>
+            <div style="height:69px; padding:0 2px;">
+                <div style="height:69px; background:linear-gradient(#e1e3e5,#bed9f8);">
+                    <table style="width:100%;  color:navy; text-shadow:1px 1px 1px #999;">
+                        <tr>
+                            <td style="height:68px; line-height:22px; vertical-align:top;font-size:14px; padding-left:5px; font-weight:bold;">
+                                <div> 테이블 : 바카라 1번</div>
+                                <div> 게임번호 : <b id="game_idx"></b></div>
+                                <div> <span style="color:#4f4000;">진행 <b id="total_count"></b></span>
+                                    &nbsp;&nbsp;<span style="color:blue;">P <b id="pcount"></b></span>
+                                    &nbsp;&nbsp;<span style="color:red;">B <b id="bcount"></b></span>
+                                    &nbsp;&nbsp;<span style="color:green;">T <b id="tcount"></b></span>
+                                    
+                                </div>
+                    <div id="ppcount" class="value2"></div>
+                    <div style="width:100%; height:9px;"></div>
+                    <div id="bpcount" class="value2"></div>
+                            </td>
+                            <td style="width:140px; height:68px !important; vertical-align:top;">
+                                <div style="height:22px; line-height:22px; text-align:center; font-weight:bold;font-size:14px;">결과예측</div>
+                                <div style="height:22px;line-height:22px;">
+                                    <div style="height:22px; line-height:22px; padding-right:5px; width:45px; float:left; font-size:12px; text-align:right; color:#007ff6;font-weight:bold;">PLAYER</div>
+                                    <div id="pej1" class="pej1N"></div>
+                                    <div id="pej2" class="pej2N"></div>
+                                    <div id="pej3" class="pej3N"></div>
+                                    <div id="pej4" class="pej4N"></div>
+                                </div>
+                                <div style="clear:both; height:0px;"></div>
+                                <div style="height:22px; line-height:22px;">
+                                    <div style="height:22px; width:45px; padding-right:5px; float:left; font-size:12px; text-align:right; color:#ff5656; font-weight:bold;">BANKER</div>
+                                    <div id="bej1" class="bej1N"></div>
+                                    <div id="bej2" class="bej2N"></div>
+                                    <div id="bej3" class="bej3N"></div>
+                                    <div id="bej4" class="bej4N"></div>
+                                </div>
+                                <div style="clear:both; height:0px;"></div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div style="height:3px; background-color:#57369b;"></div>
+            <div style="padding:0 2px;">
+                <div style="height:180px; overflow-y:scroll; ">
+                    <div class="div_game_history_box"  style="background-color:#808080; color:white; text-shadow:1px 1px 1px #111;">
+                    <table>
+                        <tr>
+                            <td class="td1">게임번호</td>
+                            <td class="td2">PLAYER</td>
+                            <td class="td3">BANKER</td>
+                            <td class="td4">결과</td>
+                        </tr>
+                    </table>
+                </div>
+                    <div class="div_game_history_box" id="div_game_history_box"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="canvas10">
+        <div style="height:255px; width:830px; background-color:#5a3fa3; margin-top:459px;">
+            <div style="position:absolute; top:548px; height:160px; width:401px; left:4px; background-color:#bfbfc1; background-image:url('img/layout/sixmap_title.png'); background-repeat:no-repeat; background-position: 10px 23px;"></div>
+        </div>
+    </div>
+    <!-------------------------------------------------------------------------------------------------------------------->
+    <!-- END TABLE INFO -->
+    <!-------------------------------------------------------------------------------------------------------------------->
+    <div class="canvas20">
+        <div id="div_result_history_box" class="div_result_history_box" style="height:164px;">
+        </div>
+    </div>
+    <div class="canvas50">
+        <div class="result_box_base" id="result_title_box">
+            <div id="text_result_box" class="text_box">
+                <div id="text_result" class="banker_win"></div>
+            </div>
+        </div>
+    </div>
+    <div class="hand_card_box_base">
+        <div id="hand_card_box" class="div_hand_card_box">
+            <div style="height:8px;"></div>
+            <div style="height:209px; width:600px; float:left;">
+                <div style="height:0px; width:600px; position:absolute;">
+                    <div class="big_cards" style="height:209px; width:324px; margin-left:29px; float:left;">
+                        <div id="sqc_1" class="card_empty"><div id="sqc_1t" class="card_back" style="display:none;" name="move_cards" onmousedown="cardMouseDown(event,this)" onmousemove="cardMouseMove(event,this)" onmouseup="popupMouseUp()"></div></div>
+                        <div id="sqc_2" class="card_empty"><div id="sqc_2t" class="card_back" style="display:none;" name="move_cards" onmousedown="cardMouseDown(event,this)" onmousemove="cardMouseMove(event,this)" onmouseup="popupMouseUp()"></div></div>
+                    </div>
+                    <div style="height:209px; width:209px; margin-left:10px; float:left;">
+                        <div style="height:62px;"></div>
+                        <div id="player_add_cardd" class="big_wide_cards" style="height:147px; width:209px; float:left;">
+                            <div id="sqc_3" class="card_empty"><div id="sqc_3t" class="card_back" style="display:none;" name="move_cards" onmousedown="cardMouseDown(event,this)" onmousemove="cardMouseMove(event,this)" onmouseup="popupMouseUp()"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="player_cards" class="big_cards" style="height:209px; width:324px; margin-left:29px; float:left;">
+                    <div class="c101"></div>
+                    <div class="c101"></div>
+                </div>
+                <div style="height:209px; width:209px; margin-left:10px; float:left;">
+                    <div style="height:62px;">
+                        <table id="tbplayer_text" style="height:62px;display:none;">
+                            <tr>
+                                <td style="width:10px;"></td>
+                                <td style="vertical-align:middle;">
+                                    <img style="height:24px; width:97px;" src='img/result/player.png';"/>
+                                </td>
+                                <td style="width:10px;"></td>
+                                <td style="vertical-align:middle;">
+                                    <img id="igplayer_num"src='img/result/player_num/0.png';"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="player_add_card" class="big_wide_cards" style="height:147px; width:209px; float:left;">
+                        <div class="c101"></div>
+                    </div>
+                </div>
+            </div>
+            <div style="height:209px; width:600px; float:left;">
+                <div style="height:0px; width:600px; position:absolute;">
+                    <div style="height:209px; width:209px; margin-left:28px; float:left;">
+                        <div style="height:62px;"></div>
+                        <div class="big_wide_cards" style="height:147px; width:209px; float:left;">
+                            <div id="sqc_6" class="card_empty"><div id="sqc_6t" class="card_back" style="display:none;" name="move_cards" onmousedown="cardMouseDown(event,this)" onmousemove="cardMouseMove(event,this)" onmouseup="popupMouseUp()"></div></div>
+                        </div>
+                    </div>
+                    <div class="big_cards" style="height:209px; width:324px; margin-left:26px; float:left;">
+                        <div id="sqc_4" class="card_empty"><div id="sqc_4t" class="card_back" style="display:none;" name="move_cards" onmousedown="cardMouseDown(event,this)" onmousemove="cardMouseMove(event,this)" onmouseup="popupMouseUp()"></div></div>
+                        <div id="sqc_5" class="card_empty"><div id="sqc_5t" class="card_back" style="display:none;" name="move_cards" onmousedown="cardMouseDown(event,this)" onmousemove="cardMouseMove(event,this)" onmouseup="popupMouseUp()"></div></div>
+                    </div>
+                </div>
+                <div style="height:209px; width:209px; margin-left:28px; float:left;">
+                    <div style="height:62px;">
+                        <table id="tbbanker_text" style="height:62px; float:right; display:none;">
+                            <tr>
+                                <td style="vertical-align:middle;">
+                                    <img id="igbanker_num" src='img/result/banker_num/0.png';"/>
+                                </td>
+                                <td style="width:10px;"></td>
+                                <td style="vertical-align:middle;">
+                                    <img style="height:24px; width:97px;" src='img/result/banker.png';"/>
+                                </td>
+                                <td style="width:10px;"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="banker_add_card" class="big_wide_cards" style="height:147px; width:209px; float:left;">
+                        <div class="c101"></div>
+                    </div>
+                </div>
+                <div id="banker_cards" class="big_cards" style="height:209px; width:324px; margin-left:26px; float:left;">
+                    <div class="c101"></div>
+                    <div class="c101"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bet_box_base">
+        </div>
+        <div class="msg_box_base">
+            <div id="msg_box" class="div_msg_box">
+                <table style="width:100%; height:100%;">
+                    <tr>
+                        <td style="vertical-align:middle;">
+                            <div id="msg_text"></div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="result_box_base" id="result_title_box">
+            <div id="text_result_box" class="text_box">
+                <div id="text_result" class="banker_win"></div>
+            </div>
+        </div>
+        
+    </div>
+        
+    </form>
+    <script type="text/javascript">
+        WowzaPlayer.create("live_video",
+            {
+                "license": "PLAY1-hHy7x-9eCYE-RE8rb-wu73p-wxzVc",
+                "sources": [{
+                    "sourceURL": "wss://edge.cdn.wowza.com/live/_definst_/0P0p2Wko2czBRNEgwTHlMS3hYK2J581f/stream.ws"
+                },
+                {
+                    "sourceURL": "https://wowzaprod183-i.akamaihd.net/hls/live/710908/0P0p2Wko2czBRNEgwTHlMS3hYK2J581f/playlist.m3u8"
+                }],
+                "title": "",
+                "description": "",
+                "loop": false,
+                "autoPlay": true,
+                "audioOnly": false,
+                "mute": true,
+                "volume": 0,
+                "uiShowQuickRewind": true,
+                "playsinline": true
+            }
+        )
+        
+        var myPlayer = WowzaPlayer.get('live_video');
+        myPlayer.play();
+        $("#div_loading").fadeOut(5000);
+        OpenXml_Live();
+        select_chip(SELECT_CHIP);
+        get_user_info();
+        setTimeout("live_video_play()", 2000);
+    </script>
+    
+</body>
+
+<!-- Mirrored from www.spark-pop.com/pc/game/baccarat/baccarat_mini.aspx?room=3 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Sep 2019 14:21:39 GMT -->
+</html>

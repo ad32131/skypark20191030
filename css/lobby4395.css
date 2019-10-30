@@ -1,0 +1,408 @@
+﻿.game_icon_line { margin-bottom:5px; }
+
+
+.game_icon_line .div_game_icon_on { width:105px; background-color:#2d5288; float:left; cursor:pointer; color:white; border:1px solid #2d5288;}
+.game_icon_line .div_game_icon_off { width:105px; background-color:white; float:left; cursor:pointer; color:#2d5288; border:1px solid #ddd;}
+.game_icon_line .game_icon_img { width:95px;padding:5px 5px 2px 5px;}
+.game_icon_line .game_icon_img img {width:95px; display:block;}
+.game_icon_line .game_icon_text {text-align:center; height:22px; line-height:22px; font-weight:bold; font-size:12px;  }
+.game_icon_line .splint_game_icon {width:5px; height:10px; float:left;}
+
+.gmae_title_line { height:28px;}
+.game_title_split {height:2px; background-color:#2d5288; margin-top:5px;}
+.split_game_table_info {}
+.game_table_base { background-color:rgba(255, 255, 255, 0.99); padding:5px; border:solid 0px #d8d7dc; min-height:374px;}
+.div_game_table_info { height:150px; width: 375px; background-color:#2d5288; padding:5px; cursor:pointer; margin:5px;}
+.div_enter_room_off { position:absolute; z-index:300; height:150px; width: 375px; background-color:#2d5288; padding:5px; cursor:pointer; margin:5px; background-color:rebeccapurple; display:none;}
+.div_enter_room_on { position:absolute; z-index:300; height:150px; width: 375px; background-color:#2d5288; padding:5px; cursor:pointer; margin:5px; background-color:rgba(0, 0, 0, 0.50); display:block; color:white; font-size:30px; text-align:center; line-height:150px;}
+
+.table_info_title {height:24px; margin-bottom:5px; background-color:#abb3cc; padding-left:5px; padding-right:5px; color:#000; font-weight:bold; font-size:12px; line-height:24px; }
+.div_dealer { height:121px; width:94px; float:left; background-color:black;}
+.div_dealer img {height:121px; width:94px;}
+.grade_button {height:67px; width:67px; margin:3px; cursor:pointer; float:left;}
+.grade_button img {display:block; }
+/*-------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------*/
+.table_info_baccarat { height:121px; width:276px; float:left; background-color:black; margin-left:5px; }
+.table_info_baccarat .tb_result_history { border-collapse:separate; empty-cells:show; padding:0px; border:0px !important; border-spacing:1px; }
+.table_info_baccarat .tb_result_history th {padding:0px;}
+.table_info_baccarat .tb_result_history td {padding:0px; width:19px; height:19px; background-color:white;}
+
+.table_info_baccarat .tb_result_history .B { background-image:url('../game/baccarat/img/history/B.png'); background-size:19px 19px; }
+.table_info_baccarat .tb_result_history .B1 { background-image:url('../game/baccarat/img/history/B1.png'); background-size:19px 19px;}
+.table_info_baccarat .tb_result_history .B2 { background-image:url('../game/baccarat/img/history/B2.png'); background-size:19px 19px;}
+.table_info_baccarat .tb_result_history .B12 { background-image:url('../game/baccarat/img/history/B12.png'); background-size:19px 19px;}
+
+.table_info_baccarat .tb_result_history .P { background-image:url('../game/baccarat/img/history/P.png'); background-size:19px 19px;}
+.table_info_baccarat .tb_result_history .P1 { background-image:url('../game/baccarat/img/history/P1.png'); background-size:19px 19px;}
+.table_info_baccarat .tb_result_history .P2 { background-image:url('../game/baccarat/img/history/P2.png'); background-size:19px 19px;}
+.table_info_baccarat .tb_result_history .P12 { background-image:url('../game/baccarat/img/history/P12.png'); background-size:19px 19px;}
+
+.table_info_baccarat .tb_result_history .T { background-image:url('../game/baccarat/img/history/T.png'); background-size:19px 19px;}
+.table_info_baccarat .tb_result_history .T1 { background-image:url('../game/baccarat/img/history/T1.png'); background-size:19px 19px;}
+.table_info_baccarat .tb_result_history .T2 { background-image:url('../game/baccarat/img/history/T2.png'); background-size:19px 19px;}
+.table_info_baccarat .tb_result_history .T12 { background-image:url('../game/baccarat/img/history/T12.png'); background-size:19px 19px;}
+/*-------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------*/
+.table_info_oe { height:121px; width:276px; float:left; background-color:black; margin-left:5px; }
+.table_info_oe .tb_result_history { border-collapse:separate; empty-cells:show; padding:0px; border:0px !important; border-spacing:1px; }
+.table_info_oe .tb_result_history th {padding:0px;}
+.table_info_oe .tb_result_history td {padding:0px; width:19px; height:19px; background-color:white;}
+
+.table_info_oe .div_six_map .tb_result_history .O { background-image:url('../game/oddeven/img/history/O.png'); background-size:19px 19px;}
+.table_info_oe .div_six_map .tb_result_history .E { background-image:url('../game/oddeven/img/history/E.png'); background-size:19px 19px;}
+/*-------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------*/
+.table_info_dt { height:121px; width:276px; float:left; background-color:black; margin-left:5px; }
+.table_info_dt .tb_result_history { border-collapse:separate; empty-cells:show; padding:0px; border:0px !important; border-spacing:1px; }
+.table_info_dt .tb_result_history th {padding:0px;}
+.table_info_dt .tb_result_history td {padding:0px; width:19px; height:19px; background-color:white;}
+
+.table_info_dt .div_six_map .tb_result_history .D { background-image:url('../game/dragontiger/img/history/D.png'); background-size:19px 19px; }
+.table_info_dt .div_six_map .tb_result_history .G { background-image:url('../game/dragontiger/img/history/G.png'); background-size:19px 19px;}
+.table_info_dt .div_six_map .tb_result_history .T { background-image:url('../game/dragontiger/img/history/T.png'); background-size:19px 19px;}
+/*-------------------------------------------------------------------------------*/
+.table_info_nn { height:121px; width:276px; float:left; background-image:url('../img/lobby_nn_his_back.jpg'); margin-left:5px; }
+.table_info_nn .tb_result_history { border-collapse:separate; empty-cells:show; padding:0px; border:0px !important; border-spacing:1px; float:right; }
+.table_info_nn .tb_result_history th {padding:0px;}
+.table_info_nn .tb_result_history td {padding:0px; width:29px; height:29px; background-size:29px 29px;}
+
+.table_info_nn .tb_result_history .w1 { background-image:url('../game/niuniu/img/history/result/w1.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .w2 { background-image:url('../game/niuniu/img/history/result/w2.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .w3 { background-image:url('../game/niuniu/img/history/result/w3.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .w4 { background-image:url('../game/niuniu/img/history/result/w4.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .w5 { background-image:url('../game/niuniu/img/history/result/w5.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .w6 { background-image:url('../game/niuniu/img/history/result/w6.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .w7 { background-image:url('../game/niuniu/img/history/result/w7.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .w8 { background-image:url('../game/niuniu/img/history/result/w8.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .w9 { background-image:url('../game/niuniu/img/history/result/w9.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .w10 { background-image:url('../game/niuniu/img/history/result/wbb.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .wb { background-image:url('../game/niuniu/img/history/result/wbb.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .wn { background-image:url('../game/niuniu/img/history/result/wn.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .wN { background-image:url('../game/niuniu/img/history/result/wn.png'); background-repeat:no-repeat;}
+
+.table_info_nn .tb_result_history .d1 { background-image:url('../game/niuniu/img/history/result/d1.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .d2 { background-image:url('../game/niuniu/img/history/result/d2.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .d3 { background-image:url('../game/niuniu/img/history/result/d3.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .d4 { background-image:url('../game/niuniu/img/history/result/d4.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .d5 { background-image:url('../game/niuniu/img/history/result/d5.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .d6 { background-image:url('../game/niuniu/img/history/result/d6.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .d7 { background-image:url('../game/niuniu/img/history/result/d7.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .d8 { background-image:url('../game/niuniu/img/history/result/d8.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .d9 { background-image:url('../game/niuniu/img/history/result/d9.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .d10 { background-image:url('../game/niuniu/img/history/result/dbb.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .db { background-image:url('../game/niuniu/img/history/result/dbb.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .dn { background-image:url('../game/niuniu/img/history/result/dn.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .dN { background-image:url('../game/niuniu/img/history/result/dn.png'); background-repeat:no-repeat;}
+
+.table_info_nn .tb_result_history .l1 { background-image:url('../game/niuniu/img/history/result/l1.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .l2 { background-image:url('../game/niuniu/img/history/result/l2.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .l3 { background-image:url('../game/niuniu/img/history/result/l3.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .l4 { background-image:url('../game/niuniu/img/history/result/l4.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .l5 { background-image:url('../game/niuniu/img/history/result/l5.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .l6 { background-image:url('../game/niuniu/img/history/result/l6.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .l7 { background-image:url('../game/niuniu/img/history/result/l7.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .l8 { background-image:url('../game/niuniu/img/history/result/l8.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .l9 { background-image:url('../game/niuniu/img/history/result/l9.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .l10 { background-image:url('../game/niuniu/img/history/result/lbb.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .lb { background-image:url('../game/niuniu/img/history/result/lbb.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .ln { background-image:url('../game/niuniu/img/history/result/ln.png'); background-repeat:no-repeat;}
+.table_info_nn .tb_result_history .lN { background-image:url('../game/niuniu/img/history/result/ln.png'); background-repeat:no-repeat;}
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+.table_info_pk { height:121px; width:276px; float:left; background-image:url('../img/lobby_nn_his_back.jpg'); margin-left:5px; }
+.table_info_pk .tb_result_history { border-collapse:separate; empty-cells:show; padding:0px; border:0px !important; border-spacing:1px; float:right; }
+.table_info_pk .tb_result_history th {padding:0px;}
+.table_info_pk .tb_result_history td {padding:0px; width:29px; height:29px; background-size:29px 29px;}
+.table_info_pk .tb_result_history .w0 { background-image:url('../game/poker/img/history/result/W0.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .w1 { background-image:url('../game/poker/img/history/result/W1.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .w2 { background-image:url('../game/poker/img/history/result/W2.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .w3 { background-image:url('../game/poker/img/history/result/W3.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .w4 { background-image:url('../game/poker/img/history/result/W4.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .w5 { background-image:url('../game/poker/img/history/result/W5.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .w6 { background-image:url('../game/poker/img/history/result/W6.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .w7 { background-image:url('../game/poker/img/history/result/W7.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .w8 { background-image:url('../game/poker/img/history/result/W8.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .w9 { background-image:url('../game/poker/img/history/result/W9.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .w10 { background-image:url('../game/poker/img/history/result/W10.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .w11 { background-image:url('../game/poker/img/history/result/W11.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .w12 { background-image:url('../game/poker/img/history/result/W12.png'); background-repeat:no-repeat;}
+
+.table_info_pk .tb_result_history .d0 { background-image:url('../game/poker/img/history/result/0.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .d1 { background-image:url('../game/poker/img/history/result/1.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .d2 { background-image:url('../game/poker/img/history/result/2.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .d3 { background-image:url('../game/poker/img/history/result/3.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .d4 { background-image:url('../game/poker/img/history/result/4.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .d5 { background-image:url('../game/poker/img/history/result/5.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .d6 { background-image:url('../game/poker/img/history/result/6.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .d7 { background-image:url('../game/poker/img/history/result/7.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .d8 { background-image:url('../game/poker/img/history/result/8.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .d9 { background-image:url('../game/poker/img/history/result/9.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .d10 { background-image:url('../game/poker/img/history/result/10.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .d11 { background-image:url('../game/poker/img/history/result/11.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .d12 { background-image:url('../game/poker/img/history/result/12.png'); background-repeat:no-repeat;}
+
+.table_info_pk .tb_result_history .l0 { background-image:url('../game/poker/img/history/result/L0.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .l1 { background-image:url('../game/poker/img/history/result/L1.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .l2 { background-image:url('../game/poker/img/history/result/L2.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .l3 { background-image:url('../game/poker/img/history/result/L3.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .l4 { background-image:url('../game/poker/img/history/result/L4.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .l5 { background-image:url('../game/poker/img/history/result/L5.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .l6 { background-image:url('../game/poker/img/history/result/L6.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .l7 { background-image:url('../game/poker/img/history/result/L7.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .l8 { background-image:url('../game/poker/img/history/result/L8.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .l9 { background-image:url('../game/poker/img/history/result/L9.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .l10 { background-image:url('../game/poker/img/history/result/L10.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .l11 { background-image:url('../game/poker/img/history/result/L11.png'); background-repeat:no-repeat;}
+.table_info_pk .tb_result_history .l12 { background-image:url('../game/poker/img/history/result/L12.png'); background-repeat:no-repeat;}
+/*-------------------------------------------------------------------------------*/
+.table_info_bj { height:121px; width:276px; float:left; background-image:url('../img/lobby_nn_his_back.jpg'); margin-left:5px; }
+.table_info_bj .tb_result_history { border-collapse:separate; empty-cells:show; padding:0px; border:0px !important; border-spacing:1px; float:right; }
+.table_info_bj .tb_result_history th {padding:0px;}
+.table_info_bj .tb_result_history td {padding:0px; width:29px; height:29px; background-size:29px 29px;}
+
+.table_info_bj .tb_result_history .w16 { background-image:url('../game/blackjack/img/history/result/W16.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .w17 { background-image:url('../game/blackjack/img/history/result/W17.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .w18 { background-image:url('../game/blackjack/img/history/result/W18.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .w19 { background-image:url('../game/blackjack/img/history/result/W19.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .w20 { background-image:url('../game/blackjack/img/history/result/W20.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .w21 { background-image:url('../game/blackjack/img/history/result/W21.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .w22 { background-image:url('../game/blackjack/img/history/result/W22.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .w23 { background-image:url('../game/blackjack/img/history/result/W23.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .w24 { background-image:url('../game/blackjack/img/history/result/W24.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .w25 { background-image:url('../game/blackjack/img/history/result/W25.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .w26 { background-image:url('../game/blackjack/img/history/result/W26.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .w27 { background-image:url('../game/blackjack/img/history/result/W27.png'); background-repeat:no-repeat;}
+
+.table_info_bj .tb_result_history .d16 { background-image:url('../game/blackjack/img/history/result/16.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .d17 { background-image:url('../game/blackjack/img/history/result/17.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .d18 { background-image:url('../game/blackjack/img/history/result/18.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .d19 { background-image:url('../game/blackjack/img/history/result/19.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .d20 { background-image:url('../game/blackjack/img/history/result/20.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .d21 { background-image:url('../game/blackjack/img/history/result/21.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .d22 { background-image:url('../game/blackjack/img/history/result/22.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .d23 { background-image:url('../game/blackjack/img/history/result/23.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .d24 { background-image:url('../game/blackjack/img/history/result/24.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .d25 { background-image:url('../game/blackjack/img/history/result/25.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .d26 { background-image:url('../game/blackjack/img/history/result/26.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .d27 { background-image:url('../game/blackjack/img/history/result/27.png'); background-repeat:no-repeat;}
+
+.table_info_bj .tb_result_history .l16 { background-image:url('../game/blackjack/img/history/result/L16.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .l17 { background-image:url('../game/blackjack/img/history/result/L17.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .l18 { background-image:url('../game/blackjack/img/history/result/L18.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .l19 { background-image:url('../game/blackjack/img/history/result/L19.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .l20 { background-image:url('../game/blackjack/img/history/result/L20.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .l21 { background-image:url('../game/blackjack/img/history/result/L21.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .l22 { background-image:url('../game/blackjack/img/history/result/L22.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .l23 { background-image:url('../game/blackjack/img/history/result/L23.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .l24 { background-image:url('../game/blackjack/img/history/result/L24.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .l25 { background-image:url('../game/blackjack/img/history/result/L25.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .l26 { background-image:url('../game/blackjack/img/history/result/L26.png'); background-repeat:no-repeat;}
+.table_info_bj .tb_result_history .l27 { background-image:url('../game/blackjack/img/history/result/L27.png'); background-repeat:no-repeat;}
+/*-------------------------------------------------------------------------------*/
+.table_info_pr { height:121px; width:276px; float:left; background-image:url('../img/lobby_nn_his_back.jpg'); margin-left:5px; }
+.table_info_pr .tb_result_history { border-collapse:separate; empty-cells:show; padding:0px; border:0px !important; border-spacing:1px; float:right; }
+.table_info_pr .tb_result_history th {padding:0px;}
+.table_info_pr .tb_result_history td {padding:0px; width:29px; height:29px; background-size:29px 29px;}
+
+.table_info_pr .tb_result_history .w0 { background-image:url('../game/pair/img/history/result_new/w0.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .w1 { background-image:url('../game/pair/img/history/result_new/w1.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .w2 { background-image:url('../game/pair/img/history/result_new/w2.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .w3 { background-image:url('../game/pair/img/history/result_new/w3.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .w4 { background-image:url('../game/pair/img/history/result_new/w4.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .w5 { background-image:url('../game/pair/img/history/result_new/w5.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .w6 { background-image:url('../game/pair/img/history/result_new/w6.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .w7 { background-image:url('../game/pair/img/history/result_new/w7.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .w8 { background-image:url('../game/pair/img/history/result_new/w8.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .w9 { background-image:url('../game/pair/img/history/result_new/w9.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .w10 { background-image:url('../game/pair/img/history/result_new/w10.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .w1P { background-image:url('../game/pair/img/history/result_new/w1p.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .w2P { background-image:url('../game/pair/img/history/result_new/w2p.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .w3P { background-image:url('../game/pair/img/history/result_new/w3p.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .w4P { background-image:url('../game/pair/img/history/result_new/w4p.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .w5P { background-image:url('../game/pair/img/history/result_new/w5p.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .w6P { background-image:url('../game/pair/img/history/result_new/w6p.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .w7P { background-image:url('../game/pair/img/history/result_new/w7p.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .w8P { background-image:url('../game/pair/img/history/result_new/w8p.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .w9P { background-image:url('../game/pair/img/history/result_new/w9p.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .w10P { background-image:url('../game/pair/img/history/result_new/w10p.png'); background-repeat:no-repeat;}
+
+.table_info_pr .tb_result_history .l0 { background-image:url('../game/pair/img/history/result_new/l0.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .l1 { background-image:url('../game/pair/img/history/result_new/l1.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .l2 { background-image:url('../game/pair/img/history/result_new/l2.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .l3 { background-image:url('../game/pair/img/history/result_new/l3.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .l4 { background-image:url('../game/pair/img/history/result_new/l4.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .l5 { background-image:url('../game/pair/img/history/result_new/l5.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .l6 { background-image:url('../game/pair/img/history/result_new/l6.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .l7 { background-image:url('../game/pair/img/history/result_new/l7.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .l8 { background-image:url('../game/pair/img/history/result_new/l8.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .l9 { background-image:url('../game/pair/img/history/result_new/l9.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .l10 { background-image:url('../game/pair/img/history/result_new/l10.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .l1P { background-image:url('../game/pair/img/history/result_new/l1p.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .l2P { background-image:url('../game/pair/img/history/result_new/l2p.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .l3P { background-image:url('../game/pair/img/history/result_new/l3p.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .l4P { background-image:url('../game/pair/img/history/result_new/l4p.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .l5P { background-image:url('../game/pair/img/history/result_new/l5p.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .l6P { background-image:url('../game/pair/img/history/result_new/l6p.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .l7P { background-image:url('../game/pair/img/history/result_new/l7p.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .l8P { background-image:url('../game/pair/img/history/result_new/l8p.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .l9P { background-image:url('../game/pair/img/history/result_new/l9p.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .l10P { background-image:url('../game/pair/img/history/result_new/l10p.png'); background-repeat:no-repeat;}
+
+.table_info_pr .tb_result_history .d0 { background-image:url('../game/pair/img/history/result_new/0.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .d1 { background-image:url('../game/pair/img/history/result_new/1.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .d2 { background-image:url('../game/pair/img/history/result_new/2.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .d3 { background-image:url('../game/pair/img/history/result_new/3.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .d4 { background-image:url('../game/pair/img/history/result_new/4.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .d5 { background-image:url('../game/pair/img/history/result_new/5.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .d6 { background-image:url('../game/pair/img/history/result_new/6.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .d7 { background-image:url('../game/pair/img/history/result_new/7.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .d8 { background-image:url('../game/pair/img/history/result_new/8.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .d9 { background-image:url('../game/pair/img/history/result_new/9.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .d10 { background-image:url('../game/pair/img/history/result_new/10.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .d1P { background-image:url('../game/pair/img/history/result_new/1p.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .d2P { background-image:url('../game/pair/img/history/result_new/2p.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .d3P { background-image:url('../game/pair/img/history/result_new/3p.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .d4P { background-image:url('../game/pair/img/history/result_new/4p.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .d5P { background-image:url('../game/pair/img/history/result_new/5p.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .d6P { background-image:url('../game/pair/img/history/result_new/6p.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .d7P { background-image:url('../game/pair/img/history/result_new/7p.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .d8P { background-image:url('../game/pair/img/history/result_new/8p.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .d9P { background-image:url('../game/pair/img/history/result_new/9p.png'); background-repeat:no-repeat;}
+.table_info_pr .tb_result_history .d10P { background-image:url('../game/pair/img/history/result_new/10p.png'); background-repeat:no-repeat;}
+
+
+/*-------------------------------------------------------------------------------*/
+.table_info_ft { height:121px; width:276px; float:left; background-color:black; margin-left:5px; color:white; overflow-y:auto; }
+.table_info_ft .tb_result_history { border-collapse:separate; empty-cells:show; padding:0px; border:0px !important; border-spacing:1px; float:right; }
+.table_info_ft .tb_result_history th {padding:0px;}
+.table_info_ft .tb_result_history td {padding:0px; width:29px; height:29px; background-size:29px 29px;}
+
+.table_info_ft .result_back {width:346px; height:182px; color:#eee; font-size:14px; font-weight:bold; letter-spacing:1px;}
+.table_info_ft .tb_result_history { width:100%; height:100%; border-collapse:separate; empty-cells:show; padding:0px; background-color:black; border:0px !important; border-spacing:1px;  }
+.table_info_ft .tb_result_history th {padding:0px;}
+.table_info_ft .tb_result_history td {padding:0px; width:44px; height:46px; vertical-align:middle;}
+.table_info_ft .igft1 { width:16px; height:16px; margin-top:3px; padding-left:1px; background-color:#ffffff; border-radius:20px; line-height:14px; color:black; display:inline-block;}
+.table_info_ft .igft2 { width:16px; height:16px; margin-top:3px; padding-left:1px; background-color:#b6ff00; border-radius:20px; line-height:14px; color:black; display:inline-block;}
+.table_info_ft .igft3 { width:16px; height:16px; margin-top:3px; padding-left:1px; background-color:#ff6a00; border-radius:20px; line-height:14px; color:black; display:inline-block;}
+
+.table_info_ft .ighdb_h { width:25px; height:26px; margin-top:0px; padding-left:1px; background-image:url('../game/hdb/img/history/h.png'); line-height:14px; color:black; display:inline-block;}
+.table_info_ft .ighdb_d { width:23px; height:26px; margin-top:0px; padding-left:1px; background-image:url('../game/hdb/img/history/d.png'); line-height:14px; color:black; display:inline-block;}
+.table_info_ft .ighdb_b { width:26px; height:26px; margin-top:0px; padding-left:1px; background-image:url('../game/hdb/img/history/b.png'); line-height:14px; color:black; display:inline-block;}
+
+.table_info_ft .htd1{ width:70px; text-shadow:1px 1px 1px #000; }
+.table_info_ft .htd2{ width:40px;}
+.table_info_ft .htd3{ width:40px;}
+.table_info_ft .htd4{ width:40px;}
+.table_info_ft .split { width:1px; background-color:black; }
+.div_history_line_0 {
+    height: 24px;
+    line-height:24px;
+    background-image:url('../game/fantan/img/history/his_line_0.png');
+    background-size:auto 24px;
+    text-align:center;
+}
+.div_history_line_1 {
+    height: 24px;
+    line-height:24px;
+    background-image:url('../game/fantan/img/history/his_line_1.png');
+    background-size:auto 24px;
+    text-align: center;
+}
+/*-------------------------------------------------------------------------------*/
+.table_info_rl { height:121px; width:276px; float:left; background-color:black; margin-left:5px; color:white; overflow-y:auto; }
+.table_info_rl .tb_result_history { border-collapse:separate; empty-cells:show; padding:0px; border:0px !important; border-spacing:1px; float:right; }
+.table_info_rl .tb_result_history th {padding:0px;}
+.table_info_rl .tb_result_history td {padding:0px; width:29px; height:29px; background-size:29px 29px;}
+
+.table_info_rl .title {height:38px;background-image:url('../game/roulette/img/history/history_title.png'); background-repeat:no-repeat; background-position:center 7px;}
+.table_info_rl .arrow {height:7px; background-image:url('../game/roulette/img/history/arrow.html'); background-position: 317px 0px; background-repeat:no-repeat;}
+
+.table_info_rl .result_back {width:346px; height:182px; color:#eee; font-size:14px; text-shadow:1px 1px 1px #000; font-weight:bold; letter-spacing:1px;}
+
+.table_info_rl .tb_result_history { width:100%; height:100%; border-collapse:separate; empty-cells:show; padding:0px; background-color:black; border:0px !important; border-spacing:1px;  }
+.table_info_rl .tb_result_history th {padding:0px;}
+.table_info_rl .tb_result_history td {padding:0px; width:44px; height:46px; vertical-align:middle;}
+
+.table_info_rl .rrl0 { width:34px; height:20px; margin-top:0px; background-image:url('../game/roulette/img/history/0.png'); display:inline-block; background-size:auto 20px; background-repeat:no-repeat;}
+.table_info_rl .rrlB { width:34px; height:20px; margin-top:0px; background-image:url('../game/roulette/img/history/B.png'); display:inline-block; background-size:auto 20px; background-repeat:no-repeat;}
+.table_info_rl .rrlR { width:34px; height:20px; margin-top:0px; background-image:url('../game/roulette/img/history/R.png'); display:inline-block; background-size:auto 20px; background-repeat:no-repeat;}
+
+.table_info_rl .htd1{ width:54px; text-align:center;}
+.table_info_rl .htd2{ width:26px; text-align:center;}
+.table_info_rl .htd3{ width:26px; text-align:center;}
+.table_info_rl .htd4{ width:26px; text-align:center;}
+.table_info_rl .htd5{ width:40px; text-align:center;}
+.table_info_rl .htd6{ width:40px; text-align:center;}
+.table_info_rl .htd7{ width:40px; text-align:center;}
+/*-------------------------------------------------------------------------------*/
+.table_info_dc { height:121px; width:276px; float:left; background-color:black; margin-left:5px; color:white; overflow-y:auto; }
+.table_info_dc .tb_result_history { border-collapse:separate; empty-cells:show; padding:0px; border:0px !important; border-spacing:1px; float:right; }
+.table_info_dc .tb_result_history th {padding:0px;}
+.table_info_dc .tb_result_history td {padding:0px; width:29px; height:29px; background-size:29px 29px;}
+
+.table_info_dc .tb_result_history { width:100%; height:100%; border-collapse:separate; empty-cells:show; padding:0px; background-color:black; border:0px !important; border-spacing:1px;  }
+.table_info_dc .tb_result_history th {padding:0px;}
+.table_info_dc .tb_result_history td {padding:0px; width:44px; height:46px; vertical-align:middle;}
+
+.table_info_dc .split { width:1px; background-color:black; }
+
+.table_info_dc .rdc1 { width:20px; height:20px; margin-top:3px; background-image:url('../game/dice/img/history/rdice1.png'); display:inline-block;}
+.table_info_dc .rdc2 { width:20px; height:20px; margin-top:3px; background-image:url('../game/dice/img/history/rdice2.png'); display:inline-block;}
+.table_info_dc .rdc3 { width:20px; height:20px; margin-top:3px; background-image:url('../game/dice/img/history/rdice3.png'); display:inline-block;}
+.table_info_dc .rdc4 { width:20px; height:20px; margin-top:3px; background-image:url('../game/dice/img/history/rdice4.png'); display:inline-block;}
+.table_info_dc .rdc5 { width:20px; height:20px; margin-top:3px; background-image:url('../game/dice/img/history/rdice5.png'); display:inline-block;}
+.table_info_dc .rdc6 { width:20px; height:20px; margin-top:3px; background-image:url('../game/dice/img/history/rdice6.png'); display:inline-block;}
+
+.table_info_dc .bdc1 { width:20px; height:20px; margin-top:3px; background-image:url('../game/dice/img/history/bdice1.png'); display:inline-block;}
+.table_info_dc .bdc2 { width:20px; height:20px; margin-top:3px; background-image:url('../game/dice/img/history/bdice2.png'); display:inline-block;}
+.table_info_dc .bdc3 { width:20px; height:20px; margin-top:3px; background-image:url('../game/dice/img/history/bdice3.png'); display:inline-block;}
+.table_info_dc .bdc4 { width:20px; height:20px; margin-top:3px; background-image:url('../game/dice/img/history/bdice4.png'); display:inline-block;}
+.table_info_dc .bdc5 { width:20px; height:20px; margin-top:3px; background-image:url('../game/dice/img/history/bdice5.png'); display:inline-block;}
+.table_info_dc .bdc6 { width:20px; height:20px; margin-top:3px; background-image:url('../game/dice/img/history/bdice6.png'); display:inline-block;}
+
+.table_info_dc .htd1{ width:70px;}
+.table_info_dc .htd2{ width:27px;}
+.table_info_dc .htd3{ width:27px;}
+.table_info_dc .htd4{ width:24px;}
+.table_info_dc .htd5{ width:50px;}
+.table_info_dc .htd6{ width:50px; text-align:center;}
+
+.table_info_dc .odd { width:12px; height:12px; margin-top:3px; background-image:url('../game/dice/img/history/odd.png'); display:inline-block; background-size:auto 12px; background-repeat:no-repeat;}
+.table_info_dc .even { width:12px; height:12px; margin-top:4px; background-image:url('../game/dice/img/history/even.png'); display:inline-block; background-size:auto 12px; background-repeat:no-repeat;}
+
+.table_info_dc .under { width:33px; height:12px; margin-top:4px; background-image:url('../game/dice/img/history/under.png'); display:inline-block;background-size:auto 12px; background-repeat:no-repeat;}
+.table_info_dc .over { width:33px; height:12px; margin-top:4px; background-image:url('../game/dice/img/history/over.png'); display:inline-block;background-size:auto 12px; background-repeat:no-repeat;}
+.table_info_dc .seven { width:35px; height:10px; margin-top:7px; background-image:url('../game/dice/img/history/seven.png'); display:inline-block;background-size:auto 10px; background-repeat:no-repeat;}
+
+.table_info_dc .blue { width:37px; height:13px; margin-top:8px; background-image:url('../game/dice/img/history/blue.png'); display:inline-block; background-size:auto 13px; background-repeat:no-repeat;}
+.table_info_dc .red { width:29px; height:13px; margin-top:8px; background-image:url('../game/dice/img/history/red.png'); display:inline-block; background-size:auto 13px; background-repeat:no-repeat;}
+.table_info_dc .tie { width:23px; height:13px; margin-top:8px; background-image:url('../game/dice/img/history/tie.png'); display:inline-block; background-size:auto 13px; background-repeat:no-repeat;}
+/*-------------------------------------------------------------------------------*/
+.table_info_cd { height:121px; width:276px; float:left; background-color:black; margin-left:5px; color:white; overflow-y:auto; }
+.table_info_cd .tb_result_history { border-collapse:separate; empty-cells:show; padding:0px; border:0px !important; border-spacing:1px; float:right; }
+.table_info_cd .tb_result_history th {padding:0px;}
+.table_info_cd .tb_result_history td {padding:0px; width:29px; height:29px; background-size:29px 29px;}
+
+.table_info_cd .rrl0 { width:38px; height:26px; margin-top:0px; background-image:url('../game/yut/img/history/0.png'); display:inline-block;}
+.table_info_cd .rrlB { width:38px; height:26px; margin-top:0px; background-image:url('../game/yut/img/history/B.png'); display:inline-block;}
+.table_info_cd .rrlR { width:38px; height:26px; margin-top:0px; background-image:url('../game/yut/img/history/R.png'); display:inline-block;}
+
+.table_info_cd .htd1{ width:70px; text-align:center;}
+.table_info_cd .htd2{ width:40px; text-align:center;}
+.table_info_cd .htd3{ width:30px; text-align:center;}
+.table_info_cd .htd4{ width:30px; text-align:center;}
+.table_info_cd .htd5{ width:100px; text-align:center;}
+.table_info_cd .htd6{ width:70px; text-align:center;}
+.table_info_cd .htd7{ width:30px; text-align:center;}
+
+.table_info_cd .split { width:1px; background-color:black; }
+/*-------------------------------------------------------------------------------*/
+
+
+
+
+

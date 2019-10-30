@@ -1,0 +1,167 @@
+﻿/************************************************************************************/
+/* GAME BOX BASE */
+/************************************************************************************/
+.game_box { background-image: url('../img/layout/base_f.jpg');}
+span {background-repeat:no-repeat;}
+
+/************************************************************************************/
+/* HISTORY */
+/************************************************************************************/
+.div_history_box {width:346px; height:182px;overflow-y:scroll;}
+.div_history {width:372px; height:255px; background-image:url('../../niuniu/img/history/history_back.png'); background-repeat:no-repeat; margin-left:457px; margin-top:132px;}
+.div_history .title {height:38px;background-image:url('../../niuniu/img/history/history_title.png'); background-repeat:no-repeat; background-position:center 7px;}
+.div_history .arrow {height:7px; background-image:url('../../niuniu/img/history/arrow.png'); background-position: 317px 0px; background-repeat:no-repeat;}
+
+.div_history .result_back {width:346px; height:182px; color:#eee; font-size:14px; font-weight:bold; letter-spacing:1px;}
+
+.div_history .tb_result_history { width:100%; height:100%; border-collapse:separate; empty-cells:show; padding:0px; background-color:black; border:0px !important; border-spacing:1px;  }
+.div_history .tb_result_history th {padding:0px;}
+.div_history .tb_result_history td {padding:0px; width:44px; height:46px; vertical-align:middle;}
+
+.div_history .igft1 { width:16px; height:16px; margin-top:3px; padding-left:1px; background-color:#ffffff; border-radius:20px; line-height:14px; color:black; display:inline-block;}
+.div_history .igft2 { width:16px; height:16px; margin-top:3px; padding-left:1px; background-color:#b6ff00; border-radius:20px; line-height:14px; color:black; display:inline-block;}
+.div_history .igft3 { width:16px; height:16px; margin-top:3px; padding-left:1px; background-color:#ff6a00; border-radius:20px; line-height:14px; color:black; display:inline-block;}
+
+.div_history .htd1{ width:70px; text-shadow:1px 1px 1px #000; }
+.div_history .htd2{ width:40px;}
+.div_history .htd3{ width:40px;}
+.div_history .htd4{ width:40px;}
+
+
+.div_history .split { width:1px; background-color:black; }
+
+.div_history_line_0 {
+    height: 26px;
+    line-height:26px;
+    background-image:url('../img/history/his_line_0.png');
+    text-align:center;
+}
+.div_history_line_1 {
+    height: 26px;
+    line-height:26px;
+    background-image:url('../img/history/his_line_1.png');
+    text-align: center;
+}
+
+/************************************************************************************/
+/* BETTING ZONE */
+/************************************************************************************/
+.div_bet_zone1_off{position:absolute; width:175px; height:111px; float:left; margin:510px 0 0 53px; border-radius:0px; }
+.div_bet_zone2_off{position:absolute; width:161px; height:110px; float:left; margin:550px 0 0 166px; border-radius:0px;}
+.div_bet_zone3_off{position:absolute; width:145px; height:107px; float:left; margin:579px 0 0 286px; border-radius:0px;}
+.div_bet_zone4_off{position:absolute; width:118px; height:97px; float:left; margin:603px 0 0 436px; border-radius:0px;}
+.div_bet_zone5_off{position:absolute; width:112px; height:94px; float:left; margin:609px 0 0 558px; border-radius:0px;}
+.div_bet_zone6_off{position:absolute; width:121px; height:97px; float:left; margin:602px 0 0 672px; border-radius:0px;}
+.div_bet_zone7_off{position:absolute; width:134px; height:100px; float:left; margin:584px 0 0 780px; border-radius:0px;}
+.div_bet_zone8_off{position:absolute; width:146px; height:101px; float:left; margin:554px 0 0 884px; border-radius:0px;}
+.div_bet_zone9_off{position:absolute; width:157px; height:101px; float:left; margin:515px 0 0 984px; border-radius:0px;}
+/*
+.div_bet_zone10_off{position:absolute; width:146px; height:107px; float:left; margin:574px 0 0 798px; border-radius:0px;}
+.div_bet_zone11_off{position:absolute; width:162px; height:110px; float:left; margin:543px 0 0 900px; border-radius:0px;}
+.div_bet_zone12_off{position:absolute; width:175px; height:112px; float:left; margin:501px 0 0 997px; border-radius:0px;}
+ */
+
+.div_bet_zone1_on{width:175px; height:113px; float:left; margin:510px 0 0 53px; position:absolute; background-image:url('../img/layout/bet_new1.png'); cursor:url(../../common/cursor/bet5.png), auto;border-radius:0px;}
+.div_bet_zone2_on{width:161px; height:110px; float:left; margin:550px 0 0 166px; position:absolute; background-image:url('../img/layout/bet_new2.png'); cursor:url(../../common/cursor/bet5.png), auto;border-radius:0px;}
+.div_bet_zone3_on{width:145px; height:107px; float:left; margin:579px 0 0 286px; position:absolute; background-image:url('../img/layout/bet_new3.png'); cursor:url(../../common/cursor/bet5.png), auto;border-radius:0px;}
+
+.div_bet_zone4_on{width:118px; height:97px; float:left; margin:603px 0 0 436px; position:absolute; background-image:url('../img/layout/bet_new4.png'); cursor:url(../../common/cursor/bet5.png), auto;border-radius:0px;}
+.div_bet_zone5_on{width:112px; height:94px; float:left; margin:609px 0 0 558px; position:absolute; background-image:url('../img/layout/bet_new5.png'); cursor:url(../../common/cursor/bet5.png), auto;border-radius:0px;}
+.div_bet_zone6_on{width:121px; height:97px; float:left; margin:602px 0 0 672px; position:absolute; background-image:url('../img/layout/bet_new6.png'); cursor:url(../../common/cursor/bet5.png), auto;border-radius:0px;}
+.div_bet_zone7_on{width:134px; height:100px; float:left; margin:584px 0 0 780px; position:absolute; background-image:url('../img/layout/bet_new7.png'); cursor:url(../../common/cursor/bet5.png), auto;border-radius:0px;}
+.div_bet_zone8_on{width:146px; height:101px; float:left; margin:554px 0 0 884px; position:absolute; background-image:url('../img/layout/bet_new8.png'); cursor:url(../../common/cursor/bet5.png), auto;border-radius:0px;}
+.div_bet_zone9_on{width:157px; height:101px; float:left; margin:515px 0 0 984px; position:absolute; background-image:url('../img/layout/bet_new9.png'); cursor:url(../../common/cursor/bet5.png), auto;border-radius:0px;}
+/*
+.div_bet_zone10_on{width:146px; height:107px; float:left; margin:574px 0 0 798px; position:absolute; background-image:url('/pc/game/fantan/img/layout/betz10.png'); cursor:url(/pc/game/common/cursor/bet5.png), auto;border-radius:0px;}
+.div_bet_zone11_on{width:162px; height:110px; float:left; margin:543px 0 0 900px; position:absolute; background-image:url('/pc/game/fantan/img/layout/betz11.png'); cursor:url(/pc/game/common/cursor/bet5.png), auto;border-radius:0px;}
+.div_bet_zone12_on{width:175px; height:112px; float:left; margin:501px 0 0 997px; position:absolute; background-image:url('/pc/game/fantan/img/layout/betz12.png'); cursor:url(/pc/game/common/cursor/bet5.png), auto;border-radius:0px;}
+    */
+
+
+
+.div_bet_zone1_on:hover{background-image:url('../img/layout/bet_new_over1.png');}
+.div_bet_zone2_on:hover{background-image:url('../img/layout/bet_new_over2.png');}
+.div_bet_zone3_on:hover{background-image:url('../img/layout/bet_new_over3.png');}
+.div_bet_zone4_on:hover{background-image:url('../img/layout/bet_new_over4.png');}
+.div_bet_zone5_on:hover{background-image:url('../img/layout/bet_new_over5.png');}
+.div_bet_zone6_on:hover{background-image:url('../img/layout/bet_new_over6.png');}
+.div_bet_zone7_on:hover{background-image:url('../img/layout/bet_new_over7.png');}
+.div_bet_zone8_on:hover{background-image:url('../img/layout/bet_new_over8.png');}
+.div_bet_zone9_on:hover{background-image:url('../img/layout/bet_new_over9.png');}
+/*
+.div_bet_zone10_on:hover{background-image:url('/pc/game/fantan/img/layout/bet_over10.png');}
+.div_bet_zone11_on:hover{background-image:url('/pc/game/fantan/img/layout/bet_over11.png');}
+.div_bet_zone12_on:hover{background-image:url('/pc/game/fantan/img/layout/bet_over12.png');}
+    */
+
+
+
+.div_bet_chip_zone1 {height:0px; width:112px; z-index:32; position:absolute; margin-top:10px; margin-left:30px;}
+.div_bet_chip_zone2 {height:0px; width:112px; z-index:32; position:absolute; margin-top:10px; margin-left:30px;}
+.div_bet_chip_zone3 {height:0px; width:112px; z-index:32; position:absolute; margin-top:10px; margin-left:20px;}
+.div_bet_chip_zone4 {height:0px; width:112px; z-index:32; position:absolute; margin-top:10px; margin-left:7px;}
+.div_bet_chip_zone5 {height:0px; width:112px; z-index:32; position:absolute; margin-top:10px; margin-left:2px;}
+.div_bet_chip_zone6 {height:0px; width:112px; z-index:32; position:absolute; margin-top:10px; margin-left:4px;}
+.div_bet_chip_zone7 {height:0px; width:112px; z-index:32; position:absolute; margin-top:10px; margin-left:17px;}
+.div_bet_chip_zone8 {height:0px; width:112px; z-index:32; position:absolute; margin-top:10px; margin-left:20px;}
+.div_bet_chip_zone9 {height:0px; width:112px; z-index:32; position:absolute; margin-top:10px; margin-left:20px;}
+/*
+.div_bet_chip_zone10 {height:0px; z-index:32; position:absolute; margin-top:25px; margin-left:30px;}
+.div_bet_chip_zone11 {height:0px; z-index:32; position:absolute; margin-top:10px; margin-left:30px;}
+.div_bet_chip_zone12 {height:0px; z-index:32; position:absolute; margin-top:10px; margin-left:30px;}
+*/
+
+.show_bet_money_box1 {position:relative; float: inherit; padding: 5px 8px 5px 35px; border-radius: 5px; font-weight: bold; font-size: 14px; left:-30px; margin-top: 82px;
+    width:92px; height:23px; line-height:18px; text-align:right; background-image:url('../img/layout/bet_money_box.png'); color:#ffcd00; z-index:35;}
+.show_bet_money_box2 {position:relative; float: inherit; padding: 5px 8px 5px 35px; border-radius: 5px; font-weight: bold; font-size: 14px; left:-30px; margin-top: 80px;
+    width:92px; height:23px; line-height:18px; text-align:right; background-image:url('../img/layout/bet_money_box.png'); color:#ffcd00; z-index:35;}
+.show_bet_money_box3 {position:relative; float: inherit; padding: 5px 8px 5px 35px; border-radius: 5px; font-weight: bold; font-size: 14px; left:-30px; margin-top: 90px;
+    width:92px; height:23px; line-height:18px; text-align:right; background-image:url('../img/layout/bet_money_box.png'); color:#ffcd00; z-index:35;}
+
+.show_bet_money_box4 {position:relative; float: inherit; padding: 5px 8px 5px 35px; border-radius: 5px; font-weight: bold; font-size: 14px; left:-45px; margin-top: 82px;
+    width:92px; height:23px; line-height:18px; text-align:right; background-image:url('../img/layout/bet_money_box.png'); color:#ffcd00; z-index:35;}
+.show_bet_money_box5 {position:relative; float: inherit; padding: 5px 8px 5px 35px; border-radius: 5px; font-weight: bold; font-size: 14px; left:-32px; margin-top: 100px;
+    width:92px; height:23px; line-height:18px; text-align:right; background-image:url('../img/layout/bet_money_box.png'); color:#ffcd00; z-index:35; }
+.show_bet_money_box6 {position:relative; float: inherit; padding: 5px 8px 5px 35px; border-radius: 5px; font-weight: bold; font-size: 14px; left:-10px; margin-top: 82px;
+    width:92px; height:23px; line-height:18px; text-align:right; background-image:url('../img/layout/bet_money_box.png'); color:#ffcd00; z-index:35;}
+.show_bet_money_box7 {position:relative; float: inherit; padding: 5px 8px 5px 35px; border-radius: 5px; font-weight: bold; font-size: 14px; left:20px; margin-top: 90px;
+    width:92px; height:23px; line-height:18px; text-align:right; background-image:url('../img/layout/bet_money_box.png'); color:#ffcd00; z-index:35;}
+.show_bet_money_box8 {position:relative; float: inherit; padding: 5px 8px 5px 35px; border-radius: 5px; font-weight: bold; font-size: 14px; left:0px; margin-top: 82px;
+    width:92px; height:23px; line-height:18px; text-align:right; background-image:url('../img/layout/bet_money_box.png'); color:#ffcd00; z-index:35;}
+.show_bet_money_box9 {position:relative; float: inherit; padding: 5px 8px 5px 35px; border-radius: 5px; font-weight: bold; font-size: 14px; left:5px; margin-top: 82px;
+    width:92px; height:23px; line-height:18px; text-align:right; background-image:url('../img/layout/bet_money_box.png'); color:#ffcd00; z-index:35;}
+/*
+.show_bet_money_box10 {position:relative; float: inherit; padding: 5px 8px 5px 35px; border-radius: 5px; font-weight: bold; font-size: 14px; left:30px; margin-top: 100px;
+    width:92px; height:23px; line-height:18px; text-align:right; background-image:url('/pc/game/fantan/img/layout/bet_money_box.png'); color:#ffcd00;z-index:35;}
+.show_bet_money_box11 {position:relative; float: inherit; padding: 5px 8px 5px 35px; border-radius: 5px; font-weight: bold; font-size: 14px; left:30px; margin-top: 85px;
+    width:92px; height:23px; line-height:18px; text-align:right; background-image:url('/pc/game/fantan/img/layout/bet_money_box.png'); color:#ffcd00;z-index:35;}
+.show_bet_money_box12 {position:relative; float: inherit; padding: 5px 8px 5px 35px; border-radius: 5px; font-weight: bold; font-size: 14px; left:30px; margin-top: 82px;
+    width:92px; height:23px; line-height:18px; text-align:right; background-image:url('/pc/game/fantan/img/layout/bet_money_box.png'); color:#ffcd00; z-index:35;}
+*/
+/************************************************************************************/
+/* CARD RESULT */
+/************************************************************************************/
+.sizeup_line {height:40px; text-align:right;}
+
+.div_result_zone_p1 { position:absolute; width:330px; height:215px;padding:15px 20px; float:left; margin:476px 0 0 38px; background-image:url('../../niuniu/img/layout/player_card_base2.png');}
+.div_result_zone_p2{ position:absolute; width:330px; height:215px; padding:15px 20px; float:left; margin:546px 0 0 415px; background-image:url('../../niuniu/img/layout/player_card_base2.png');}
+.div_result_zone_p3{ position:absolute; width:330px; height:215px;padding:15px 20px; float:left; margin:476px 0 0 792px;  background-image:url('../../niuniu/img/layout/player_card_base2.png');}
+.div_result_zone_bk{ position:absolute; width:344px; height:96px;   margin:261px 0 0 833px; background-image:url('../../niuniu/img/layout/dealer_card_base2.png'); background-repeat:no-repeat; padding:6px 8px; z-index:101; display:none;}
+
+
+
+.rt_winner_text { width:369px; height:225px; margin:-15px -20px; background-image:url('../../niuniu/img/result/winner2.png'); display:inline-block; background-position-y:bottom;}
+.rt_loser_text {width:369px; height:225px; margin:-15px -20px; background-image:url('../../niuniu/img/result/loser2.png'); display:inline-block; background-position-y:bottom;}
+.rt_banker_text { width:360px; height:108px; margin-top:-12px; margin-left:-16px; background-image:url('../../niuniu/img/result/banker3.png'); display:inline-block; background-position-y:bottom;}
+
+.div_text_result_zone{width:330px; height:195px;margin:0px 0px; text-align:center; vertical-align:middle;}
+.div_text_result_zone_bk{width:360px; height:108px;margin:0px 0px; text-align:center; vertical-align:middle;}
+
+/************************************************************************************/
+/* TEXT RESULT */
+/************************************************************************************/
+/* TEXT RESULT BOX */
+/************************************************************************************/
+.result_box_base {height:0px; position:absolute; width:828px; text-align:center;}
+.result_box_base .text_box {width:828px; height:160px; margin-top:120px; position:absolute;z-index:503; background-image:url('../img/layout/result_box.png'); background-position:center; display:none; font-weight:bold; font-size:24px; line-height:55px; letter-spacing:3px; color:#fff;}
+/************************************************************************************/

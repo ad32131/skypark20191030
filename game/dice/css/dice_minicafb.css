@@ -1,0 +1,160 @@
+﻿/************************************************************************************/
+/* GAME BOX BASE */
+/************************************************************************************/
+span {background-repeat:no-repeat;}
+/************************************************************************************/
+/* ORDER CARD  */
+/************************************************************************************/
+.div_order_card_zone { position:absolute; width:66px; height:96px; margin-top:260px; margin-left:6px; margin-left:272px; background-image:url('../../niuniu/img/layout/burn_base.png'); background-repeat:no-repeat; padding:6px 14px; display:none;}
+.div_order_card_zone_text {position:absolute; width:259px; height:108px; margin-top:260px; float:left; margin-left:6px; display:none;}
+.div_order_card_zone_text1{position:absolute; width:259px; height:108px; margin-top:260px; float:left; margin-left:6px; background-image:url('../../niuniu/img/order/aorder_1.png');}
+.div_order_card_zone_text2{position:absolute; width:259px; height:108px; margin-top:260px; float:left; margin-left:6px; background-image:url('../../niuniu/img/order/aorder_2.png');}
+.div_order_card_zone_text3{position:absolute; width:259px; height:108px; margin-top:260px; float:left; margin-left:6px; background-image:url('../../niuniu/img/order/aorder_3.png');}
+.div_order_card_zone_text0{position:absolute; width:259px; height:108px; margin-top:260px; float:left; margin-left:6px; background-image:url('../../niuniu/img/order/aorder_0.png');}
+/************************************************************************************/
+/* HISTORY */
+/************************************************************************************/
+.div_history_box {width:346px; height:182px;overflow-y:scroll;}
+.div_history {width:372px; height:255px; background-image:url('../../niuniu/img/history/history_back.png'); background-repeat:no-repeat; margin-left:457px; margin-top:132px;}
+.div_history .title {height:38px;background-image:url('../../niuniu/img/history/history_title.png'); background-repeat:no-repeat; background-position:center 7px;}
+.div_history .arrow {height:7px; background-image:url('../../niuniu/img/history/arrow.png'); background-position: 317px 0px; background-repeat:no-repeat;}
+
+.div_history .result_back {width:346px; height:182px; color:#eee; font-size:14px; text-shadow:1px 1px 1px #000; font-weight:bold; letter-spacing:1px;}
+
+.div_history .tb_result_history { width:100%; height:100%; border-collapse:separate; empty-cells:show; padding:0px; background-color:black; border:0px !important; border-spacing:1px;  }
+.div_history .tb_result_history th {padding:0px;}
+.div_history .tb_result_history td {padding:0px; width:44px; height:46px; vertical-align:middle;}
+
+.div_history .rdc1 { width:20px; height:20px; margin-top:3px; background-image:url('../img/history/rdice1.png'); display:inline-block;}
+.div_history .rdc2 { width:20px; height:20px; margin-top:3px; background-image:url('../img/history/rdice2.png'); display:inline-block;}
+.div_history .rdc3 { width:20px; height:20px; margin-top:3px; background-image:url('../img/history/rdice3.png'); display:inline-block;}
+.div_history .rdc4 { width:20px; height:20px; margin-top:3px; background-image:url('../img/history/rdice4.png'); display:inline-block;}
+.div_history .rdc5 { width:20px; height:20px; margin-top:3px; background-image:url('../img/history/rdice5.png'); display:inline-block;}
+.div_history .rdc6 { width:20px; height:20px; margin-top:3px; background-image:url('../img/history/rdice6.png'); display:inline-block;}
+
+.div_history .bdc1 { width:20px; height:20px; margin-top:3px; background-image:url('../img/history/bdice1.png'); display:inline-block;}
+.div_history .bdc2 { width:20px; height:20px; margin-top:3px; background-image:url('../img/history/bdice2.png'); display:inline-block;}
+.div_history .bdc3 { width:20px; height:20px; margin-top:3px; background-image:url('../img/history/bdice3.png'); display:inline-block;}
+.div_history .bdc4 { width:20px; height:20px; margin-top:3px; background-image:url('../img/history/bdice4.png'); display:inline-block;}
+.div_history .bdc5 { width:20px; height:20px; margin-top:3px; background-image:url('../img/history/bdice5.png'); display:inline-block;}
+.div_history .bdc6 { width:20px; height:20px; margin-top:3px; background-image:url('../img/history/bdice6.png'); display:inline-block;}
+
+.div_history .htd1{ width:70px;}
+.div_history .htd2{ width:40px;}
+.div_history .htd3{ width:40px;}
+.div_history .htd4{ width:40px;}
+.div_history .htd5{ width:60px;}
+.div_history .htd6{ width:70px; text-align:center;}
+
+.div_history .odd { width:17px; height:19px; margin-top:3px; background-image:url('../img/history/odd.png'); display:inline-block;}
+.div_history .even { width:18px; height:18px; margin-top:4px; background-image:url('../img/history/even.png'); display:inline-block;}
+
+.div_history .under { width:50px; height:18px; margin-top:4px; background-image:url('../img/history/under.png'); display:inline-block;}
+.div_history .over { width:50px; height:18px; margin-top:4px; background-image:url('../img/history/over.png'); display:inline-block;}
+.div_history .seven { width:44px; height:13px; margin-top:8px; background-image:url('../img/history/seven.png'); display:inline-block;}
+
+.div_history .blue { width:37px; height:13px; margin-top:8px; background-image:url('../img/history/blue.png'); display:inline-block;}
+.div_history .red { width:29px; height:13px; margin-top:8px; background-image:url('../img/history/red.png'); display:inline-block;}
+.div_history .tie { width:23px; height:13px; margin-top:8px; background-image:url('../img/history/tie.png'); display:inline-block;}
+
+.div_history .split { width:1px; background-color:black; }
+
+.div_history_line_0 {
+    height: 26px;
+    line-height:26px;
+    background-image:url('../img/history/his_line_0.png');
+    text-align:center;
+}
+.div_history_line_1 {
+    height: 26px;
+    line-height:26px;
+    background-image:url('../img/history/his_line_1.png');
+    text-align: center;
+}
+
+/************************************************************************************/
+/* BETTING ZONE */
+/************************************************************************************/
+.div_bet_zone1_off{position:absolute; width:343px; height:213px; float:left; margin:482px 0 0 45px; border-radius:0px;}
+.div_bet_zone2_off{position:absolute; width:344px; height:213px; float:left; margin:472px 0 0 812px; border-radius:0px;}
+.div_bet_zone3_off{position:absolute; width:181px; height:65px; float:left; margin:612px 0 0 333px; border-radius:0px;}
+.div_bet_zone4_off{position:absolute; width:171px; height:65px; float:left; margin:612px 0 0 514px; border-radius:0px;}
+.div_bet_zone5_off{position:absolute; width:182px; height:65px; float:left; margin:612px 0 0 684px; border-radius:0px;}
+.div_bet_zone6_off{position:absolute; width:154px; height:48px; float:left; margin:555px 0 0 381px; border-radius:0px;}
+.div_bet_zone7_off{position:absolute; width:147px; height:48px; float:left; margin:555px 0 0 533px; border-radius:0px;}
+.div_bet_zone8_off{position:absolute; width:155px; height:48px; float:left; margin:555px 0 0 674px; border-radius:0px;}
+
+.div_bet_zone1_on{width:343px; height:213px; float:left; margin:482px 0 0 45px; position:absolute; background-image:url('../img/layout/bet1.png'); cursor:url(../../common/cursor/bet5.png), auto;border-radius:0px;}
+.div_bet_zone2_on{width:344px; height:213px; float:left; margin:482px 0 0 812px; position:absolute; background-image:url('../img/layout/bet2.png'); cursor:url(../../common/cursor/bet5.png), auto;border-radius:0px;}
+.div_bet_zone3_on{width:181px; height:65px; float:left; margin:612px 0 0 333px; position:absolute; background-image:url('../img/layout/bet5.png'); cursor:url(../../common/cursor/bet5.png), auto;border-radius:0px;}
+.div_bet_zone4_on{width:171px; height:65px; float:left; margin:612px 0 0 514px; position:absolute; background-image:url('../img/layout/bet4.png'); cursor:url(../../common/cursor/bet5.png), auto;border-radius:0px;}
+.div_bet_zone5_on{width:182px; height:65px; float:left; margin:612px 0 0 686px; position:absolute; background-image:url('../img/layout/bet3.png'); cursor:url(../../common/cursor/bet5.png), auto;border-radius:0px;}
+.div_bet_zone6_on{width:154px; height:48px; float:left; margin:555px 0 0 370px; position:absolute; background-image:url('../img/layout/bet8.png'); cursor:url(../../common/cursor/bet5.png), auto;border-radius:0px;}
+.div_bet_zone7_on{width:147px; height:48px; float:left; margin:555px 0 0 527px; position:absolute; background-image:url('../img/layout/bet7.png'); cursor:url(../../common/cursor/bet5.png), auto;border-radius:0px;}
+.div_bet_zone8_on{width:155px; height:48px; float:left; margin:555px 0 0 674px; position:absolute; background-image:url('../img/layout/bet6.png'); cursor:url(../../common/cursor/bet5.png), auto;border-radius:0px;}
+
+
+
+.div_bet_zone1_on:hover{background-image:url('../img/layout/bet_over1.png');}
+.div_bet_zone2_on:hover{background-image:url('../img/layout/bet_over2.png');}
+.div_bet_zone3_on:hover{background-image:url('../img/layout/bet_over33.png');}
+.div_bet_zone4_on:hover{background-image:url('../img/layout/bet_over4.png');}
+.div_bet_zone5_on:hover{background-image:url('../img/layout/bet_over55.png');}
+.div_bet_zone6_on:hover{background-image:url('../img/layout/bet_over66.png');}
+.div_bet_zone7_on:hover{background-image:url('../img/layout/bet_over7.png');}
+.div_bet_zone8_on:hover{background-image:url('../img/layout/bet_over88.png');}
+
+
+
+.div_bet_chip_zone1 {height:0px; width:112px; z-index:32; position:absolute; margin-top:50px; margin-left:130px;}
+.div_bet_chip_zone2 {height:0px; width:112px; z-index:32; position:absolute; margin-top:50px; margin-left:110px;}
+.div_bet_chip_zone3 {height:0px; width:112px; z-index:32; position:absolute; margin-top:-10px; margin-left:30px;}
+.div_bet_chip_zone4 {height:0px; width:112px; z-index:32; position:absolute; margin-top:-10px; margin-left:30px;}
+.div_bet_chip_zone5 {height:0px; width:112px; z-index:32; position:absolute; margin-top:-10px; margin-left:30px;}
+.div_bet_chip_zone6 {height:0px; width:112px; z-index:32; position:absolute; margin-top:-27px; margin-left:20px;}
+.div_bet_chip_zone7 {height:0px; width:112px; z-index:32; position:absolute; margin-top:-27px; margin-left:20px;}
+.div_bet_chip_zone8 {height:0px; width:112px; z-index:32; position:absolute; margin-top:-27px; margin-left:20px;}
+
+.show_bet_money_box1 {position:relative; float: inherit; padding: 5px 15px 5px 45px; border-radius: 5px; font-weight: bold; font-size: 18px; left:70px; margin-top: 130px;
+    width:124px; height:39px; line-height:30px; text-align:right; background-image:url('../../common/img/layout/bet_money_box.png'); color:#ffcd00;}
+.show_bet_money_box2 {position:relative; float: inherit; padding: 5px 15px 5px 45px; border-radius: 5px; font-weight: bold; font-size: 18px; left:70px; margin-top: 130px;
+    width:124px; height:39px; line-height:30px; text-align:right; background-image:url('../../common/img/layout/bet_money_box.png'); color:#ffcd00;}
+.show_bet_money_box3 {position:relative; float: inherit; padding: 5px 15px 5px 45px; border-radius: 5px; font-weight: bold; font-size: 18px; left:-5px; margin-top: 70px;
+    width:124px; height:39px; line-height:30px; text-align:right; background-image:url('../../common/img/layout/bet_money_box.png'); color:#ffcd00; }
+.show_bet_money_box4 {position:relative; float: inherit; padding: 5px 15px 5px 45px; border-radius: 5px; font-weight: bold; font-size: 18px; left:-3px; margin-top: 70px;
+    width:124px; height:39px; line-height:30px; text-align:right; background-image:url('../../common/img/layout/bet_money_box.png'); color:#ffcd00;}
+.show_bet_money_box5 {position:relative; float: inherit; padding: 5px 15px 5px 45px; border-radius: 5px; font-weight: bold; font-size: 18px; left:10px; margin-top: 70px;
+    width:124px; height:39px; line-height:30px; text-align:right; background-image:url('../../common/img/layout/bet_money_box.png'); color:#ffcd00; }
+.show_bet_money_box6 {position:relative; float: inherit; padding: 5px 15px 5px 45px; border-radius: 5px; font-weight: bold; font-size: 18px; left:-30px; margin-top: 40px;
+    width:124px; height:39px; line-height:30px; text-align:right; background-image:url('../../common/img/layout/bet_money_box.png'); color:#ffcd00; }
+.show_bet_money_box7 {position:relative; float: inherit; padding: 5px 15px 5px 45px; border-radius: 5px; font-weight: bold; font-size: 18px; left:-15px; margin-top: 40px;
+    width:124px; height:39px; line-height:30px; text-align:right; background-image:url('../../common/img/layout/bet_money_box.png'); color:#ffcd00; }
+.show_bet_money_box8 {position:relative; float: inherit; padding: 5px 15px 5px 45px; border-radius: 5px; font-weight: bold; font-size: 18px; left:10px; margin-top: 40px;
+    width:124px; height:39px; line-height:30px; text-align:right; background-image:url('../../common/img/layout/bet_money_box.png'); color:#ffcd00; }
+/************************************************************************************/
+/* CARD RESULT */
+/************************************************************************************/
+.sizeup_line {height:40px; text-align:right;}
+
+.div_result_zone_p1 { position:absolute; width:330px; height:215px;padding:15px 20px; float:left; margin:476px 0 0 38px; background-image:url('../../niuniu/img/layout/player_card_base2.png');}
+.div_result_zone_p2{ position:absolute; width:330px; height:215px; padding:15px 20px; float:left; margin:546px 0 0 415px; background-image:url('../../niuniu/img/layout/player_card_base2.png');}
+.div_result_zone_p3{ position:absolute; width:330px; height:215px;padding:15px 20px; float:left; margin:476px 0 0 792px;  background-image:url('../../niuniu/img/layout/player_card_base2.png');}
+.div_result_zone_bk{ position:absolute; width:344px; height:96px;   margin:261px 0 0 833px; background-image:url('../../niuniu/img/layout/dealer_card_base2.png'); background-repeat:no-repeat; padding:6px 8px; z-index:101; display:none;}
+
+
+
+.rt_winner_text { width:369px; height:225px; margin:-15px -20px; background-image:url('../../niuniu/img/result/winner2.png'); display:inline-block; background-position-y:bottom;}
+.rt_loser_text {width:369px; height:225px; margin:-15px -20px; background-image:url('../../niuniu/img/result/loser2.png'); display:inline-block; background-position-y:bottom;}
+.rt_banker_text { width:360px; height:108px; margin-top:-12px; margin-left:-16px; background-image:url('../../niuniu/img/result/banker3.png'); display:inline-block; background-position-y:bottom;}
+
+.div_text_result_zone{width:330px; height:195px;margin:0px 0px; text-align:center; vertical-align:middle;}
+.div_text_result_zone_bk{width:360px; height:108px;margin:0px 0px; text-align:center; vertical-align:middle;}
+
+/************************************************************************************/
+/* TEXT RESULT */
+/************************************************************************************/
+/* TEXT RESULT BOX */
+/************************************************************************************/
+.result_box_base {height:0px; position:absolute; width:828px; text-align:center;}
+.result_box_base .text_box {width:828px; height:60px; margin-top:200px; position:absolute;z-index:503; background-image:url('../img/layout/result_box.png'); background-position:center; display:none; font-weight:bold; font-size:24px; line-height:55px; letter-spacing:3px; color:#fff;}
+/************************************************************************************/

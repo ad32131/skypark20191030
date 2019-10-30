@@ -1,0 +1,220 @@
+﻿/************************************************************************************/
+/* COMMON */
+/************************************************************************************/
+body 
+{ 
+    margin : 0px 0px 0px 0px; font-family: Dotum; color: #d2d2d2;
+   font-size:12px; background-color:#282828; min-width:1200px;
+   -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge*/
+    user-select: none; 
+    font-family:'Noto Sans KR',맑은 고딕,'Malgun Gothic','맑은 고딕',dotum !important;
+}
+html{overflow-y:hidden;}
+img {border:0px;}
+a {text-decoration:none;}
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
+table { padding:0; border:0; border-collapse:collapse; border-spacing:0px; }
+th, td { padding:0; vertical-align:top; }
+/************************************************************************************/
+/* CARD LAYOUT */
+/************************************************************************************/
+
+
+/************************************************************************************/
+/* BASE LAYOUT */
+/************************************************************************************/
+.game_box {
+    z-index:10;
+    width: 828px;
+    height: 455px;
+    position:absolute;
+    background-repeat:no-repeat;
+    background-color:#5a3fa3;
+    margin-left:auto;
+    margin-right:auto;
+    padding:2px 1px;
+    border-radius:0px;
+    cursor:url(../cursor/normal.cur), auto;
+}
+.game_box div {background-repeat:no-repeat;}
+.canvas20 {height:0px; position:absolute; z-index:20; top:2px; height:0px;}
+.canvas30 {height:0px; position:absolute; z-index:30; top:2px; height:0px;}
+.canvas40 {height:0px; position:absolute; z-index:40; top:2px; height:0px;}
+.canvas50 {height:0px; position:absolute; z-index:50; top:2px; height:0px;}
+.canvas60 {height:0px; position:absolute; z-index:60; top:2px; height:0px;}
+.canvas70 {height:0px; position:absolute; z-index:70; top:2px; height:0px;}
+.canvas80 {height:0px; position:absolute; z-index:80; top:2px; height:0px;}
+.canvas90 {height:0px; position:absolute; z-index:90; top:2px; height:0px;}
+.canvas100 {height:0px; position:absolute; z-index:90; top:2px; height:0px;}
+
+.hand_card_box_base {height:0px; position:absolute; z-index:300; top:0px; height:0px;}
+/************************************************************************************/
+/* VIDEO */
+/************************************************************************************/
+.div_video_base {position:absolute; width:456px; height:456px; margin-left:0px; margin-top:0px; margin-left:1px;}
+.div_video_base .video_loding{position:absolute; width:456px; height:455px; background-color:white; background-image:url('../img/layout/loading.gif'); background-position:center; z-index:21;}
+/************************************************************************************/
+/* GAME INFO */
+/************************************************************************************/
+.div_game_info {position:absolute; width:372px; height:255px; background-image:url('../img/info/info_back.png'); margin-left:828px;}
+.div_game_info .title {height:38px;background-image:url('../img/info/info_title.png'); background-repeat:no-repeat; background-position:center 8px;}
+
+.div_game_info .title1 {width:84px; height:30px; float:left; background-image:url('../img/info/info_title11.png'); background-repeat:no-repeat; background-position:left 6px;}
+.div_game_info .title2 {width:84px; height:30px; float:left; background-image:url('../img/info/info_title222.png'); background-repeat:no-repeat; background-position:left 6px;}
+.div_game_info .title3 {width:84px; height:30px; float:left; background-image:url('../img/info/info_title33.png'); background-repeat:no-repeat; background-position:left 6px;}
+.div_game_info .title4 {width:84px; height:30px; float:left; background-image:url('../img/info/info_title44.png'); background-repeat:no-repeat; background-position:left 5px;}
+.div_game_info .value {line-height:30px; text-align:right; color:white; padding-right:10px; font-weight:bold; font-size:16px; float:right; width:242px; height:30px;}
+
+.div_game_info .exit {width:32px; height:34px;margin:2px 7px 0px 0px; float:right; background-image:url('../img/info/exit.png'); background-repeat:no-repeat; cursor:url(../cursor/pointer12.png), auto;}
+.div_game_info .exit:hover {background-image:url('../img/info/exit_up.png');}
+
+.div_game_info .menu {width:48px; height:50px; float:right; background-image:url('../img/info/menu.png'); background-repeat:no-repeat; cursor:url(../cursor/pointer12.png), auto;}
+.div_game_info .menu_on {width:48px; height:50px; float:right; background-image:url('../img/info/menu_up.png'); background-repeat:no-repeat; cursor:url(../cursor/pointer12.png), auto;}
+
+.sound_on {width:48px; height:50px; float:right; background-image:url('../img/info/sound_on.png'); background-repeat:no-repeat; cursor:url(../cursor/pointer12.png), auto;}
+.sound_off {width:48px; height:50px; float:right; background-image:url('../img/info/sound_off.png'); background-repeat:no-repeat; cursor:url(../cursor/pointer12.png), auto;}
+/************************************************************************************/
+/* SIZE ICON */
+/************************************************************************************/
+.bt_size { margin-top:5px; width:24px; height:23px; display:inline-block;  background-image:url('../img/button/size.png'); cursor:url(../cursor/pointer12.png), auto;}
+.bt_size:hover {background-image:url('../img/button/size_up.png');}
+.bbt_size { margin-top:5px; width:26px; height:25px; display:inline-block;  background-image:url('../img/button/big_size.png'); cursor:url(../cursor/pointer12.png), auto;}
+.bbt_size:hover {background-image:url('../img/button/big_size_up.png');}
+/************************************************************************************/
+/* CHIP TOWER */
+/************************************************************************************/
+.tb_chip_tower{margin-top:-120px; float:left;}
+.tb_chip_tower td{vertical-align:bottom; height:150px;}
+.tb_chip_tower2{ margin-top:-270px;}
+.tb_chip_tower2 td{vertical-align:bottom; height:300px;}
+/************************************************************************************/
+.bt_open_all {
+    width:138px;
+    height:43px;
+    background-image:url('../../niuniu/img/button/open_all.png');
+    background-repeat:no-repeat;
+    margin: 20px;
+    cursor: url(../cursor/pointer12.png), auto;
+    display:inline-block;
+}
+.bt_open_all:hover {
+        background-image:url('../../niuniu/img/button/open_all_up.png');
+}
+
+.bt_sort_card {
+    width:138px;
+    height:43px;
+    background-image:url('../../niuniu/img/button/sort_card.png');
+    background-repeat:no-repeat;
+    margin: 20px;
+    cursor: url(../cursor/pointer12.png), auto;
+    display:inline-block;
+}
+.bt_sort_card:hover {
+        background-image:url('../../niuniu/img/button/sort_card_up.png');
+}
+
+/*--------------------------------------------------------------------------------*/
+/* chat zone */
+/*--------------------------------------------------------------------------------*/
+.game_chat_P {position:absolute;margin-left:-320px;}
+.game_chat_P .div_chat {float:left; width:320px;}
+.game_chat_P .div_chat .chat_box { background-color:white; height:794px; padding:3px; background-color:#403232; }
+.game_chat_P .div_chat .chat_box .msg_box {padding:5px; background-color:white; height:751px; overflow-y:auto; word-break:break-all; overflow-y:scroll;}
+.game_chat_P .div_chat_input_line {height:30px; background-color:#2d5288; margin-top:3px;}
+.game_chat_P .chat_msg_input {height:30px; line-height:30px; border:0; padding:0; width:267px; padding-left:5px; margin:0;}
+.game_chat_P .send_button {height:30px; line-height:30px; border:0; padding:0; width:40px; background-color:#7b9cce; color:white; font-weight:bold; margin:0; float:right;}
+
+.game_chat_P .msg_box {font-family:굴림, Gulim, Dotum;}
+.game_chat_P .msg_box div { text-align:left; line-height:16px; font-size:12px; }
+.game_chat_P .msg_box .div_enter{ background-color:#2d5288; color:white; text-align:center; height:22px; line-height:22px; font-size:12px;}
+.game_chat_P .msg_box .div_notice{ background-color:#2d5288; color:white; text-align:center; padding:3px; line-height:12px; font-size:12px;}
+
+.game_chat_P .tdlevel{ text-align:center; vertical-align:top;}
+.game_chat_P .tdlevel img {display:block;}
+.game_chat_P .tdmy_chat{vertical-align:top; word-break:break-all; color:#2d5288;}
+.game_chat_P .tdot_chat{vertical-align:top; word-break:break-all;}
+
+.game_chat_P .ftnick{ margin-left:0px; font-weight:bold;}
+.game_chat_P .ftmsg{ margin-left:5px; word-break:break-all;}
+.game_chat_P .msg_line_empty {height:1px;}
+
+.game_chat_M {position:absolute; margin-top:800px;}
+.game_chat_M .div_chat {float:left; width:1200px;}
+.game_chat_M .div_chat .chat_box { background-color:white; height:310px; padding:3px; background-color:#403232; }
+.game_chat_M .div_chat .chat_box .msg_box {padding:5px; background-color:white; height:257px; overflow-y:auto; word-break:break-all; overflow-y:scroll;}
+.game_chat_M .div_chat_input_line {height:40px; background-color:#2d5288; margin-top:3px;}
+.game_chat_M .chat_msg_input {height:40px; line-height:40px; border:0; padding:0; width:1106px; font-size:20px; padding-left:5px; margin:0;}
+.game_chat_M .send_button {height:40px; line-height:40px; border:0; padding:0; width:80px; background-color:#7b9cce; color:white; font-weight:bold; margin:0; float:right;}
+
+.game_chat_M .msg_box {font-family:굴림, Gulim, Dotum;}
+.game_chat_M .msg_box div { text-align:left; line-height:24px; font-size:20px; }
+.game_chat_M .msg_box .div_enter{ background-color:#2d5288; color:white; text-align:center; height:30px; line-height:30px; font-size:20px;}
+.game_chat_M .msg_box .div_notice{ background-color:#2d5288; color:white; text-align:center; padding:3px; line-height:20px; font-size:20px;}
+.msg_box .tb_item{ margin-left:10px;}
+.msg_box .tb_item td{ padding:3px;}
+.game_chat_M .tdlevel img {display:block; margin-top:4px;}
+
+
+.game_chat_M .ftnick{ margin-left:0px; font-weight:bold;}
+.game_chat_M .ftmsg{ margin-left:10px; word-break:break-all;}
+.game_chat_M .msg_line_empty {height:2px;}
+
+.game_chat_M .tdlevel{ text-align:center; vertical-align:top;}
+
+.tdmy_chat{vertical-align:top; word-break:break-all; color:#2d5288;}
+.tdot_chat{vertical-align:top; word-break:break-all;}
+
+.ept1{height:2px;}
+.ept2{height:3px;}
+.ept3{height:2px;}
+.ept4{height:3px;}
+.ept5{height:2px;}
+.ept6{height:3px;}
+.ept7{height:3px;}
+.ept8{height:8px;}
+.ept9{height:8px;}
+/*--------------------------------------------------------------------------------*/
+/*msg_box*/
+/*--------------------------------------------------------------------------------*/
+
+.msg_box_base {height:0px; z-index:200; position:absolute; top:0px; width:828px; text-align:center;}
+.div_msg_box {width:828px; z-index:200; height:455px; position:absolute; background-image:url('../img/msg/msg_box_mini.png'); display:none;}
+
+/*
+    .div_msg_box {width:684px; height:84px; margin-left:50%; left:-342px; position:absolute; background-image:url('/pc/game/common/img/msg/msg_box.png'); display:none; margin-top:-414px;}
+*/
+/* 게임을 준비중입니다. */
+.msg_text0{width:828px; height:54px; margin-top:7px; background-image:url('../img/msg/m0.png'); background-position-x:center; z-index:9999;}
+/* 게임을 시작합니다. */
+.msg_text1{width:828px; height:54px; margin-top:7px; background-image:url('../img/msg/m1.png'); background-position-x:center; z-index:9999;}
+/* 베팅이 가능합니다. */
+.msg_text2{width:828px; height:54px; margin-top:7px; background-image:url('../img/msg/m2.png'); background-position-x:center; z-index:9999;}
+/* 베팅이 종료되었습니다. */
+.msg_text3{width:828px; height:54px; margin-top:7px; background-image:url('../img/msg/m3.png'); background-position-x:center; z-index:9999;}
+/* 카드를 분배하는 중 입니다. */
+.msg_text4{width:828px; height:54px; margin-top:7px; background-image:url('../img/msg/m4.png'); background-position-x:center; z-index:9999;}
+/* 카드를 확인해주세요. */
+.msg_text5{width:828px; height:54px; margin-top:7px; background-image:url('../img/msg/m5.png'); background-position-x:center; z-index:9999;}
+/* 카드를 오픈합니다. */
+.msg_text6{width:830px; height:54px; margin-top:7px; background-image:url('../img/msg/m6.png'); background-position-x:center; z-index:9999;}
+/* 게임이 종료되었습니다. */
+.msg_text7{width:828px; height:54px; margin-top:7px; background-image:url('../img/msg/m7.png'); background-position-x:center; z-index:9999;}
+
+
+.bet_box_base {height:0px; z-index:100;position:absolute; width:1200px; text-align:center;}
+.div_betting_box { width:364px; height:164px; margin-left:50%; left:-182px; position:absolute; background-image:url('../img/msg/betting_box.png'); display:none; margin-top:290px;}
+.bet_check_text {width:364px; height:28px; background-image:url('../img/msg/bet_check_text.png'); background-position-x:center; margin-top:20px;}
+.bt_ok_bet {width:85px; height:85px; background-image:url('../img/msg/ok.png'); display:inline-block;cursor:url(../cursor/pointer12.png), auto;}
+.bt_ok_bet:hover{background-image:url('../img/msg/ok_over.png');}
+.bt_cancel_bet {width:85px; height:85px; background-image:url('../img/msg/cancel.png'); display:inline-block;cursor:url(../cursor/pointer12.png), auto;}
+.bt_cancel_bet:hover{background-image:url('../img/msg/cancel_over.png');}
+/*--------------------------------------------------------------------------------*/

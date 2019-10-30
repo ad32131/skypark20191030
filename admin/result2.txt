@@ -1,0 +1,9 @@
+./bbs/login_check.php:    set_cookie('ck_auto', $key, 86400 * 31);
+./bbs/login_check.php:    set_cookie('ck_auto', '', 0);
+./bbs/logout.php:set_cookie('ck_auto', '', 0);
+./bbs/common_login_title.php:                $tmp_key = get_cookie('ck_auto');
+./common_login_title.php:                $tmp_key = get_cookie('ck_auto');
+./common.php:                $tmp_key = get_cookie('ck_auto');
+./result.txt:./bbs/common_login_title.php:                $tmp_key = get_cookie('ck_auto');
+./result.txt:./common_login_title.php:                $tmp_key = get_cookie('ck_auto');
+./result.txt:./common.php:                $tmp_key = get_cookie('ck_auto');

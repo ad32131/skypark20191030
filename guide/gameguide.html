@@ -1,0 +1,449 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from www.spark-pop.com/pc/guide/gameguide.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Sep 2019 12:25:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+	스카이파크
+</title>
+    <script src="../../Scripts/jquery-1.6.4.min.js"></script>
+	<script src="../../Scripts/jquery.signalR-2.4.0.min.js"></script>
+	<script src="http://www.spark-pop.com/signalr/hubs"></script>
+    
+    <link rel="stylesheet" href="../css/chat7aff.css?v=1905271" /><link rel="stylesheet" href="../css/layout7aff.css?v=1905271" /><link rel="stylesheet" href="../css/common7aff.css?v=1905271" /> 
+    <script type="text/javascript" src="../js/common7aff.js?v=1905271" ></script>
+    <script type="text/javascript">
+        var chat;
+        var szAccount = "";
+        var szNcik = "";
+        var chat_id = "";
+
+        function pop_note_list() {
+            var nWidth = 800;
+            var nHeight = 500;
+            var x = (screen.availWidth - nWidth) / 2;
+            var y = (screen.availHeight - nHeight) / 2;
+            window.open("../pop/pop_note_list.html", "note_list", "width=" + nWidth + ",height=" + nHeight + ",toolbar=no,top=" + y + ",left=" + x + ",directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes");
+        }
+
+        function pop_user_info() {
+            var nWidth = 800;
+            var nHeight = 500;
+            var x = (screen.availWidth - nWidth) / 2;
+            var y = (screen.availHeight - nHeight) / 2;
+            window.open("../pop/pop_user_info.html", "user_info", "width=" + nWidth + ",height=" + nHeight + ",toolbar=no,top=" + y + ",left=" + x + ",directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes");
+        }
+
+        function pop_rand_box() {
+            var nWidth = 420;
+            var nHeight = 600;
+            var x = (screen.availWidth - nWidth) / 2;
+            var y = (screen.availHeight - nHeight) / 2;
+            window.open("../pop/pop_rand_box.html", "rand_box", "width=" + nWidth + ",height=" + nHeight + ",toolbar=no,top=" + y + ",left=" + x + ",directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes");
+        }
+        function pop_api_sample() {
+            var nWidth = 900;
+            var nHeight = 1000;
+            var x = (screen.availWidth - nWidth) / 2;
+            var y = (screen.availHeight - nHeight) / 2;
+            window.open("../pop/api_sample_view.html", "rand_box", "width=" + nWidth + ",height=" + nHeight + ",toolbar=no,top=" + y + ",left=" + x + ",directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes");
+        }
+
+    </script>
+    <script type="text/javascript" src="../js/chat9aa2.js?v=20190911212345" ></script>
+    
+    <link href="css/detailgame9aa2.css?v=20190911212345" rel="stylesheet" />
+</head>
+<body>
+    
+    <form method="post" action="http://www.spark-pop.com/pc/guide/gameguide.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="CY7ViLo1uGXxCjg5lHwwJ6djEAProh7ziT1ez1mbsUUBR2SL5wTvENtOuFnTILaTJxr9VxNs2+w/TWjztRuMG7YcxRK/MuOAHbFOC8vnid8=" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6F7EDD24" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="ic5IMuNoGS9//2vktUvxIrTdJ3wycgLGV8gVxhFHgmmOe8W0UAdZ/3FJPvjOiecytlPKGc2N4HL5ltayYW5GJ9YaRqf0eIY0WdNDIYluA1yF+rTiZleLJkfvzBA7f1wC" />
+</div>
+        <div style="display:none"><input type="submit" name="ctl00$btnNull" value="" onclick="return false;" id="btnNull" /></div>
+        <div style="position:fixed; left:-9000px;"><img alt="" src="../img/main_logo4.png" /></div>
+    <div>
+        <div class="main_page_top_line">
+            <div class="top_line_zone" style="font-size:12px;">
+                <a href="javascript:pop_rand_box();" style="padding:0; margin:0;">
+                    <div style="float:left; margin-left:10px;">
+                        <div style="width:23px; padding:5px 0px; height:20px; float:left;"><img src="../img/icon/rand_box_icon.png" style="height:20px; display:block;" /></div>
+                        <div style="color:#c5cfff; float:left; text-align:left;">랜덤박스</div>
+                        <div style="width:100px; padding:9px; height:12px; float:left;">
+                            <div style="height:12px; border-radius:5px; background-color:#c2ebff;">
+                                <div style="float:left; height:12px; border-radius:5px; background-color:#2ef706; width:0px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div style="color:#c5cfff; float:left; text-align:left;">달성률 0%</div>
+                    </div>
+                </a>
+                <a href="javascript:pop_api_sample();">영상API샘플</a>
+                <a href="../Default.html">영상API문의</a>
+                <a href="../Default.html">고객센터</a>
+                <a href="gameguide.html" style="margin-right:10px;">로그아웃</a>
+            </div>
+        </div>
+        <div class="main_body">
+            <div class="logo_line">
+                <div class="logo_zone">
+                    <a href="../Default.html">
+                        <img alt="" src="../img/main_logo4.png" />
+                    </a>
+                </div>
+                <div class="main_menu"><a href="../lobby.html"><img alt="" src="../img/mnt01.png" /></a></div>
+                <div class="main_menu"><a href="gameguide.html"><img alt="" src="../img/mnt02.png" /></a></div>
+                <div class="main_menu"><a href="../item_shop/item_shop.html"><img alt="" src="../img/mnt03.png" /></a></div>
+                <div class="main_menu"><a href="../notice_board.html"><img alt="" src="../img/mnt04.png" /></a></div>
+                <div class="main_menu"><a href="../dealer_intro.html"><img alt="" src="../img/mnt05.png" /></a></div>
+                <div class="main_menu"><a href="../free_refill.html"><img alt="" src="../img/mnt06.png" /></a></div>
+                <div class="main_menu"><a href="../user_rank.html"><img alt="" src="../img/mnt07.png" /></a></div>
+                <div class="main_menu"><a href="../game_result.html"><img alt="" src="../img/mnt08.png" /></a></div>
+            </div>
+            <div>
+                <div class="div_chat">
+                    <div class="login_box">
+                        
+                        <div style="height:4px;"></div>
+                        <div>
+                            <div style="width:280px; margin-left:auto; margin-right:auto;">
+                                <div style="height:40px; line-height:40px;">
+                                    로그인 이후 컨텐츠 이용이 가능합니다.
+                                </div> 
+                                <div class="login_button_box">
+                                    <a href="../login.html"><img alt="" src="../img/login_button.png" /></a>
+                                </div>
+                                <div style="height:40px; line-height:40px;">
+                                    <span style="float:left;"><a href="http://www.spark-pop.com/SignUp.aspx">간편 회원가입</a></span>
+                                    <span style="float:right;"><a href="http://www.spark-pop.com/find_id.aspx" style="font-weight:100;">아이디 찾기</a></span> 
+                                    <span style="float:right; padding:0 10px; font-size:8px; color:#dbdbdb">|</span> <span style="float:right;"><a href="http://www.spark-pop.com/find_passwd.aspx" style="font-weight:100;">비밀번호 찾기</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="div_split_height"></div>
+                    <div class="chat_box">
+                        <div style="position:absolute; height:440px; width:60px; margin-left:-64px;margin-top:-3px;">
+                            <div id="enter_room_chat" style="height:63px; cursor:pointer;">
+                                <img alt="" src="../img/chat_room_icon2.png" />
+                            </div>
+                        </div>
+                        <div id="msgs" class="msg_box">
+                            <div style="text-align:center;">
+                                <img alt="" src="../img/chat_loading.gif" style="margin-left:auto; margin-right:auto;" />
+                            </div>
+                        </div>
+                        <div class="div_chat_input_line">
+                            <input autocomplete="off" type="text" id="msg" onkeypress="javascript: msg_input_keypress(event);" class="chat_msg_input" />
+	                        <input type="button" id="send" value="전송" / class="send_button" />
+                        </div>
+                    </div>
+                </div>
+                <div class="div_content">
+                    
+     <div class="div_content_pd5">
+         <div class="subject"></div>
+         <div class="sub_menu">
+            <ul>
+                <li><a href="gameguide.html" class="active">게임소개</a></li>
+                <li><a href="niuniudetail.html">니우니우</a></li>
+                <li><a href="baccaratdetail.html">바카라</a></li>
+                <li><a href="baccarat_speeddetail.html">스피드 바카라</a></li>
+                <li><a href="baccarat_insurancedetail.html">보험 바카라</a></li>
+                <li><a href="pokerdetail.html">스카이 포커</a></li>
+                <li><a href="pairdetail.html">페어 게임</a></li>
+            </ul>
+            <ul>
+                <li><a href="oddevendetail.html">스카이 홀짝</a></li>
+                <li><a href="dragontigerdetail.html">드래곤 타이거</a></li>
+                <li><a href="blackjackdetail.html">블랙잭</a></li>
+                <li><a href="fantandetail.html">삼치기</a></li>
+                <li><a href="dicedetail.html">주사위</a></li>
+                <li><a href="roulettedetail.html">스카이 룰렛</a></li>
+                <li><a href="yutdetail.html">윷놀이</a></li>
+            </ul>
+        </div>
+        <div class="w_rap">
+            <div class="row">
+                <div class="column left">
+                    <img src="../img/game_icon/gm_banner1.png" />
+                </div>
+                <div class="column right" >
+                    <div class="game_title"><span class="main_title">니우니우</span> <span class="sub_title">게임 소개</span></div>
+                    <div class="game_guide_text">
+                        &nbsp;니우니우는 BANKER와 3명의 PLAYER가 각각 5장의 카드를 받아 그중 3장의 합으로 10의 배수를 만들고 나머지 두장의 합으로 승부하며, 같은 메이드를 만들었을 경우 가장 높은 카드로 각각의 PLAYER와 BANKER가 승부를 겨루는 게임 입니다&nbsp;&nbsp;<a href="niuniudetail.html">자세히 보기 >></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column left">
+                    <img src="../img/game_icon/gm_banner2.png" />
+                </div>
+                <div class="column right" >
+                    <div class="game_title"><span class="main_title">바카라</span> <span class="sub_title">게임 소개</span></div>
+                    <div class="game_guide_text">
+                        &nbsp;바카라 게임은 PLAYER와 BANKER가 게임규칙에 따라 카드를 받은 후 PLAYER와 BANKER의 카드 숫자합을 비교하여 9에 가까운 쪽이 이기는 게임입니다.&nbsp;&nbsp;<a href="baccaratdetail.html">자세히 보기 >></a>
+                    </div>
+                </div>
+            </div>
+             <div class="row">
+                <div class="column left">
+                    <img src="../img/game_icon/gm_banner3.png" />
+                </div>
+                <div class="column right" >
+                    <div class="game_title"><span class="main_title">스피드 바카라</span> <span class="sub_title">게임 소개</span></div>
+                    <div class="game_guide_text">
+                        &nbsp;스피드 바카라 게임은 기존 바카라 게임과 동일한 룰이 적용되며 별도의 카드 확인시간이 없는 게임입니다.  PLAYER와 BANKER가 게임규칙에 따라 카드를 받은 후 PLAYER와 BANKER의 카드 숫자합을 비교하여 9에 가까운 쪽이 이기는 게임입니다.&nbsp;&nbsp;<a href="baccarat_speeddetail.html">자세히 보기 >></a>
+                    </div>
+                </div>
+            </div>
+             <div class="row">
+                <div class="column left">
+                    <img src="../img/game_icon/gm_banner4.png" />
+                </div>
+                <div class="column right" >
+                    <div class="game_title"><span class="main_title">보험 바카라</span> <span class="sub_title">게임 소개</span></div>
+                    <div class="game_guide_text">
+                        &nbsp;보험 바카라 게임은 기존 바카라 게임과 동일한 룰이 적용되며 기존 배팅의 패배를 대비하여 기존배팅 외 추가적인 보험 배팅이 가능한 바카라 게임입니다.&nbsp;&nbsp;<a href="baccarat_insurancedetail.html">자세히 보기 >></a>
+                    </div>
+                </div>
+            </div>
+             <div class="row">
+                <div class="column left">
+                    <img src="../img/game_icon/gm_banner5.png" />
+                </div>
+                <div class="column right" >
+                    <div class="game_title"><span class="main_title">스카이 포커</span> <span class="sub_title">게임 소개</span></div>
+                    <div class="game_guide_text">
+                        &nbsp;스카이 포커는 바닥에 깔린 4장의 공용카드를 PLAYER와 BANKER 각자가 받은 3장의 카드를 조합하여 포커 족보에 의거해 가장 좋은 5장의 카드로 각각의 PLAYER와 BANKER가 승부를 겨루는 게임 입니다.&nbsp;&nbsp;<a href="pokerdetail.html">자세히 보기 >></a>
+                    </div>
+                </div>
+            </div>
+             <div class="row">
+                <div class="column left">
+                    <img src="../img/game_icon/gm_banner6.png" />
+                </div>
+                <div class="column right" >
+                    <div class="game_title"><span class="main_title">페어게임</span> <span class="sub_title">게임 소개</span></div>
+                    <div class="game_guide_text">
+                        &nbsp;페어게임이란 PLAYER와 BANKER가 각각 2장씩 카드를 나누어받고 받은 카드 합의 일의자리 수인 끝수나 페어를 이룬 숫자 카드의 숫자로 각각의 PLAYER와 BANKER가 승부를 겨루는 게임 입니다.&nbsp;&nbsp;<a href="pairdetail.html">자세히 보기 >></a>
+                    </div>
+                </div>
+            </div>
+             <div class="row">
+                <div class="column left">
+                    <img src="../img/game_icon/gm_banner7.png" />
+                </div>
+                <div class="column right" >
+                    <div class="game_title"><span class="main_title">스카이 홀짝</span> <span class="sub_title">게임 소개</span></div>
+                    <div class="game_guide_text">
+                        &nbsp;스카이홀짝 게임은 바닥에 깔린 오픈카드 한장과 히든카드 한장의 합을 예상하여 카드 숫자 합의 홀/짝 여부나 히든카드의 무늬를 맞추는 게임입니다.&nbsp;&nbsp;<a href="oddevendetail.html">자세히 보기 >></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column left">
+                    <img src="../img/game_icon/gm_banner8.png" />
+                </div>
+                <div class="column right" >
+                    <div class="game_title"><span class="main_title">드래곤 타이거</span> <span class="sub_title">게임 소개</span></div>
+                    <div class="game_guide_text">
+                        &nbsp;드래곤 타이거 게임은 드래곤(용) , 타이거(호랑이) 측이 각 한장씩 카드를 분배 받고 각각 받은 카드의 숫자의 크기로 승부를 겨루는 게임입니다.&nbsp;&nbsp;<a href="dragontigerdetail.html">자세히 보기 >></a>
+                    </div>
+                </div>
+            </div>
+             <div class="row">
+                <div class="column left">
+                    <img src="../img/game_icon/gm_banner9.png" />
+                </div>
+                <div class="column right" >
+                    <div class="game_title"><span class="main_title">블랙잭</span> <span class="sub_title">게임 소개</span></div>
+                    <div class="game_guide_text">
+                        &nbsp;블랙잭 게임은 BANKER와 PLAYER가 정해진 블랙잭 룰에 의하여 각각 카드를 분배 받은 후 분배 받은 카드의 합이 21또는 21에 가장 가까운 카드를 만들어 PLAYER와 BANKER가 승부를 겨루는 게임입니다.&nbsp;&nbsp;<a href="blackjackdetail.html">자세히 보기 >></a>
+                    </div>
+                </div>
+            </div>
+             <div class="row">
+                <div class="column left">
+                    <img src="../img/game_icon/gm_banner10.png" />
+                </div>
+                <div class="column right" >
+                    <div class="game_title"><span class="main_title">삼치기</span> <span class="sub_title">게임 소개</span></div>
+                    <div class="game_guide_text">
+                        &nbsp;삼치기 게임은 바닥에 섞은 단추 뭉치에서 일부를 분리해 내어 분리해 낸 단추의 숫자가 3으로 나누었을때 남는 단추의 숫자를 맞추는 게임 입니다.&nbsp;&nbsp;<a href="fantandetail.html">자세히 보기 >></a>
+                    </div>
+                </div>
+            </div>
+             <div class="row">
+                <div class="column left">
+                    <img src="../img/game_icon/gm_banner11.png" />
+                </div>
+                <div class="column right" >
+                    <div class="game_title"><span class="main_title">주사위</span> <span class="sub_title">게임 소개</span></div>
+                    <div class="game_guide_text">
+                        &nbsp;주사위 게임은 레드/블루 두개의 주사위를 동시에 굴려서 두 주사위 눈의 합을 이용해 홀/짝의 결과 , 7을 기준으로 한 언더/오버 , 레드/블루 두개의 주사위 중 높은 눈의 주사위를 맞추는 게임입니다.&nbsp;&nbsp;<a href="dicedetail.html">자세히 보기 >></a>
+                    </div>
+                </div>
+            </div>
+             <div class="row">
+                <div class="column left">
+                    <img src="../img/game_icon/gm_banner12.png" />
+                </div>
+                <div class="column right" >
+                    <div class="game_title"><span class="main_title">스카이 룰렛</span> <span class="sub_title">게임 소개</span></div>
+                    <div class="game_guide_text">
+                        &nbsp;스카이 룰렛 게임은 원형돌림판에 3개의 공을 굴려 레드 와 블랙 , 숫자 중 보다 많은 공이 위치한 색을 맞추는 게임입니다.&nbsp;&nbsp;<a href="roulettedetail.html">자세히 보기 >></a>
+                    </div>
+                </div>
+            </div>
+             <div class="row">
+                <div class="column left">
+                    <img src="../img/game_icon/gm_banner13.png" />
+                </div>
+                <div class="column right" >
+                    <div class="game_title"><span class="main_title">윷놀이</span> <span class="sub_title">게임 소개</span></div>
+                    <div class="game_guide_text">
+                        &nbsp;윷놀이 게임은 한국의 전통놀이를 기반으로 한 게임입니다. 원형통에 회색의 앞면과 빨간색의 뒷면이 있는 4개의 동그란 윷가락을 섞어 도,개,걸,윷,모 여부를 맞추거나 결과에 따라 진행되는 A마,B마,C마 3개 중 1등마를 맞추는 게임입니다.&nbsp;&nbsp;<a href="yutdetail.html">자세히 보기 >></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
+                </div>
+                <div style="clear:both;"></div>
+                <div class="div_game_menu_zone">
+                    <div class="game_menu_title_line"> <img alt="" src="../img/title_skypark_games.png" /> </div>
+                    <div class="div_line_1px"></div>
+                    <div class="game_menu_line">
+                        <div class="game_menu_box" onclick="move_game_lobby('14');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner14.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">해달별</div>
+                                <div class="game_detail">하늘의 최강자를 가린다!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('2');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner2.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">바카라</div>
+                                <div class="game_detail">두근두근 악마의 게임!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('3');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner3.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">스피드 바카라</div>
+                                <div class="game_detail">쉴틈이 없다! 더욱 빠르게!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('4');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner4.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">보험 바카라</div>
+                                <div class="game_detail">안전을 위한 선택!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('5');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner5.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">포커</div>
+                                <div class="game_detail">최고의 패를 쥐어라!</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game_menu_line">
+                        <div class="game_menu_box" onclick="move_game_lobby('6');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner6.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">페어게임</div>
+                                <div class="game_detail">아슬아슬한 한끗 승부!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('7');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner7.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">스카이 홀짝</div>
+                                <div class="game_detail">둘중 하나만 골라 홀 OR 짝?</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('8');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner8.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">드래곤 타이거</div>
+                                <div class="game_detail">최강은 누구인가?</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('9');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner9.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">스카이 블랙잭</div>
+                                <div class="game_detail">버스트인가 메이드인가? 한장 더!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('10');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner10.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">삼치기</div>
+                                <div class="game_detail">그시절 우리가 좋아했던 게임</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game_menu_line">
+                        <div class="game_menu_box" onclick="move_game_lobby('11');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner11.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">주사위</div>
+                                <div class="game_detail">행운을 굴려보자!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('12');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner12.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">스카이 룰렛</div>
+                                <div class="game_detail">판은 오늘도 돌고있다</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('13');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner13.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">윷놀이</div>
+                                <div class="game_detail">신선하게 즐기는 우리네 전통놀이</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="height:20px;"></div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="div_footer">
+            <div style="height:46px; text-align:center; line-height:46px; color:#999;">
+                회사소개 &nbsp;&nbsp;<span style="color:#ddd;">|</span>&nbsp;&nbsp; <a href="../agreement.html" style="text-decoration:none; color:#999;">이용약관</a> &nbsp;&nbsp;<span style="color:#ddd;">|</span>&nbsp;&nbsp;개인정보처리방침 &nbsp;&nbsp;<span style="color:#ddd;">|</span>&nbsp;&nbsp; <a href="../Default.html" style="text-decoration:none; color:#999;">제휴문의</a> &nbsp;&nbsp;<span style="color:#ddd;">|</span>&nbsp;&nbsp; <a href="../Default.html" style="text-decoration:none; color:#999;">고객센터</a>
+            </div>
+            <div class="div_line_1px"></div>
+            <div>
+                <div style="width:1130px; margin-top:10px; margin-left:auto; margin-right:auto;">
+                    <img alt="" src="../img/bottom4.png" />
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">connect_chat_server();</script>
+    </div>
+    </form>
+</body>
+
+<!-- Mirrored from www.spark-pop.com/pc/guide/gameguide.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Sep 2019 12:25:10 GMT -->
+</html>

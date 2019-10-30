@@ -1,0 +1,50 @@
+﻿.div_content_intro {
+     background: white; 
+    float: left;
+    width: 790px;
+    padding:5px;   
+}
+  
+    .div_content_intro h1 {
+        color: #2d5288;
+        text-align: center;
+        font-family: 'Noto Sans KR',맑은 고딕,'Malgun Gothic','맑은 고딕',dotum !important;
+    }
+    .div_content_intro .divider {
+        margin:5px 0px;
+        border: 0.2px solid #ddd;
+    }
+
+.outer {
+    width: 100%;
+    text-align: center;
+}
+
+.pagination {
+    
+    display: inline-block;
+    margin : 12px auto 12px auto;
+  
+}
+
+    .pagination a {
+        color: #2d5288;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: background-color .3s;
+        border: 1px solid #ddd;
+        margin: 0 4px;
+    }
+
+        .pagination a.active {
+            background-color: #2d5288;
+            color: white;
+            border: 1px solid #2d5288;
+        }
+
+        .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
+   
+

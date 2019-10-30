@@ -1,0 +1,19 @@
+﻿a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+table { padding:0; border:0; border-collapse:collapse; border-spacing:0px; }
+th { padding:0; }
+td { padding:0; }
+
+.tb_basic { padding:0; border:0; border-collapse:collapse; border-spacing:0px; }
+.tb_basic th { padding:0; }
+.tb_basic td { padding:0; }

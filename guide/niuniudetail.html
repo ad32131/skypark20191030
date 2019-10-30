@@ -1,0 +1,328 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from www.spark-pop.com/pc/guide/niuniudetail.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Sep 2019 12:28:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+	스카이파크
+</title>
+    <script src="../../Scripts/jquery-1.6.4.min.js"></script>
+	<script src="../../Scripts/jquery.signalR-2.4.0.min.js"></script>
+	<script src="http://www.spark-pop.com/signalr/hubs"></script>
+    
+    <link rel="stylesheet" href="../css/chat7aff.css?v=1905271" /><link rel="stylesheet" href="../css/layout7aff.css?v=1905271" /><link rel="stylesheet" href="../css/common7aff.css?v=1905271" /> 
+    <script type="text/javascript" src="../js/common7aff.js?v=1905271" ></script>
+    <script type="text/javascript">
+        var chat;
+        var szAccount = "";
+        var szNcik = "";
+        var chat_id = "";
+
+        function pop_note_list() {
+            var nWidth = 800;
+            var nHeight = 500;
+            var x = (screen.availWidth - nWidth) / 2;
+            var y = (screen.availHeight - nHeight) / 2;
+            window.open("../pop/pop_note_list.html", "note_list", "width=" + nWidth + ",height=" + nHeight + ",toolbar=no,top=" + y + ",left=" + x + ",directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes");
+        }
+
+        function pop_user_info() {
+            var nWidth = 800;
+            var nHeight = 500;
+            var x = (screen.availWidth - nWidth) / 2;
+            var y = (screen.availHeight - nHeight) / 2;
+            window.open("../pop/pop_user_info.html", "user_info", "width=" + nWidth + ",height=" + nHeight + ",toolbar=no,top=" + y + ",left=" + x + ",directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes");
+        }
+
+        function pop_rand_box() {
+            var nWidth = 420;
+            var nHeight = 600;
+            var x = (screen.availWidth - nWidth) / 2;
+            var y = (screen.availHeight - nHeight) / 2;
+            window.open("../pop/pop_rand_box.html", "rand_box", "width=" + nWidth + ",height=" + nHeight + ",toolbar=no,top=" + y + ",left=" + x + ",directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes");
+        }
+        function pop_api_sample() {
+            var nWidth = 900;
+            var nHeight = 1000;
+            var x = (screen.availWidth - nWidth) / 2;
+            var y = (screen.availHeight - nHeight) / 2;
+            window.open("../pop/api_sample_view.html", "rand_box", "width=" + nWidth + ",height=" + nHeight + ",toolbar=no,top=" + y + ",left=" + x + ",directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes");
+        }
+
+    </script>
+    <script type="text/javascript" src="../js/chat7932.js?v=20190911212457" ></script>
+    
+    <link href="css/detailgame7932.css?v=20190911212457" rel="stylesheet" />
+</head>
+<body>
+    
+    <form method="post" action="http://www.spark-pop.com/pc/guide/niuniudetail.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="eni+8fauUOuH2fyIBxGQv0CXM4Gt+Ho4FspsaJThtu7rCJ4Ne6wOXYAeCFir9YvsEQX5oAlp8+2mbPVq5VHn9Fk18FBZoatTuw+GTZWB+lQ=" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="AA2BCFF4" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="HIfJyIugNIR8UdV8w7BaV32GLczDWL9Tqoh8T95iYGD+vN4Bq/EEvhcNlJOb4KYEumXWq9HuTNdWnlYNbp6KCF4j5zFl8WLdxGMFU/xddrM6aoIuq0dEsVN6JPeuy/CX" />
+</div>
+        <div style="display:none"><input type="submit" name="ctl00$btnNull" value="" onclick="return false;" id="btnNull" /></div>
+        <div style="position:fixed; left:-9000px;"><img alt="" src="../img/main_logo4.png" /></div>
+    <div>
+        <div class="main_page_top_line">
+            <div class="top_line_zone" style="font-size:12px;">
+                <a href="javascript:pop_rand_box();" style="padding:0; margin:0;">
+                    <div style="float:left; margin-left:10px;">
+                        <div style="width:23px; padding:5px 0px; height:20px; float:left;"><img src="../img/icon/rand_box_icon.png" style="height:20px; display:block;" /></div>
+                        <div style="color:#c5cfff; float:left; text-align:left;">랜덤박스</div>
+                        <div style="width:100px; padding:9px; height:12px; float:left;">
+                            <div style="height:12px; border-radius:5px; background-color:#c2ebff;">
+                                <div style="float:left; height:12px; border-radius:5px; background-color:#2ef706; width:0px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div style="color:#c5cfff; float:left; text-align:left;">달성률 0%</div>
+                    </div>
+                </a>
+                <a href="javascript:pop_api_sample();">영상API샘플</a>
+                <a href="../Default.html">영상API문의</a>
+                <a href="../Default.html">고객센터</a>
+                <a href="niuniudetail.html" style="margin-right:10px;">로그아웃</a>
+            </div>
+        </div>
+        <div class="main_body">
+            <div class="logo_line">
+                <div class="logo_zone">
+                    <a href="../Default.html">
+                        <img alt="" src="../img/main_logo4.png" />
+                    </a>
+                </div>
+                <div class="main_menu"><a href="../lobby.html"><img alt="" src="../img/mnt01.png" /></a></div>
+                <div class="main_menu"><a href="gameguide.html"><img alt="" src="../img/mnt02.png" /></a></div>
+                <div class="main_menu"><a href="../item_shop/item_shop.html"><img alt="" src="../img/mnt03.png" /></a></div>
+                <div class="main_menu"><a href="../notice_board.html"><img alt="" src="../img/mnt04.png" /></a></div>
+                <div class="main_menu"><a href="../dealer_intro.html"><img alt="" src="../img/mnt05.png" /></a></div>
+                <div class="main_menu"><a href="../free_refill.html"><img alt="" src="../img/mnt06.png" /></a></div>
+                <div class="main_menu"><a href="../user_rank.html"><img alt="" src="../img/mnt07.png" /></a></div>
+                <div class="main_menu"><a href="../game_result.html"><img alt="" src="../img/mnt08.png" /></a></div>
+            </div>
+            <div>
+                <div class="div_chat">
+                    <div class="login_box">
+                        
+                        <div style="height:4px;"></div>
+                        <div>
+                            <div style="width:280px; margin-left:auto; margin-right:auto;">
+                                <div style="height:40px; line-height:40px;">
+                                    로그인 이후 컨텐츠 이용이 가능합니다.
+                                </div> 
+                                <div class="login_button_box">
+                                    <a href="../login.html"><img alt="" src="../img/login_button.png" /></a>
+                                </div>
+                                <div style="height:40px; line-height:40px;">
+                                    <span style="float:left;"><a href="http://www.spark-pop.com/SignUp.aspx">간편 회원가입</a></span>
+                                    <span style="float:right;"><a href="http://www.spark-pop.com/find_id.aspx" style="font-weight:100;">아이디 찾기</a></span> 
+                                    <span style="float:right; padding:0 10px; font-size:8px; color:#dbdbdb">|</span> <span style="float:right;"><a href="http://www.spark-pop.com/find_passwd.aspx" style="font-weight:100;">비밀번호 찾기</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="div_split_height"></div>
+                    <div class="chat_box">
+                        <div style="position:absolute; height:440px; width:60px; margin-left:-64px;margin-top:-3px;">
+                            <div id="enter_room_chat" style="height:63px; cursor:pointer;">
+                                <img alt="" src="../img/chat_room_icon2.png" />
+                            </div>
+                        </div>
+                        <div id="msgs" class="msg_box">
+                            <div style="text-align:center;">
+                                <img alt="" src="../img/chat_loading.gif" style="margin-left:auto; margin-right:auto;" />
+                            </div>
+                        </div>
+                        <div class="div_chat_input_line">
+                            <input autocomplete="off" type="text" id="msg" onkeypress="javascript: msg_input_keypress(event);" class="chat_msg_input" />
+	                        <input type="button" id="send" value="전송" / class="send_button" />
+                        </div>
+                    </div>
+                </div>
+                <div class="div_content">
+                    
+    <div class="div_content_pd5">
+         <div class="subject"></div>
+         <div class="sub_menu">
+            <ul>
+                <li><a href="gameguide.html">게임소개</a></li>
+                <li><a href="niuniudetail.html" class="active">니우니우</a></li>
+                <li><a href="baccaratdetail.html">바카라</a></li>
+                <li><a href="baccarat_speeddetail.html">스피드 바카라</a></li>
+                <li><a href="baccarat_insurancedetail.html">보험 바카라</a></li>
+                <li><a href="pokerdetail.html">스카이 포커</a></li>
+                <li><a href="pairdetail.html">페어 게임</a></li>
+            </ul>
+            <ul>
+                <li><a href="oddevendetail.html">스카이 홀짝</a></li>
+                <li><a href="dragontigerdetail.html">드래곤 타이거</a></li>
+                <li><a href="blackjackdetail.html">블랙잭</a></li>
+                <li><a href="fantandetail.html">삼치기</a></li>
+                <li><a href="dicedetail.html">주사위</a></li>
+                <li><a href="roulettedetail.html">스카이 룰렛</a></li>
+                <li><a href="yutdetail.html">윷놀이</a></li>
+            </ul>
+        </div>
+        <div class="w_rap">
+            <!--------close Detail game menu page---------------------------->
+            <div class="row">
+                <div class="column left">
+                    <img src="../img/game_icon/gm_banner1.png" />
+                </div>
+                <div class="column right" >
+                    <div class="game_title"><span class="main_title">니우니우</span> <span class="sub_title">게임 소개</span></div>
+                    <div class="game_guide_text">
+                        &nbsp;니우니우는 BANKER와 3명의 PLAYER가 각각 5장의 카드를 받아 그중 3장의 합으로 10의 배수를 만들고 나머지 두장의 합으로 승부하며, 같은 메이드를 만들었을 경우 가장 높은 카드로 각각의 PLAYER와 BANKER가 승부를 겨루는 게임 입니다
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <h2>동영상 게임 가이드</h2>
+                     <video src="video/nn.mp4" width="780" height="500" preload="auto" controls="controls">
+                    </video>
+                </div>
+                <div class="game_guide_text_detail">  
+                    <p style="line-height: 1.2;"><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;"><span style="font-size: 11pt; font-family: 굴림, gulim;">『게임화면』<br><br></span></span><img src="../../UploadFiles/20181226234228%eb%89%b4%eb%89%b41.png" title="%eb%89%b4%eb%89%b41.png"><br><span style="font-weight: bold; color: rgb(255, 255, 255); background-color: rgb(255, 0, 0); font-family: 굴림, gulim; font-size: 11pt;"><span style="font-size: 11pt; font-family: 굴림, gulim;"><br></span></span><span style="color: rgb(255, 255, 255); font-family: 굴림, gulim; font-size: 14.6667px; font-weight: 700; background-color: rgb(255, 0, 0);">&nbsp;</span><span style="font-weight: bold; color: rgb(255, 255, 255); background-color: rgb(255, 0, 0); font-family: 굴림, gulim; font-size: 11pt;"><span style="font-size: 11pt; font-family: 굴림, gulim;">1</span></span><span style="background-color: rgb(255, 0, 0); color: rgb(255, 255, 255); font-family: 굴림, gulim; font-size: 14.6667px; font-weight: 700;">&nbsp;</span><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;">&nbsp;</span><span style="font-weight: bold;"><span style="font-family: 굴림, gulim; font-size: 11pt;">게임정보</span></span><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;">&nbsp; : <span style="font-size: 11pt;">배팅한도, 사용자아이디, 보유골드, 딜러정보가 표시 됩니다<br><br></span></span><span style="color: rgb(255, 255, 255); font-family: 굴림, gulim; font-size: 14.6667px; font-weight: 700; background-color: rgb(255, 0, 0);">&nbsp;</span><span style="font-weight: bold; background-color: rgb(255, 0, 0); color: rgb(255, 255, 255); font-family: 굴림, gulim; font-size: 11pt;">2</span><span style="background-color: rgb(255, 0, 0); color: rgb(255, 255, 255); font-family: 굴림, gulim; font-size: 14.6667px; font-weight: 700;">&nbsp;</span><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;">&nbsp;배팅용칩</span><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;">&nbsp; : 배팅할때 필요한 칩 (1천원, 5천원, 1만원, 5만원, 10만원, 50만원, 100만원) 표시 됩니다<br><br></span><span style="color: rgb(255, 255, 255); font-family: 굴림, gulim; font-size: 14.6667px; font-weight: 700; background-color: rgb(255, 0, 0);">&nbsp;</span><span style="font-weight: bold; background-color: rgb(255, 0, 0); color: rgb(255, 255, 255); font-family: 굴림, gulim; font-size: 11pt;">3</span><span style="background-color: rgb(255, 0, 0); color: rgb(255, 255, 255); font-family: 굴림, gulim; font-size: 14.6667px; font-weight: 700;">&nbsp;</span><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;">&nbsp;배팅용판</span><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;">&nbsp; : 각 자리마다 배팅을 할 수 있습니다<br><br></span><span style="color: rgb(255, 255, 255); font-family: 굴림, gulim; font-size: 14.6667px; font-weight: 700; background-color: rgb(255, 0, 0);">&nbsp;</span><span style="font-weight: bold; background-color: rgb(255, 0, 0); color: rgb(255, 255, 255); font-family: 굴림, gulim; font-size: 11pt;">4</span><span style="background-color: rgb(255, 0, 0); color: rgb(255, 255, 255); font-family: 굴림, gulim; font-size: 14.6667px; font-weight: 700;">&nbsp;</span><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;">&nbsp;게임결과</span><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;">&nbsp; : 이전회차 게임결과를 표시 합니다<br><br></span><span style="color: rgb(255, 255, 255); font-family: 굴림, gulim; font-size: 14.6667px; font-weight: 700; background-color: rgb(255, 0, 0);">&nbsp;</span><span style="font-weight: bold; background-color: rgb(255, 0, 0); color: rgb(255, 255, 255); font-family: 굴림, gulim; font-size: 11pt;">5</span><span style="background-color: rgb(255, 0, 0); color: rgb(255, 255, 255); font-family: 굴림, gulim; font-size: 14.6667px; font-weight: 700;">&nbsp;</span><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;">&nbsp;Live화면</span><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;"><span style="font-size: 11pt;">&nbsp; : 실시간으로 게임이 진행되는것을 볼 수 있습니다<br><br></span></span><span style="font-family: 굴림, gulim; font-size: 18pt;">···················································································<br></span><span style="font-family: 굴림, gulim; font-size: 11pt; font-weight: bold;"><br>『게임진행』<br>&nbsp;</span></p><p style="line-height: 1.2;"><img src="../../UploadFiles/20181225001021%eb%89%b4%eb%89%b42.png" title="%eb%89%b4%eb%89%b42.png"><br><span style="font-weight: bold; font-size: 11pt; font-family: 굴림, gulim;"><br>1.&nbsp;<span style="color: rgb(255, 0, 0);"><sup><span style="font-size: 11pt; font-family: 굴림, gulim;">①</span></sup></span></span><span style="font-weight: bold; font-size: 11pt; font-family: 굴림, gulim;">빨간,&nbsp;<sup><span style="color: rgb(255, 0, 0); font-size: 11pt; font-family: 굴림, gulim;">①</span></sup></span><span style="font-weight: bold; font-size: 11pt; font-family: 굴림, gulim;">파란카드 1목씩 총 2목의 카드로 번갈아가며 게임을 진행합니다<br></span><br><span style="font-weight: bold; font-size: 11pt; font-family: 굴림, gulim;">2. <span style="color: rgb(2, 41, 251);"><sup><span style="font-size: 11pt; font-family: 굴림, gulim;">ⓟ</span></sup></span>플레이어(1, 2, 3) 와 <span style="color: rgb(255, 0, 0);"><sup><span style="font-size: 11pt; font-family: 굴림, gulim;">ⓑ</span></sup></span>뱅커가 대결을 진행합니다<br></span><br><span style="font-weight: bold; font-size: 11pt; font-family: 굴림, gulim;">3. 딜러는 <span style="color: rgb(255, 0, 0);"><sup><span style="font-size: 11pt; font-family: 굴림, gulim;">②</span></sup></span>번(burn)카드로 순서를 정하며 이 때 번카드의 표기된 숫자만큼&nbsp;</span><span style="font-weight: bold; font-size: 9pt; font-family: 굴림, gulim;"><span style="color: rgb(255, 0, 0);"><sup><span style="font-size: 11pt; font-family: 굴림, gulim;">ⓑ</span></sup></span></span><span style="font-weight: bold; font-size: 11pt; font-family: 굴림, gulim;">뱅커&nbsp;☞&nbsp;</span><span style="font-weight: bold; font-size: 9pt; font-family: 굴림, gulim;"><span style="color: rgb(2, 41, 251);"><sup><span style="font-size: 11pt; font-family: 굴림, gulim;">ⓟ</span></sup></span></span><span style="font-weight: bold; font-size: 11pt; font-family: 굴림, gulim;">플레이어(1, 2, 3)<br>&nbsp; &nbsp;순으로 순서를 정한후 배팅을 시작합니다<br>&nbsp;</span><br><span style="font-weight: bold; font-size: 11pt; font-family: 굴림, gulim;">4.&nbsp;</span><span style="font-weight: bold; font-size: 9pt; font-family: 굴림, gulim;"><span style="color: rgb(2, 41, 251);"><span style="font-size: 11pt; font-family: 굴림, gulim;"><sup><span style="font-size: 11pt; font-family: 굴림, gulim;">ⓟ</span></sup></span></span></span><span style="font-weight: bold; font-size: 11pt; font-family: 굴림, gulim;">플레이어(1, 2, 3) 중 원하는 곳에 배팅이 가능합니다<br></span><br><span style="font-weight: bold; font-size: 11pt; font-family: 굴림, gulim;">5. 딜러는&nbsp;</span><span style="font-weight: bold; font-size: 9pt; font-family: 굴림, gulim; color: rgb(255, 0, 0);"><sup><span style="font-size: 11pt; font-family: 굴림, gulim;">②</span></sup></span><span style="font-weight: bold; font-size: 11pt; font-family: 굴림, gulim;">번(burn)카드에 나온 순서대로 각각 1장씩 총5장의 카드를 놓습니다<br></span><br><span style="font-weight: bold; font-size: 11pt; font-family: 굴림, gulim;">6.&nbsp;</span><span style="font-weight: bold; font-size: 9pt; font-family: 굴림, gulim;"><span style="color: rgb(2, 41, 251);"><span style="font-size: 11pt; font-family: 굴림, gulim;"><sup><span style="font-size: 11pt; font-family: 굴림, gulim;">ⓟ</span></sup></span></span></span><span style="font-weight: bold; font-size: 11pt; font-family: 굴림, gulim;">플레이어가 받은 카드 ,&nbsp;</span><span style="font-weight: bold; font-size: 9pt; font-family: 굴림, gulim;"><span style="color: rgb(255, 0, 0);"><span style="font-size: 11pt; font-family: 굴림, gulim;"><sup><span style="font-size: 11pt; font-family: 굴림, gulim;">ⓑ</span></sup></span></span></span><span style="font-weight: bold; font-size: 11pt; font-family: 굴림, gulim;">뱅커가 받은 카드를 조합하여 승부합니다.<br><br></span><span style="font-size: 12pt; font-family: 굴림, gulim;"><span style="font-size: 18pt; font-family: 굴림, gulim;">···················································································</span></span><br><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;"><br>『게임규칙』<br><br style="clear:both;"></span><img src="../../UploadFiles/201812221034321.png" title="1.png"><br style="clear:both;"><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;"><br>⊙ A = 1 , (K,Q,J) = 10 로 계산하고 그 외에 나머지카드 2 ~ 10 카드는 카드표면에 숫자로 계산합니다<br></span><br><img src="../../UploadFiles/20181226232455K___1.png" title="K~~~1.png"><br style="clear:both;"><br style="clear:both;"><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;">⊙ 카드의 가치는 ( K &gt; Q &gt; J &gt; 10&nbsp;… 2 &gt; 1 ) 순으로 높은수 카드입니다<br></span><span style="font-weight: bold; color: rgb(255, 0, 0); font-family: 굴림, gulim; font-size: 11pt;"><span style="color: rgb(0, 0, 0); font-family: 굴림, gulim; font-size: 11pt;"><img src="../../UploadFiles/201812221034533.png" title="3.png"><br style="clear:both;"></span></span><span style="font-weight: bold; color: rgb(255, 0, 0); font-family: 굴림, gulim; font-size: 11pt;"><span style="color: rgb(0, 0, 0); font-family: 굴림, gulim; font-size: 11pt;"><br></span></span><span style="font-weight: bold; color: rgb(255, 0, 0); font-family: 굴림, gulim; font-size: 11pt;"><span style="color: rgb(0, 0, 0); font-size: 11pt; font-family: 굴림, gulim;">⊙ 문양은&nbsp;</span></span><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;">( ♠ &gt;&nbsp;</span><span style="font-weight: bold; color: rgb(255, 0, 0); font-family: 굴림, gulim; font-size: 11pt;">♥&nbsp;<span style="color: rgb(0, 0, 0); font-size: 11pt; font-family: 굴림, gulim;">&gt;&nbsp;</span></span><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;">♣ &gt;&nbsp;</span><span style="font-weight: bold; color: rgb(255, 0, 0); font-family: 굴림, gulim; font-size: 11pt;">◆&nbsp;<span style="color: rgb(0, 0, 0); font-size: 11pt; font-family: 굴림, gulim;">) 순으로 높은 카드입니다</span></span><span style="font-weight: bold; color: rgb(255, 0, 0); font-family: 굴림, gulim; font-size: 11pt;"><span style="color: rgb(0, 0, 0); font-size: 11pt;"><br></span></span><span style="font-weight: bold; color: rgb(255, 0, 0); font-family: 굴림, gulim; font-size: 11pt;"><span style="color: rgb(0, 0, 0); font-family: 굴림, gulim; font-size: 11pt;"><br>⊙ 받은 5장의카드 중 3장의 카드로 10의 배수를 만들면 <span style="color: rgb(255, 108, 0); font-size: 11pt; font-family: 굴림, gulim;">메이드</span>가 되고,<br>&nbsp;어느 조합으로도 10의 배수가 안되면&nbsp;<span style="color: rgb(255, 108, 0); font-size: 11pt; font-family: 굴림, gulim;">노메이드</span>가 됩니다<br><br>⊙ <span style="color: rgb(255, 108, 0); font-size: 11pt; font-family: 굴림, gulim;">메이드</span>에 성공하면 승패는 나머지 2장으로 겨룹니다. 가장 높은 것<span style="color: rgb(0, 0, 0); font-family: 굴림, gulim; font-size: 11pt;">은 2장의 카드합이 제로(0) 이며,<br></span><span style="color: rgb(0, 0, 0); font-family: 굴림, gulim; font-size: 11pt;">&nbsp;이</span><span style="color: rgb(0, 0, 0); font-family: 굴림, gulim; font-size: 11pt;">를 <span style="color: rgb(255, 108, 0); font-size: 11pt; font-family: 굴림, gulim;">니우니우</span> 라고 부릅니다<br></span><br><span style="color: rgb(0, 0, 0); font-family: 굴림, gulim; font-size: 11pt;">⊙ <span style="color: rgb(255, 108, 0); font-size: 11pt; font-family: 굴림, gulim;">니우니우</span>를 제외하면 2장의 카드합이 9에 가까운 숫자가 이기게됩니다<br></span><br>⊙ 뱅커와 플레이어가 동일한 <span style="color: rgb(255, 108, 0); font-size: 11pt; font-family: 굴림, gulim;">노메이드</span>, <span style="color: rgb(255, 108, 0); font-size: 11pt; font-family: 굴림, gulim;">메이드</span>, <span style="color: rgb(255, 108, 0); font-size: 11pt; font-family: 굴림, gulim;">니우니우</span> 일 때 각각 가진 5장의카드중 가장높은수 한장의 카드로 승부합니다 높은수가&nbsp;</span></span><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;">같다면 카드의 문양(♠&gt;</span><span style="font-weight: bold; color: rgb(255, 0, 0); font-family: 굴림, gulim; font-size: 11pt;">♥<span style="color: rgb(0, 0, 0); font-size: 11pt; font-family: 굴림, gulim;">&gt;</span></span><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;">♣&gt;</span><span style="font-weight: bold; color: rgb(255, 0, 0);"><span style="font-family: 굴림, gulim;"><span style="font-size: 11pt; font-family: 굴림, gulim;">◆</span></span><span style="color: rgb(0, 0, 0);"><span style="font-family: 굴림, gulim;"><span style="font-size: 11pt; font-family: 굴림, gulim;">)이 높은쪽이 승리하게 됩니다<br></span></span></span></span><span style="color: rgb(255, 0, 0);"><span style="color: rgb(0, 0, 0);"><span style="font-size: 12pt; font-family: 굴림, gulim;"><br><span style="font-size: 18pt; font-family: 굴림, gulim;">··························································</span><span style="font-size: 12pt; font-family: 굴림, gulim;"><span style="font-size: 18pt; font-family: 굴림, gulim;">·········</span><span style="font-size: 11pt; font-family: 굴림, gulim;"><span style="font-size: 18pt;">················</span><br></span></span></span><span style="font-weight: bold; font-size: 11pt; font-family: 굴림, gulim;"><br>『</span><span style="font-weight: bold; font-size: 11pt; font-family: 굴림, gulim;">배팅</span><span style="font-weight: bold; font-size: 11pt; font-family: 굴림, gulim;">』</span><span style="font-weight: bold; font-size: 11pt; font-family: 굴림, gulim;">(승리할시 배팅액의 5% 수수료를 차감합니다)</span><br><br><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt; color: rgb(255, 108, 0);">BET 배팅 시<br></span><br></span></span><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;">플레이어가 노메이드~6메이드 로 승리시 배팅금액 1:1배 지급됩니다</span><br><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;">(Ex&nbsp; 1만원(배팅금)+1만원(당첨금) = 1 : 1)<br></span><br><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;">플레이어가 7메이드~9메이드 로 승리시 배팅금액 1:2배 지급됩니다</span><br><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;">(Ex&nbsp; 1만원(배팅금)+2만원(당첨금) = 1 : 2)<br></span><br><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;">플레이어가 니우니우 로 승리시 배팅금액 1:3배 지급됩니다</span><br><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;">(Ex&nbsp; 1만원(배팅금)+3만원(당첨금) = 1 : 3)</span><br><br><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;">뱅커가 노메이드~6메이드 로 승리시 추가 차감금액 없습니다<br></span><br><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;">뱅커가&nbsp; 7메이드~9메이드 로 승리시 배팅금액의 1배 추가차감 됩니다</span><br><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;">(Ex&nbsp; 1만원(배팅금)+1만원(추가차감금액) = 2만원)<br></span><br><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;">뱅커가 니우니우 로 승리시 배팅금액의 2배 추가차감 됩니다</span><br><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;">( Ex 1만원(배팅금)+2만원(추가차감금액) = 3만원 )</span><br><b><span style="font-size: 11pt; font-family: 굴림, gulim; color: rgb(255, 0, 0);"><br></span></b><b><span style="font-size: 11pt; font-family: 굴림, gulim; color: rgb(255, 0, 0);">BET 배팅은 배팅금의 2배 이상을 보유하고 있어야 배팅이 가능합니다<br><br>EX===&gt;BET에 1만골드를 배팅할경우 보유금액이 3만골드 이상 있어야 배팅이 가능합니다&nbsp;</span></b><br><br><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt; color: rgb(255, 108, 0);">Anti 배팅 시</span><br><span style="font-weight: bold; font-family: 굴림, gulim; font-size: 11pt;"><br>플레이어가 노메이드 ~ 니우니우 어떤 패든 상관없이 승리 할 시 1 : 1배 지급됩니다/ 패배시 배팅금액만 잃습니다</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                </div>
+                <div style="clear:both;"></div>
+                <div class="div_game_menu_zone">
+                    <div class="game_menu_title_line"> <img alt="" src="../img/title_skypark_games.png" /> </div>
+                    <div class="div_line_1px"></div>
+                    <div class="game_menu_line">
+                        <div class="game_menu_box" onclick="move_game_lobby('14');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner14.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">해달별</div>
+                                <div class="game_detail">하늘의 최강자를 가린다!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('2');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner2.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">바카라</div>
+                                <div class="game_detail">두근두근 악마의 게임!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('3');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner3.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">스피드 바카라</div>
+                                <div class="game_detail">쉴틈이 없다! 더욱 빠르게!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('4');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner4.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">보험 바카라</div>
+                                <div class="game_detail">안전을 위한 선택!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('5');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner5.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">포커</div>
+                                <div class="game_detail">최고의 패를 쥐어라!</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game_menu_line">
+                        <div class="game_menu_box" onclick="move_game_lobby('6');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner6.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">페어게임</div>
+                                <div class="game_detail">아슬아슬한 한끗 승부!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('7');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner7.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">스카이 홀짝</div>
+                                <div class="game_detail">둘중 하나만 골라 홀 OR 짝?</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('8');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner8.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">드래곤 타이거</div>
+                                <div class="game_detail">최강은 누구인가?</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('9');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner9.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">스카이 블랙잭</div>
+                                <div class="game_detail">버스트인가 메이드인가? 한장 더!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('10');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner10.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">삼치기</div>
+                                <div class="game_detail">그시절 우리가 좋아했던 게임</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game_menu_line">
+                        <div class="game_menu_box" onclick="move_game_lobby('11');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner11.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">주사위</div>
+                                <div class="game_detail">행운을 굴려보자!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('12');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner12.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">스카이 룰렛</div>
+                                <div class="game_detail">판은 오늘도 돌고있다</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('13');">
+                            <div class="game_menu_img"><img alt="" src="../img/game_icon/gm_banner13.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">윷놀이</div>
+                                <div class="game_detail">신선하게 즐기는 우리네 전통놀이</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="height:20px;"></div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="div_footer">
+            <div style="height:46px; text-align:center; line-height:46px; color:#999;">
+                회사소개 &nbsp;&nbsp;<span style="color:#ddd;">|</span>&nbsp;&nbsp; <a href="../agreement.html" style="text-decoration:none; color:#999;">이용약관</a> &nbsp;&nbsp;<span style="color:#ddd;">|</span>&nbsp;&nbsp;개인정보처리방침 &nbsp;&nbsp;<span style="color:#ddd;">|</span>&nbsp;&nbsp; <a href="../Default.html" style="text-decoration:none; color:#999;">제휴문의</a> &nbsp;&nbsp;<span style="color:#ddd;">|</span>&nbsp;&nbsp; <a href="../Default.html" style="text-decoration:none; color:#999;">고객센터</a>
+            </div>
+            <div class="div_line_1px"></div>
+            <div>
+                <div style="width:1130px; margin-top:10px; margin-left:auto; margin-right:auto;">
+                    <img alt="" src="../img/bottom4.png" />
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">connect_chat_server();</script>
+    </div>
+    </form>
+</body>
+
+<!-- Mirrored from www.spark-pop.com/pc/guide/niuniudetail.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Sep 2019 12:29:30 GMT -->
+</html>

@@ -1,0 +1,607 @@
+﻿
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from www.spark-pop.com/pc/lobby.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Sep 2019 12:24:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+	바젤tv
+</title>
+    <script src="../Scripts/jquery-1.6.4.min.js"></script>
+	<script src="../Scripts/jquery.signalR-2.4.0.min.js"></script>
+	<script src="http://www.spark-pop.com/signalr/hubs"></script>
+    
+    <link rel="stylesheet" href="css/chat7aff.css?v=1905271" /><link rel="stylesheet" href="css/layout7aff.css?v=1905271" /><link rel="stylesheet" href="css/common7aff.css?v=1905271" /> 
+    <script type="text/javascript" src="js/common7aff.js?v=1905271" ></script>
+    <script type="text/javascript">
+        var chat;
+        var szAccount = "";
+        var szNcik = "";
+        var chat_id = "";
+
+        function pop_note_list() {
+            var nWidth = 800;
+            var nHeight = 500;
+            var x = (screen.availWidth - nWidth) / 2;
+            var y = (screen.availHeight - nHeight) / 2;
+            window.open("pop/pop_note_list.html", "note_list", "width=" + nWidth + ",height=" + nHeight + ",toolbar=no,top=" + y + ",left=" + x + ",directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes");
+        }
+
+        function pop_user_info() {
+            var nWidth = 800;
+            var nHeight = 500;
+            var x = (screen.availWidth - nWidth) / 2;
+            var y = (screen.availHeight - nHeight) / 2;
+            window.open("pop/pop_user_info.html", "user_info", "width=" + nWidth + ",height=" + nHeight + ",toolbar=no,top=" + y + ",left=" + x + ",directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes");
+        }
+
+        function pop_rand_box() {
+            var nWidth = 420;
+            var nHeight = 600;
+            var x = (screen.availWidth - nWidth) / 2;
+            var y = (screen.availHeight - nHeight) / 2;
+            window.open("pop/pop_rand_box.html", "rand_box", "width=" + nWidth + ",height=" + nHeight + ",toolbar=no,top=" + y + ",left=" + x + ",directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes");
+        }
+        function pop_api_sample() {
+            var nWidth = 900;
+            var nHeight = 1000;
+            var x = (screen.availWidth - nWidth) / 2;
+            var y = (screen.availHeight - nHeight) / 2;
+            window.open("pop/api_sample_view.html", "rand_box", "width=" + nWidth + ",height=" + nHeight + ",toolbar=no,top=" + y + ",left=" + x + ",directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes");
+        }
+
+    </script>
+    <script type="text/javascript" src="js/chat9aa2.js?v=20190911212345" ></script>
+    
+    <link rel="stylesheet" href="css/lobby4395.css?v=190724"/> 
+    
+    <script type="text/javascript">
+        var select_room = 0;
+        var select_num = 0;
+        //------------------------------------------------------------------------------
+        var bfRefreshTime = 2000;
+        var newxml, oldxml;
+        var xmlLive = null;
+        var parser = null;
+        var oSerializer = null;
+        var isIE = true;
+        var UPDATE_INFO_TIME = "0";
+        var UPDATE_INFO_TIME_PREV ="-1";
+        var now_select_game = "0";
+        //------------------------------------------------------------------------------
+        function game_menu_on(num) {
+            if (now_select_game != num) {
+                document.getElementById("gm_icon_div" + num).className = "div_game_icon_on";
+                document.getElementById("game_icon_img" + num).src = "/pc/img/game_icon/gm_banner" + num + ".png";
+            }
+        }
+        //------------------------------------------------------------------------------
+        function game_menu_off(num) {
+            if (now_select_game != num) {
+                document.getElementById("gm_icon_div" + num).className = "div_game_icon_off";
+                //document.getElementById("game_icon_img" + num).src = "/pc/img/game_icon/gm_banner_off" + num+".png";
+            }
+
+        }
+        //------------------------------------------------------------------------------
+        function move_game_lobby(game_type) {
+            location.href = "/pc/lobby.aspx?gmn=" + game_type;
+        }
+        //------------------------------------------------------------------------------
+        function table_info_on(room) {
+            //document.getElementById("der_" + room).className = "div_enter_room_on";
+        }
+        //------------------------------------------------------------------------------
+        function table_info_off(room) {
+            //document.getElementById("der_" + room).className = "div_enter_room_off";
+        }
+        //------------------------------------------------------------------------------
+        function show_grade_popup(room,num) {
+            /*
+            if (szAccount == "") {
+                alert('로그인이 필요한 서비스입니다. sgpr');
+                return;
+            }
+            */
+            select_num = num;
+            select_room = room;     
+            var nTop;
+            var nLeft;
+            if (num == 0) nTop = 10;
+            else {
+                nTop = num / 2;
+                
+                nTop = parseInt(nTop);
+               
+                nTop = nTop*170;
+                nTop = nTop+10;
+            }
+            if (num % 2 == 1) nLeft = 395;
+            else nLeft = 0;
+            document.getElementById("div_select_grade").style.top = String(nTop)+"px";
+            document.getElementById("div_select_grade").style.left = String(nLeft)+"px";
+            document.getElementById('div_select_grade').style.display = "block";
+            table_info_off(room);
+        }
+        //------------------------------------------------------------------------------
+        function keep_grade_popup() {
+            /*
+            if (szAccount == "") {
+                alert('로그인이 필요한 서비스입니다. sgpr');
+                return;
+            }
+            */
+            
+            var nTop;
+            var nLeft;
+            if (select_num == 0) nTop = 10;
+            else {
+                nTop = select_num / 2;
+                
+                nTop = parseInt(nTop);
+               
+                nTop = nTop*170;
+                nTop = nTop+10;
+            }
+            if (select_num % 2 == 1) nLeft = 395;
+            else nLeft = 0;
+            document.getElementById("div_select_grade").style.top = String(nTop)+"px";
+            document.getElementById("div_select_grade").style.left = String(nLeft)+"px";
+            document.getElementById('div_select_grade').style.display = "block";
+            table_info_off(room);
+        }
+        //------------------------------------------------------------------------------
+        function close_grade_popup() {
+            document.getElementById('div_select_grade').style.display = "none";
+        }
+        //------------------------------------------------------------------------------
+        function enter_grade_room(level) {
+            if (szAccount == "") {
+                alert('로그인이 필요한 서비스입니다.');
+                return;
+            }
+            var url = "game/index.html";
+            if (select_room == "1") url += "niuniu/niuniu.aspx?room=" + select_room+ "&lv=" + level;
+            if (select_room == "2") url += "hdb/hdb.aspx?room=" + select_room+ "&lv=" + level;
+            if (select_room == "3" || select_room == "4" || select_room == "10" || select_room == "11" ) url += "baccarat/baccarat.aspx?room=" + select_room + "&lv=" + level;
+            if (select_room == "12" || select_room == "13") url += "baccarat_speed/baccarat_speed.aspx?room=" + select_room+ "&lv=" + level;
+            if (select_room == "17") url += "baccarat_insurance/baccarat_insurance.aspx?room=" + select_room+ "&lv=" + level;
+            if (select_room == "9") url += "poker/poker.aspx?room=" + select_room+ "&lv=" + level;
+            if (select_room == "8") url += "pair/pair.aspx?room=" + select_room+ "&lv=" + level;
+            if (select_room == "6") url += "oddeven/oddeven.aspx?room=" + select_room+ "&lv=" + level;
+            if (select_room == "7"|| select_room == "16") url += "dragontiger/dragontiger.aspx?room=" + select_room+ "&lv=" + level;
+            if (select_room == "15" ) url += "blackjack/blackjack.aspx?room=" + select_room+ "&lv=" + level;
+            if (select_room == "19") url += "fantan/fantan.aspx?room=" + select_room+ "&lv=" + level;
+            if (select_room == "20") url += "dice/dice.aspx?room=" + select_room+ "&lv=" + level;
+            if (select_room == "21") url += "roulette/roulette.aspx?room=" + select_room+ "&lv=" + level;
+            if (select_room == "18") url += "yut/yut.aspx?room=" + select_room + "&lv=" + level;
+            location.href = url;
+        }
+        //------------------------------------------------------------------------------
+        function get_game_table_info() {
+            
+            $.ajax({
+                type: "get",
+                url: "/game_data/lobby_history/" + now_select_game + ".html?v=" + Date.parse(new Date()),
+                success: function (oHtml) {
+                    //alert(oHtml);
+                    oHtml = oHtml.replace(/(_A_)/g, "A마");
+            oHtml = oHtml.replace(/(_B_)/g, "B마");
+            oHtml = oHtml.replace(/(_C_)/g, "C마");
+
+            oHtml = oHtml.replace(/(-0-)/g, "빽");
+            oHtml = oHtml.replace(/(-1-)/g, "도");
+            oHtml = oHtml.replace(/(-2-)/g, "개");
+            oHtml = oHtml.replace(/(-3-)/g, "걸");
+            oHtml = oHtml.replace(/(-4-)/g, "윷");
+            oHtml = oHtml.replace(/(-5-)/g, "모");
+
+            oHtml = oHtml.replace(/(_N0)/g, "후진");
+            oHtml = oHtml.replace(/(_N1)/g, "전진");
+            oHtml = oHtml.replace(/(_N2)/g, "전진");
+            oHtml = oHtml.replace(/(_N3)/g, "전진");
+            oHtml = oHtml.replace(/(_B4)/g, "한번더");
+            oHtml = oHtml.replace(/(_B5)/g, "한번더");
+
+            oHtml = oHtml.replace(/(_G0)/g, "A마승리");
+            oHtml = oHtml.replace(/(_G1)/g, "B마승리");
+            oHtml = oHtml.replace(/(_G2)/g, "C마승리");
+
+            oHtml = oHtml.replace(/(_K0)/g, "A마를 잡음");
+            oHtml = oHtml.replace(/(_K1)/g, "B마를 잡음");
+            oHtml = oHtml.replace(/(_K2)/g, "C마를 잡음");
+
+            oHtml = oHtml.replace(/(-A_)/g, "다음:A마");
+            oHtml = oHtml.replace(/(-B_)/g, "다음:B마");
+            oHtml = oHtml.replace(/(-C_)/g, "다음:C마");
+                    document.getElementById("game_table_base").innerHTML = oHtml;
+                }
+            });
+        }
+
+        //------------------------------------------------------------------------------
+        if (window.ActiveXObject) {
+            try {
+                xmlLive = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            catch (e) {
+                xmlLive = new ActiveXObject("MsXml2.XMLHTTP");
+            }
+            isIE = true;
+        }
+        else {
+            xmlLive = new XMLHttpRequest();
+            parser = new DOMParser();
+            oSerializer = new XMLSerializer();
+            isIE = false;
+        }
+        //------------------------------------------------------------------------------
+        function OpenXml_Live() {
+            try {
+                xmlLive.open("get.html", "/game_data/lobby_xml/" + now_select_game + ".xml?v=" + Date.parse(new Date()), true);
+                xmlLive.onreadystatechange = livexmlonreadystatechange;
+                xmlLive.send(null);
+                
+            }
+            catch (e) {
+                ;
+            }
+            if (typeof (OpenXml_Timer) == "number")
+                clearTimeout(OpenXml_Timer);
+            OpenXml_Timer = setTimeout("OpenXml_Live()", bfRefreshTime);
+        }
+        //------------------------------------------------------------------------------
+        function livexmlonreadystatechange() {
+            if (xmlLive.readyState != 4 || (xmlLive.status != 200 && xmlLive.status != 0)) return;
+            if (isIE) {
+                XmlDocLive = xmlLive.responseXML;
+                newxml = XmlDocLive.xml;
+                if (newxml == "" || oldxml == newxml)
+                    return;
+            }
+            else {
+                XmlDocLive = parser.parseFromString(xmlLive.responseText, "text/xml");
+                if (XmlDocLive.documentElement.tagName == "parsererror") return;
+                newxml = oSerializer.serializeToString(XmlDocLive.documentElement);
+                if (newxml == "" || oldxml == newxml) return;
+            }
+            
+            oldxml = newxml;
+            var root = XmlDocLive.documentElement;
+            var oNode = root.firstChild;
+             while (oNode != null) {
+                if (oNode.nodeName == "UPDATE_INFO_TIME") {
+                    UPDATE_INFO_TIME = oNode.textContent;
+                }
+                oNode = oNode.nextSibling;
+            }
+            Update_Proc();
+        }
+        //------------------------------------------------------------------------------
+        function Update_Proc() {
+            if (UPDATE_INFO_TIME != UPDATE_INFO_TIME_PREV) {
+                get_game_table_info();
+                UPDATE_INFO_TIME_PREV = UPDATE_INFO_TIME;
+            }
+        }
+        OpenXml_Live();
+    </script>
+</head>
+<body>
+    
+    <form method="post" action="http://www.spark-pop.com/pc/lobby.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="YLCxdMF0EbM52WTw0HMa1kE3P3RqNEMIvbZEBIKq6ybT0JH5UTc/XiInawS7ojUdvAPRytnZu87eAcFbcMyVfTPT17VeOoR5NKGasISEHCk=" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="07B1B3CE" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="VXL52hAsdP/X+5M/1EkFOI5tbsO9E5uAk6ajBGg6hGjanwu2a3CGlImJK/zL6oSnBkiQIRFM34QZlk8aXdm/H7y5PZD7FtD7MeMgK0JVsT0pq8fHY8tOMHvxJRpXKvWa" />
+</div>
+        <div style="display:none"><input type="submit" name="ctl00$btnNull" value="" onclick="return false;" id="btnNull" /></div>
+        <div style="position:fixed; left:-9000px;"><img alt="" src="img/main_logo4.png" /></div>
+    <div>
+        <div class="main_page_top_line">
+            <div class="top_line_zone" style="font-size:12px;">
+                <a href="javascript:pop_rand_box();" style="padding:0; margin:0;">
+                    <div style="float:left; margin-left:10px;">
+                        <div style="width:23px; padding:5px 0px; height:20px; float:left;"><img src="img/icon/rand_box_icon.png" style="height:20px; display:block;" /></div>
+                        <div style="color:#c5cfff; float:left; text-align:left;">랜덤박스</div>
+                        <div style="width:100px; padding:9px; height:12px; float:left;">
+                            <div style="height:12px; border-radius:5px; background-color:#FFFFFF;">
+                                <div style="float:left; height:12px; border-radius:5px; background-color:#CB2400; width:0px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div style="color:#c5cfff; float:left; text-align:left;">달성률 0%</div>
+                    </div>
+                </a>
+                <a href="javascript:pop_api_sample();">영상API샘플</a>
+                <a href="Default.html">영상API문의</a>
+                <a href="Default.html">고객센터</a>
+                <a href="lobby.html" style="margin-right:10px;">로그아웃</a>
+            </div>
+        </div>
+        <div class="main_body">
+            <div class="logo_line">
+                <div class="logo_zone">
+                    <a href="Default.html">
+                        <img alt="" src="img/main_logo4.png" />
+                    </a>
+                </div>
+                <div class="main_menu"><a href="lobby.html"><img alt="" src="img/mnt01.png" /></a></div>
+                <div class="main_menu"><a href="guide/gameguide.html"><img alt="" src="img/mnt02.png" /></a></div>
+                <div class="main_menu"><a href="item_shop/item_shop.html"><img alt="" src="img/mnt03.png" /></a></div>
+                <div class="main_menu"><a href="notice_board.html"><img alt="" src="img/mnt04.png" /></a></div>
+                <div class="main_menu"><a href="dealer_intro.html"><img alt="" src="img/mnt05.png" /></a></div>
+                <div class="main_menu"><a href="free_refill.html"><img alt="" src="img/mnt06.png" /></a></div>
+                <div class="main_menu"><a href="user_rank.html"><img alt="" src="img/mnt07.png" /></a></div>
+                <div class="main_menu"><a href="game_result.html"><img alt="" src="img/mnt08.png" /></a></div>
+            </div>
+            <div>
+                <div class="div_chat">
+                    <div class="login_box">
+                        
+                        <div style="height:4px;"></div>
+                        <div>
+                            <div style="width:280px; margin-left:auto; margin-right:auto;">
+                                <div style="height:40px; line-height:40px;">
+                                    로그인 이후 컨텐츠 이용이 가능합니다.
+                                </div> 
+                                <div class="login_button_box">
+                                    <a href="login.html"><img alt="" src="img/login_button.png" /></a>
+                                </div>
+                                <div style="height:40px; line-height:40px;">
+                                    <span style="float:left;"><a href="http://www.spark-pop.com/SignUp.aspx">간편 회원가입</a></span>
+                                    <span style="float:right;"><a href="http://www.spark-pop.com/find_id.aspx" style="font-weight:100;">아이디 찾기</a></span> 
+                                    <span style="float:right; padding:0 10px; font-size:8px; color:#dbdbdb">|</span> <span style="float:right;"><a href="http://www.spark-pop.com/find_passwd.aspx" style="font-weight:100;">비밀번호 찾기</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="div_split_height"></div>
+                    <div class="chat_box">
+                        <div style="position:absolute; height:440px; width:60px; margin-left:-64px;margin-top:-3px;">
+                            <div id="enter_room_chat" style="height:63px; cursor:pointer;">
+                                <img alt="" src="img/chat_room_icon2.png" />
+                            </div>
+                        </div>
+                        <div id="msgs" class="msg_box">
+                            <div style="text-align:center;">
+                                <img alt="" src="img/chat_loading.gif" style="margin-left:auto; margin-right:auto;" />
+                            </div>
+                        </div>
+                        <div class="div_chat_input_line">
+                            <input autocomplete="off" type="text" id="msg" onkeypress="javascript: msg_input_keypress(event);" class="chat_msg_input" />
+	                        <input type="button" id="send" value="전송" / class="send_button" />
+                        </div>
+                    </div>
+                </div>
+                <div class="div_content">
+                    
+    <div style="background-color:white; padding:10px;">
+        <div class="game_icon_line">
+            <div id="gm_icon_div0" class="div_game_icon_off" onclick="move_game_lobby('0');" onmouseover="game_menu_on('0');" onmouseout="game_menu_off('0');">
+                <div class="game_icon_img"><img alt="" id="game_icon_img0" src="img/game_icon/gm_banner0.png" /></div>
+                <div class="game_icon_text">전체게임</div>
+            </div>
+            <div class="splint_game_icon"></div>
+            <div id="gm_icon_div14" class="div_game_icon_off" onclick="move_game_lobby('14');" onmouseover="game_menu_on('14');" onmouseout="game_menu_off('14');">
+                <div class="game_icon_img"><img alt="" id="game_icon_img14" src="img/game_icon/gm_banner14.png" /></div>
+                <div class="game_icon_text">해달별</div>
+            </div>
+            <div class="splint_game_icon"></div>
+            <div id="gm_icon_div2" class="div_game_icon_off" onclick="move_game_lobby('2');" onmouseover="game_menu_on('2');" onmouseout="game_menu_off('2');">
+                <div class="game_icon_img"><img alt="" id="game_icon_img2" src="img/game_icon/gm_banner2.png" /></div>
+                <div class="game_icon_text">바카라</div>
+            </div>
+            <div class="splint_game_icon"></div>
+            <div id="gm_icon_div3" class="div_game_icon_off" onclick="move_game_lobby('3');" onmouseover="game_menu_on('3');" onmouseout="game_menu_off('3');">
+                <div class="game_icon_img"><img alt="" id="game_icon_img3" src="img/game_icon/gm_banner3.png" /></div>
+                <div class="game_icon_text">스피드 바카라</div>
+            </div>
+            <div class="splint_game_icon"></div>
+            <div id="gm_icon_div4" class="div_game_icon_off" onclick="move_game_lobby('4');" onmouseover="game_menu_on('4');" onmouseout="game_menu_off('4');">
+                <div class="game_icon_img"><img alt="" id="game_icon_img4" src="img/game_icon/gm_banner4.png" /></div>
+                <div class="game_icon_text">보험 바카라</div>
+            </div>
+            <div class="splint_game_icon"></div>
+            <div id="gm_icon_div5" class="div_game_icon_off" onclick="move_game_lobby('5');" onmouseover="game_menu_on('5');" onmouseout="game_menu_off('5');">
+                <div class="game_icon_img"><img alt="" id="game_icon_img5" src="img/game_icon/gm_banner5.png" /></div>
+                <div class="game_icon_text">포커</div>
+            </div>
+            <div class="splint_game_icon"></div>
+            <div id="gm_icon_div6" class="div_game_icon_off" onclick="move_game_lobby('6');" onmouseover="game_menu_on('6');" onmouseout="game_menu_off('6');">
+                <div class="game_icon_img"><img alt="" id="game_icon_img6" src="img/game_icon/gm_banner6.png" /></div>
+                <div class="game_icon_text">페어게임</div>
+            </div>
+        </div>
+        <div style=" clear:both; height:5px;"></div>
+        <div class="game_icon_line">
+            <div id="gm_icon_div7" class="div_game_icon_off" onclick="move_game_lobby('7');" onmouseover="game_menu_on('7');" onmouseout="game_menu_off('7');">
+                <div class="game_icon_img"><img alt="" id="game_icon_img7" src="img/game_icon/gm_banner7.png" /></div>
+                <div class="game_icon_text">스카이 홀짝</div>
+            </div>
+            <div class="splint_game_icon"></div>
+            <div id="gm_icon_div8" class="div_game_icon_off" onclick="move_game_lobby('8');" onmouseover="game_menu_on('8');" onmouseout="game_menu_off('8');">
+                <div class="game_icon_img"><img alt="" id="game_icon_img8" src="img/game_icon/gm_banner8.png" /></div>
+                <div class="game_icon_text">드래곤 타이거</div>
+            </div>
+            <div class="splint_game_icon"></div>
+            <div id="gm_icon_div9" class="div_game_icon_off" onclick="move_game_lobby('9');" onmouseover="game_menu_on('9');" onmouseout="game_menu_off('9');">
+                <div class="game_icon_img"><img alt="" id="game_icon_img9" src="img/game_icon/gm_banner9.png" /></div>
+                <div class="game_icon_text">스카이 블랙잭</div>
+            </div>
+            <div class="splint_game_icon"></div>
+            <div id="gm_icon_div10" class="div_game_icon_off" onclick="move_game_lobby('10');" onmouseover="game_menu_on('10');" onmouseout="game_menu_off('10');">
+                <div class="game_icon_img"><img alt="" id="game_icon_img10" src="img/game_icon/gm_banner10.png" /></div>
+                <div class="game_icon_text">삼치기</div>
+            </div>
+            <div class="splint_game_icon"></div>
+            <div id="gm_icon_div11" class="div_game_icon_off" onclick="move_game_lobby('11');" onmouseover="game_menu_on('11');" onmouseout="game_menu_off('11');">
+                <div class="game_icon_img"><img alt="" id="game_icon_img11" src="img/game_icon/gm_banner11.png" /></div>
+                <div class="game_icon_text">주사위</div>
+            </div>
+            <div class="splint_game_icon"></div>
+            <div id="gm_icon_div12" class="div_game_icon_off" onclick="move_game_lobby('12');" onmouseover="game_menu_on('12');" onmouseout="game_menu_off('12');">
+                <div class="game_icon_img"><img alt="" id="game_icon_img12" src="img/game_icon/gm_banner12.png" /></div>
+                <div class="game_icon_text">스카이 룰렛</div>
+            </div>
+            <div class="splint_game_icon"></div>
+            <div id="gm_icon_div13" class="div_game_icon_off" onclick="move_game_lobby('13');" onmouseover="game_menu_on('13');" onmouseout="game_menu_off('13');">
+                <div class="game_icon_img"><img alt="" id="game_icon_img13" src="img/game_icon/gm_banner13.png" /></div>
+                <div class="game_icon_text">윷놀이</div>
+            </div>
+        </div>
+        <div style=" clear:both; height:15px;"></div>
+        <div class="gmae_title_line">
+            <div class="div_game_title"><img alt="" id="game_title_img" src="#" /></div>
+        </div>
+        <div class="game_title_split"></div>
+    </div>
+    <div style="height:0px; position:absolute;">
+        <div id="div_select_grade" style="position:relative; height:146px; width:367px; border:1px solid #2d5288; background-color:rgba(0, 0, 0, 0.70); top:500px;  padding:6px 8px; margin-left:10px; z-index:1500; display:none;" onmouseout="javascript: close_grade_popup();" onmouseover="keep_grade_popup();">
+            <a href="javascript:enter_grade_room('1');" class="grade_button"><img al="" src="img/grade_button/egb_on1.png" onmouseover="this.src='img/grade_button/egb_over1.png';" onmouseout="this.src='img/grade_button/egb_on1.png';" /></a><a href="javascript:enter_grade_room('2');" class="grade_button"><img al="" src="img/grade_button/egb_on2.png" onmouseover="this.src='img/grade_button/egb_over2.png';" onmouseout="this.src='img/grade_button/egb_on2.png';" /></a><a href="javascript:enter_grade_room('3');" class="grade_button"><img al="" src="img/grade_button/egb_on3.png" onmouseover="this.src='img/grade_button/egb_over3.png';" onmouseout="this.src='img/grade_button/egb_on3.png';" /></a><a href="javascript:enter_grade_room('4');" class="grade_button"><img al="" src="img/grade_button/egb_on4.png" onmouseover="this.src='img/grade_button/egb_over4.png';" onmouseout="this.src='img/grade_button/egb_on4.png';" /></a><a href="javascript:enter_grade_room('5');" class="grade_button"><img al="" src="img/grade_button/egb_on5.png" onmouseover="this.src='img/grade_button/egb_over5.png';" onmouseout="this.src='img/grade_button/egb_on5.png';" /></a><a href="javascript:enter_grade_room('6');" class="grade_button"><img al="" src="img/grade_button/egb_on6.png" onmouseover="this.src='img/grade_button/egb_over6.png';" onmouseout="this.src='img/grade_button/egb_on6.png';" /></a><a href="javascript:enter_grade_room('7');" class="grade_button"><img al="" src="img/grade_button/egb_on7.png" onmouseover="this.src='img/grade_button/egb_over7.png';" onmouseout="this.src='img/grade_button/egb_on7.png';" /></a><a href="javascript:enter_grade_room('8');" class="grade_button"><img al="" src="img/grade_button/egb_on8.png" onmouseover="this.src='img/grade_button/egb_over8.png';" onmouseout="this.src='img/grade_button/egb_on8.png';" /></a><a href="javascript:enter_grade_room('9');" class="grade_button"><img al="" src="img/grade_button/egb_on9.png" onmouseover="this.src='img/grade_button/egb_over9.png';" onmouseout="this.src='img/grade_button/egb_on9.png';" /></a>
+            <a href="javascript: close_grade_popup();" class="grade_button"><img alt="" src="img/grade_button/egb_close.png" onmouseout="this.src='img/grade_button/egb_close.png'" onmouseover="this.src='img/grade_button/egb_close_over.png'" /></a>
+        </div>
+    </div>
+    <div id="game_table_base" class="game_table_base">
+    </div>
+    
+    <script>
+        document.getElementById("gm_icon_div" + now_select_game).className = "div_game_icon_on";
+        document.getElementById("game_icon_img" + now_select_game).src = "/pc/img/game_icon/gm_banner" + now_select_game + ".png";  
+        document.getElementById("game_title_img").src = "/pc/img/game_title/gmt" + now_select_game + ".png";
+    </script>
+
+                </div>
+                <div style="clear:both;"></div>
+                <div class="div_game_menu_zone">
+                    <div class="game_menu_title_line"> <img alt="" src="img/title_skypark_games.png" /> </div>
+                    <div class="div_line_1px"></div>
+                    <div class="game_menu_line">
+                        <div class="game_menu_box" onclick="move_game_lobby('14');">
+                            <div class="game_menu_img"><img alt="" src="img/game_icon/gm_banner14.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">해달별</div>
+                                <div class="game_detail">하늘의 최강자를 가린다!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('2');">
+                            <div class="game_menu_img"><img alt="" src="img/game_icon/gm_banner2.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">바카라</div>
+                                <div class="game_detail">두근두근 악마의 게임!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('3');">
+                            <div class="game_menu_img"><img alt="" src="img/game_icon/gm_banner3.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">스피드 바카라</div>
+                                <div class="game_detail">쉴틈이 없다! 더욱 빠르게!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('4');">
+                            <div class="game_menu_img"><img alt="" src="img/game_icon/gm_banner4.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">보험 바카라</div>
+                                <div class="game_detail">안전을 위한 선택!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('5');">
+                            <div class="game_menu_img"><img alt="" src="img/game_icon/gm_banner5.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">포커</div>
+                                <div class="game_detail">최고의 패를 쥐어라!</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game_menu_line">
+                        <div class="game_menu_box" onclick="move_game_lobby('6');">
+                            <div class="game_menu_img"><img alt="" src="img/game_icon/gm_banner6.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">페어게임</div>
+                                <div class="game_detail">아슬아슬한 한끗 승부!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('7');">
+                            <div class="game_menu_img"><img alt="" src="img/game_icon/gm_banner7.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">스카이 홀짝</div>
+                                <div class="game_detail">둘중 하나만 골라 홀 OR 짝?</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('8');">
+                            <div class="game_menu_img"><img alt="" src="img/game_icon/gm_banner8.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">드래곤 타이거</div>
+                                <div class="game_detail">최강은 누구인가?</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('9');">
+                            <div class="game_menu_img"><img alt="" src="img/game_icon/gm_banner9.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">스카이 블랙잭</div>
+                                <div class="game_detail">버스트인가 메이드인가? 한장 더!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('10');">
+                            <div class="game_menu_img"><img alt="" src="img/game_icon/gm_banner10.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">삼치기</div>
+                                <div class="game_detail">그시절 우리가 좋아했던 게임</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game_menu_line">
+                        <div class="game_menu_box" onclick="move_game_lobby('11');">
+                            <div class="game_menu_img"><img alt="" src="img/game_icon/gm_banner11.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">주사위</div>
+                                <div class="game_detail">행운을 굴려보자!</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('12');">
+                            <div class="game_menu_img"><img alt="" src="img/game_icon/gm_banner12.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">스카이 룰렛</div>
+                                <div class="game_detail">판은 오늘도 돌고있다</div>
+                            </div>
+                        </div>
+                        <div class="game_menu_box" onclick="move_game_lobby('13');">
+                            <div class="game_menu_img"><img alt="" src="img/game_icon/gm_banner13.png" /></div>
+                            <div class="game_menu_text">
+                                <div class="game_name">윷놀이</div>
+                                <div class="game_detail">신선하게 즐기는 우리네 전통놀이</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="height:20px;"></div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="div_footer">
+            <div style="height:46px; text-align:center; line-height:46px; color:#999;">
+                회사소개 &nbsp;&nbsp;<span style="color:#ddd;">|</span>&nbsp;&nbsp; <a href="agreement.html" style="text-decoration:none; color:#999;">이용약관</a> &nbsp;&nbsp;<span style="color:#ddd;">|</span>&nbsp;&nbsp;개인정보처리방침 &nbsp;&nbsp;<span style="color:#ddd;">|</span>&nbsp;&nbsp; <a href="Default.html" style="text-decoration:none; color:#999;">제휴문의</a> &nbsp;&nbsp;<span style="color:#ddd;">|</span>&nbsp;&nbsp; <a href="Default.html" style="text-decoration:none; color:#999;">고객센터</a>
+            </div>
+            <div class="div_line_1px"></div>
+            <div>
+                <div style="width:1130px; margin-top:10px; margin-left:auto; margin-right:auto;">
+                    <img alt="" src="img/bottom4.png" />
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">connect_chat_server();</script>
+    </div>
+    </form>
+</body>
+
+<!-- Mirrored from www.spark-pop.com/pc/lobby.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Sep 2019 12:25:05 GMT -->
+</html>

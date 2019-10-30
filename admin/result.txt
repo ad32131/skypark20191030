@@ -1,0 +1,40 @@
+./adm/admin.tail.php:    var font_resize_act = get_cookie("ck_font_resize_act");
+./adm/shop_admin/admin.shop.lib.php:    $admin_cookie_time = get_cookie('admin_visit_time');
+./adm/shop_admin/itemform.php:    $it['ca_id'] = get_cookie("ck_ca_id");
+./adm/shop_admin/itemform.php:    $it['ca_id2'] = get_cookie("ck_ca_id2");
+./adm/shop_admin/itemform.php:    $it['ca_id3'] = get_cookie("ck_ca_id3");
+./adm/shop_admin/itemform.php:    $it['it_maker']  = stripslashes(get_cookie("ck_maker"));
+./adm/shop_admin/itemform.php:    $it['it_origin'] = stripslashes(get_cookie("ck_origin"));
+./adm/sms_admin/ajax.sms_write_person.php:    if (get_cookie('cookie_no_hp') == 'yes')
+./adm/sms_admin/num_book.php:    if (get_cookie('cookie_no_hp') == 'yes')
+./bbs/visit_insert.inc.php:if (get_cookie('ck_visit_ip') != $_SERVER['REMOTE_ADDR'])
+./bbs/common_login_title.php:    if ($tmp_mb_id = get_cookie('ck_mb_id')) {
+./bbs/common_login_title.php:                $tmp_key = get_cookie('ck_auto');
+./common_login_title.php:    if ($tmp_mb_id = get_cookie('ck_mb_id')) {
+./common_login_title.php:                $tmp_key = get_cookie('ck_auto');
+./common.php:    if ($tmp_mb_id = get_cookie('ck_mb_id')) {
+./common.php:                $tmp_key = get_cookie('ck_auto');
+./js/common.js:function get_cookie(name)
+./js/common.js:    var value = get_cookie(name);
+./js/shop.list.js:    if(itemlist_type = get_cookie("ck_itemlist"+itemlist_ca_id+"_type")) {
+./lib/common.lib.php:function get_cookie($cookie_name)
+./lib/shop.lib.php:            $tmp_cart_id = preg_replace('/[^a-z0-9_\-]/i', '', get_cookie('ck_guest_cart_id'));
+./mobile/head.php:            var font_resize_class = get_cookie("ck_font_resize_add_class");
+./mobile/shop/item.php:if (get_cookie('ck_it_id') != $it_id) {
+./mobile/skin/board/basic/view_comment.skin.php:                <input type="text" name="wr_name" value="<?php echo get_cookie("ck_sns_name"); ?>" id="wr_name" required class="frm_input required" size="25" placeholder="이름">
+./mobile/skin/board/gallery/view_comment.skin.php:                <input type="text" name="wr_name" value="<?php echo get_cookie("ck_sns_name"); ?>" id="wr_name" required class="frm_input required" size="25" placeholder="이름">
+./mobile/tail.php:        font_resize("container", get_cookie("ck_font_resize_rmv_class"), get_cookie("ck_font_resize_add_class"));
+./plugin/sns/view_comment_write.sns.skin.php:        echo '<input type="checkbox" name="facebook_checked" id="facebook_checked" '.(get_cookie('ck_facebook_checked')?'checked':'').' value="1">';
+./plugin/sns/view_comment_write.sns.skin.php:        echo '<input type="checkbox" name="twitter_checked" id="twitter_checked" '.(get_cookie('ck_twitter_checked')?'checked':'').' value="1">';
+./shop/item.php:if (get_cookie('ck_it_id') != $it_id) {
+./skin/board/basic/view_comment.skin.php:            <input type="text" name="wr_name" value="<?php echo get_cookie("ck_sns_name"); ?>" id="wr_name" required class="frm_input required" size="25" placeholder="이름">
+./skin/board/gallery/view_comment.skin.php:            <input type="text" name="wr_name" value="<?php echo get_cookie("ck_sns_name"); ?>" id="wr_name" required class="frm_input required" size="25" placeholder="이름">
+./theme/basic/mobile/head.php:            var font_resize_class = get_cookie("ck_font_resize_add_class");
+./theme/basic/mobile/skin/board/basic/view_comment.skin.php:                <input type="text" name="wr_name" value="<?php echo get_cookie("ck_sns_name"); ?>" id="wr_name" required class="frm_input required" size="25" placeholder="이름">
+./theme/basic/mobile/skin/board/gallery/view_comment.skin.php:                <input type="text" name="wr_name" value="<?php echo get_cookie("ck_sns_name"); ?>" id="wr_name" required class="frm_input required" size="25" placeholder="이름">
+./theme/basic/mobile/tail.php:        font_resize("container", get_cookie("ck_font_resize_rmv_class"), get_cookie("ck_font_resize_add_class"));
+./theme/basic/skin/board/basic/view_comment.skin.php:            <input type="text" name="wr_name" value="<?php echo get_cookie("ck_sns_name"); ?>" id="wr_name" required class="frm_input required" size="25" placeholder="이름">
+./theme/basic/skin/board/gallery/view_comment.skin.php:            <input type="text" name="wr_name" value="<?php echo get_cookie("ck_sns_name"); ?>" id="wr_name" required class="frm_input required" size="25" placeholder="이름">
+./theme/basic/tail.php:    font_resize("container", get_cookie("ck_font_resize_rmv_class"), get_cookie("ck_font_resize_add_class"));
+./yc4_import.php:    font_resize("container", get_cookie("ck_font_resize_rmv_class"), get_cookie("ck_font_resize_add_class"));
+./yc4_import_run.php:    font_resize("container", get_cookie("ck_font_resize_rmv_class"), get_cookie("ck_font_resize_add_class"));

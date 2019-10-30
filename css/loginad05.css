@@ -1,0 +1,15 @@
+﻿body 
+{ margin : 0px 0px 0px 0px; font-family: Dotum; color: #333;
+   font-size:12px; background-color:#eef3f6; min-width:600px;
+   font-family:'굴림',Gulim,돋움,Dotum, Tahoma;
+}
+
+.login_title { font-size:20px; font-weight:bold;}
+.login_input_box { color:#333; }
+.login_input_box table {margin-left:auto; margin-right:auto;}
+.tb_account { border:1px solid #2d5288; width:410px; height:40px; padding-left:10px; font-size:14px; font-weight:bold; color:#333;}
+.tb_account:focus{}
+.tb_passwd { border:1px solid #2d5288; width:400px;  height:40px; padding-left:20px; font-size:16px;}
+.btlogin { height:60px; width:420px;background-color:#2d5288; color:white; border:1px solid #2d5288; cursor:pointer; font-size:16px; font-weight:bold; letter-spacing:10px;}
+.btlogin:hover { border:1px solid #2d5288; color:#2d5288; background-color:#fff;}
+.btlogin:focus{ border:1px solid #2d5288; color:#2d5288; background-color:#fff;}

@@ -1,0 +1,207 @@
+﻿body 
+{ margin : 0px 0px 0px 0px; font-family: Dotum; color: #000000;
+   font-size:12px; background-color:#eef3f6; min-width:1130px;
+   font-family:'굴림',Gulim,돋움,Dotum, Tahoma;
+   background-position:top center; background-repeat:no-repeat;
+   background-attachment:fixed;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+/* #e9e8ef  */
+html{overflow-y:scroll}
+img {border:0px;}
+.div_promotion1 ul {padding:0; border:0; margin:0; list-style:none;}
+.div_promotion1 li {padding:0; border:0; margin:0;}
+.div_promotion1 li img {display:block; height:300px; width:530px;}
+/*--------------------------------------------------------------------------------*/
+/* common   */
+/*--------------------------------------------------------------------------------*/
+.div_line_1px {background-color:#d8d7dc; height:1px;}
+/*--------------------------------------------------------------------------------*/
+/* TOP line */
+/*--------------------------------------------------------------------------------*/
+.main_page_top_line { height:30px; line-height:30px; background-color:#2d5288; font-size:12px;}
+/* #717da5 */
+.main_page_top_line .top_line_zone { width:1130px; color:white; margin-left:auto; margin-right:auto;  text-align:right;}
+.main_page_top_line .top_line_zone a {color:white; font-weight:100; letter-spacing:0px; margin-left:30px;}
+
+.main_body {width:1130px; margin-left:auto; margin-right:auto;}
+/*--------------------------------------------------------------------------------*/
+/* logo line */
+/*--------------------------------------------------------------------------------*/
+.logo_line {height:100px;}
+.logo_line .logo_zone{float:left; width:330px; }
+.logo_line .logo_zone img { margin-top:8px;}
+
+.logo_line .main_menu {float:left; margin-right:40px;}
+.logo_line .main_menu img { margin-top:45px;}
+.login_button_box { height:50px; background-color:#2d5288; color:white; }
+/*--------------------------------------------------------------------------------*/
+/* chat zone */
+/*--------------------------------------------------------------------------------*/
+.div_chat {float:left; width:320px;}
+
+.div_chat .login_box { background-color:white; height:140px; }
+.div_chat .login_box a { color:#2d5288; font-weight:bold;}
+.div_chat .chat_box { background-color:white; height:484px; margin-top:10px;padding:3px; background-color:#2d5288; }
+
+.div_chat .chat_box .msg_box {padding:5px; background-color:white; height:441px; overflow-y:auto; word-break:break-all; overflow-y:scroll; word-break:break-all;}
+.div_chat_input_line {height:30px; background-color:#2d5288; margin-top:3px;}
+.chat_msg_input {height:30px; line-height:30px; border:0; padding:0; width:267px; padding-left:5px; margin:0;}
+.send_button {height:30px; line-height:30px; border:0; padding:0; width:40px; background-color:#7b9cce; color:white; font-weight:bold; margin:0; float:right;}
+.msg_box {font-family:굴림, Gulim, Dotum;}
+.msg_box div { text-align:left; line-height:16px; font-size:12px; }
+.msg_box .div_enter{ background-color:#2d5288; color:white; margin-top:1px; margin-bottom:1px; text-align:center; height:22px; line-height:22px; font-size:12px;}
+.msg_box .div_notice{ background-color:#2d5288; color:white;margin-top:1px; margin-bottom:1px; text-align:center; line-height:12px; padding:5px; font-size:12px;}
+.msg_box .tb_item{ margin-left:10px;}
+.msg_box .tb_item td{ padding:3px;}
+
+.tdlevel{ text-align:center; vertical-align:top;}
+.tdlevel img {display:block;}
+.tdmy_chat{vertical-align:top; word-break:break-all; color:#2d5288;}
+.tdot_chat{vertical-align:top; word-break:break-all;}
+
+
+.ept1{height:2px;}
+.ept2{height:3px;}
+.ept3{height:2px;}
+.ept4{height:3px;}
+.ept5{height:2px;}
+.ept6{height:3px;}
+.ept7{height:3px;}
+.ept8{height:8px;}
+.ept9{height:8px;}
+
+.eptr1{height:2px;}
+.eptr2{height:3px;}
+.eptr3{height:2px;}
+.eptr4{height:3px;}
+.eptr5{height:2px;}
+.eptr6{height:3px;}
+.eptr7{height:3px;}
+.eptr8{height:8px;}
+.eptr9{height:8px;}
+
+.ftnick{ margin-left:0px; font-weight:bold;}
+.ftmsg{ margin-left:5px; word-break:break-all;}
+.msg_line_empty {height:1px;}
+/*--------------------------------------------------------------------------------*/
+/* COMMON */
+/*--------------------------------------------------------------------------------*/
+.div_content_pd5 { float:left; width:790px; padding:5px; background-color:white; min-height:630px; }
+.div_content_pd5 .subject { margin:5px 5px 10px 5px; text-align:center; height:103px; line-height:103px; background-color:#7b9cce; }
+
+.div_content_pd5 .sub_menu { text-align:center; padding: 0 5px; }
+.div_content_pd5 .sub_menu ul { list-style:none; padding:0px; display:inline-block; margin:0px; }
+.div_content_pd5 .sub_menu li { float:left; padding:0px 1.5px;}
+.div_content_pd5 .sub_menu a { display:inline-block;
+        color: #2d5288;
+        padding: 8px 0px;
+        text-decoration: none;
+        transition: background-color .3s;
+        border: 1px solid #ddd;
+        margin: 0px;
+    }
+.div_content_pd5 .sub_menu a.active { background-color: #2d5288; color: white; border: 1px solid #2d5288; font-weight:bold;}
+.div_content_pd5 .sub_menu a:hover:not(.active) { background-color: #e6edf7;  }
+
+.div_content_pd5 .blue_button { 
+        display:inline-block;
+        padding: 8px 0px;
+        text-decoration: none;
+        transition: background-color .3s;
+        border: 1px solid #ddd;
+        margin: 0px;
+        background-color: #2d5288; color: white; border: 1px solid #2d5288; font-weight:bold;
+        text-align:center;
+}
+.div_content_pd5 .blue_button:hover { background-color: #e6edf7; color:#2d5288; border: 1px solid #e6edf7; }
+
+.div_content_pd5 .white_button { 
+        display:inline-block;
+        padding: 8px 0px;
+        text-decoration: none;
+        transition: background-color .3s;
+        border: 1px solid #ddd;
+        margin: 0px;
+        background-color: white; color: #2d5288; border: 1px solid #d8d7dc; font-weight:100;
+        text-align:center;
+}
+.div_content_pd5 .white_button:hover { background-color: #e6edf7; color:#2d5288; border: 1px solid #e6edf7; }
+
+.div_content_pd5 .red_button { 
+        display:inline-block;
+        padding: 8px 0px;
+        text-decoration: none;
+        transition: background-color .3s;
+        border: 1px solid #ddd;
+        margin: 0px;
+        background-color: #882d2d; color: white; border: 1px solid #882d2d; font-weight:bold;
+        text-align:center;
+}
+.div_content_pd5 .red_button:hover { background-color: #ef9e9e; color:#2d5288; border: 1px solid #ef9e9e; }
+
+.div_content_pd5 .gray_button { 
+        display:inline-block;
+        padding: 8px 0px;
+        text-decoration: none;
+        transition: background-color .3s;
+        border: 1px solid #ddd;
+        margin: 0px;
+        background-color: #d8d7dc; color: black; border: 1px solid #d8d7dc; font-weight:100;
+        text-align:center;
+        cursor:default;
+}
+
+
+.div_content_pd5 .w_rap {padding:0 5px 5px 5px;}
+/*--------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------------*/
+/* Default Page */
+/*--------------------------------------------------------------------------------*/
+.div_content{ float:left; width:800px; margin-left:10px;}
+
+.div_content .game_banner_line { margin-top:10px;}
+.div_content .notice_line { margin-top:10px; }
+
+.div_content .div_promotion1 { width:530px; background-color:#fff; height:300px; float:left;}
+.div_content .div_promotion2 { width:260px; background-color:#fff; height:300px; float:left; margin-left:10px;}
+
+.div_content .div_promot_game1 { width:260px; background-color:#fff; height:160px; float:left;}
+.div_content .div_promot_game2 { width:260px; background-color:#fff; height:160px; float:left; margin-left:10px;}
+.div_content .div_promot_game3 { width:260px; background-color:#fff; height:160px; float:left; margin-left:10px;}
+
+.div_content .div_event_banner { width:260px; background-color:#fff; height:160px; float:left;}
+.div_content .div_notice_zone { width:530px; background-color:white; height:160px; float:left; margin-left:10px;}
+.div_content .div_notice_zone_title {height:34px; text-align:center;}
+.div_content .div_notice_zone_title img {margin-top:10px;}
+/*--------------------------------------------------------------------------------*/
+/* Game Menu Zone */
+/*--------------------------------------------------------------------------------*/
+.div_game_menu_zone {margin-top:20px; background-color:white; border:0px solid #e9e9e9;}
+
+.game_menu_title_line { height:46px; line-height:46px; text-align:center;}
+.game_menu_title_line img {margin-top:14px;}
+.game_menu_line { margin-top:20px; padding-left:40px; padding-right:40px; height:160px;}
+.game_menu_box { width:180px; float:left; margin-left:15px; margin-right:15px; cursor:pointer; }
+.game_menu_box .game_menu_img {width:180px; height:111px; background-color:#2d5288; }
+.game_menu_box .game_menu_img img {width:180px; height:111px;}
+.game_menu_box .game_menu_text { height:49px; }
+.game_name {font-weight:bold; margin-top:5px; font-size:14px; letter-spacing:0px; padding-left:0px; color:#333;}
+.game_detail { margin-top:2px; font-size:12px; color:#7a7a7a;}
+/*--------------------------------------------------------------------------------*/
+.div_footer { background-color:white; height:140px; margin-top:30px; }
+/*--------------------------------------------------------------------------------*/
+.hidden_box { display:none; }
+
